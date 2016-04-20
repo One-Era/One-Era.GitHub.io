@@ -14,21 +14,21 @@
 .clearfix:after { clear: both; }
 
 body {
-	background: #cae4b6;
-	color: #c94e50;
+	background: #000;
+	color: #000;
 	font-weight: 400;
 	font-size: 1em;
 	font-family: 'Raleway', Arial, sans-serif;
 }
 
 a, button {
-	color: #74716D;
+	color: #fff;
 	text-decoration: none;
 	outline: none;
 }
 
 a:hover, a:focus {
-	color: #c94e50;
+	color: #fff;
 	outline: none;
 }
 
