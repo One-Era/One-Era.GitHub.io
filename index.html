@@ -1,37 +1,32 @@
-﻿<!--
+﻿<!DOCTYPE html>
+<!--
     Copyright           2016 One-Era Press, CUHK. All rights reserved.
     Handcrafted by      Crist Xiaotian Ye
     Special thanks to   Sodagreen and Bauhinia
 -->
-<!DOCTYPE html>
-<title>独立时代</title>
-<meta charset="utf-8">
-<meta name="author" content="独立时代中文电子杂志社">
-<meta name="description" content="香港中文大学独立时代中文电子杂志社的官方网站。在这里找到我们的最新动态、杂志介绍、成员介绍、社交媒体、往期杂志、联系方式、投稿要求。">
-<meta name="keywords" content="独立时代,中文杂志,电子杂志,中文电子杂志,香港,香港中文大学">
-<meta name="google-site-verification" content="Ez7FnsZo3XzliwqLpWcXzlvqjHyvgi3BEK69krPtor4">
-<link href="https://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-<script src="https://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/jQuery-slimScroll/1.3.7/jquery.slimscroll.min.js"></script>
-<div style="display:none"><script src="https://s11.cnzz.com/z_stat.php?id=1257541251&web_id=1257541251"></script></div>
-
+<head>
+    <title>独立时代</title>
+    <meta name="author" content="独立时代中文电子杂志社">
+    <meta name="keywords" content="独立时代,中文杂志,电子杂志,中文电子杂志,香港,香港中文大学">
+    <meta name="description" content="香港中文大学独立时代中文电子杂志社的官方网站。在这里找到我们的最新动态、杂志介绍、成员介绍、社交媒体、往期杂志、联系方式、投稿要求。">
+    <link href="https://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/jquery.perfect-scrollbar/0.6.10/css/perfect-scrollbar.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/fullPage.js/2.7.7/jquery.fullPage.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery.perfect-scrollbar/0.6.10/js/min/perfect-scrollbar.jquery.min.js"></script>
+</head>
 <style>
+    /*fullpage.js*/
     body {
         margin: 0;
-        text-align: center;
-        font-family: "Microsoft YaHei Light","Microsoft YaHei",sans-serif;
-        overflow-x: hidden;
-        overflow-y: hidden;
     }
 
-    /*bg section*/
-    .bg {
-        background-attachment: fixed;
-        background-size: contain;
-        background-image: url("index_bg.jpg");
-        background-repeat: no-repeat;
-        background-position: right bottom;
+    #fullpage {
+        text-align: center;
+        background-size: cover;
+        background-image: url(index_bg.jpg);
         display: none;
+        font-family: "Microsoft YaHei Light","Microsoft YaHei",sans-serif;
     }
 
     /*logo section*/
@@ -104,16 +99,15 @@
 
     .dialog {
         text-align: center;
-        position: fixed;
         display: none;
+        position: fixed;
         color: #fff;
         overflow-y: scroll;
         margin-left: 20vw;
         margin-right: 20vw;
         width: 60vw;
-        top: 15vh;
+        margin-top: 15vh;
         max-height: 70vh;
-        z-index: 5;
     }
 
         .dialog a {
@@ -142,8 +136,6 @@
             font-size: 2.5vmin;
             line-height: 180%;
         }
-
-
 
     .aboutusdialog {
     }
@@ -212,7 +204,7 @@
             margin-left: 5vw;
             margin-right: 5vw;
             width: 90vw;
-            top: 5vh;
+            margin-top: 5vh;
             max-height: 80vh;
         }
 
@@ -244,20 +236,20 @@
             }
     }
 </style>
-
 <script>
     $(document).ready(function () {
-        //load scrollbar js
-        $('.dialog').slimScroll({
-            height: '70vh'
-        });
+        //load fullpage and scrollbar js
+        $('#fullpage').fullpage();
+        $('.dialog').perfectScrollbar();
 
         //normal loading animation
-        setTimeout(function () { $('.bg').fadeIn(800); }, 500);
-        setTimeout(function () { $('.footermask').fadeIn(800); }, 500);
-        setTimeout(function () { $('.logo').fadeIn(800); }, 1000);
-        setTimeout(function () { $('.headline').fadeIn(800); }, 1000);
-        setTimeout(function () { $('.footer').fadeIn(800); }, 1000);
+        $(window).load(function () {
+            setTimeout(function () { $('#fullpage').fadeIn(800); }, 0);
+            setTimeout(function () { $('.footermask').fadeIn(800); }, 0);
+            setTimeout(function () { $('.logo').fadeIn(800); }, 500);
+            setTimeout(function () { $('.headline').fadeIn(800); }, 500);
+            setTimeout(function () { $('.footer').fadeIn(800); }, 500);
+        });
 
         //open dialog
         $('.aboutusbutton').click(function () {
@@ -289,347 +281,345 @@
         });
     });
 </script>
-
-<div class="bg">
-    <img src="index_bg.jpg">
-</div>
-
-<div class="logo">
-    <img src="index_logo.png">
-</div>
-
-<div class="headline">
-    <h1><a href="31.pdf">欢迎阅读新刊<br />《笔与刀》</a></h1>
-</div>
-
-<div class="footermask"></div>
-<div class="footer">
-    <span class="aboutusbutton"><i class="fa fa-users"></i> 关于我们</span>
-    <span> | </span>
-    <span class="socialmediabutton"><i class="fa fa-share-alt"></i> 社交媒体</span>
-    <span> | </span>
-    <span class="magazinesbutton"><i class="fa fa-book"></i> 往期杂志</span>
-    <span> | </span>
-    <span class="contactusbutton"><i class="fa fa-envelope"></i> 来信来稿</span>
-</div>
-
-<div class="dialogmask"></div>
-<div class="aboutusdialog dialog">
-    <div class="introduction">
-        ————杂志介绍————<br />
+<div id="fullpage">
+    <div class="logo">
+        <img src="index_logo.png" />
     </div>
-    <div class="textleft">
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这是求学于香港的我们所创办的电子杂志——《独立时代》！<br />
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;是我们的呐喊，独立在香港这个视野开阔的自由港口，倚靠着大陆，面迎着季风。是我们的灵魂，漂泊在中文大学这个异乡天地，感受着东西文化碰撞，思想受到撼动。<br />
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;于是我们思考，我们记录。但我们并不侈求匆匆改变所处时代，只是想让时代更多聆听到我们的声音——关注身边社会、描绘大千世界、记录点滴生活、表达见解感动、宣扬独立精神……贪婪的我们办了这个“杂”志。<br />
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;无论是心路散文还是时政评论，这里有着不同的人各自独立的思考与见解，期待与你一起分享这时代年轻人的所见、所思、所闻、所感。我们，也愿意在这个独立的时代，与你同行。<br />
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;让时代，听到你的声音！<br />
-        <br />
+
+    <div class="headline">
+        <h1><a href="http://mp.weixin.qq.com/s?__biz=MzA4MDIyMzkyOQ==&mid=402331671&idx=1&sn=e73c4ab16ec1606e6b21e57ab1781efb&3rd=MzA3MDU4NTYzMw==&scene=6#rd">第四届<br />微情书大赛<br />正式开始</a></h1>
     </div>
-    <div class="introduction">
-        ————成员介绍————<br />
+
+    <div class="footermask"></div>
+    <div class="footer">
+        <span class="aboutusbutton"><i class="fa fa-users"></i> 关于我们</span>
+        <span> | </span>
+        <span class="socialmediabutton"><i class="fa fa-share-alt"></i> 社交媒体</span>
+        <span> | </span>
+        <span class="magazinesbutton"><i class="fa fa-book"></i> 往期杂志</span>
+        <span> | </span>
+        <span class="contactusbutton"><i class="fa fa-envelope"></i> 来信来稿</span>
     </div>
-    <table>
-        <tr>
-            <td class="teamname">
-                第六届制作团体<br />六羡歌
-            </td>
-            <td class="teammember">
-                主编：怀海<br />
-                外务副主编：沈念卿
-                内务副主编：子艨<br />
-                宣传：墨瞳
-                文书/财政：Wendy<br />
-                文编：叶空 墨拦 四饼 寒宇 伟哥 中文系<br />
-                美编：HXI  月月鸟 君槐 贝贝 镜楼 安德烈<br />
-                技术：凉君 老鱼<br />
-            </td>
-        </tr>
-        <tr>
-            <td class="teammember">
-                主编：林霏
-                副主编：挡猿钺<br />
-                宣传：泽木
-                文书/财政：凝荷<br />
-                文编：花房八二 简 秦维彧 诶呦喂 景深 子衿<br />
-                美编：晓曦 蘑菇教主 K 梨尘 嘿嘿君 Kelly<br />
-                技术：Kris iWalker
-            </td>
-            <td class="teamname">
-                第五届制作团体<br />五味纸
-            </td>
-        </tr>
-        <tr>
-            <td class="teamname">
-                第四届制作团体<br />创肆季
-            </td>
-            <td class="teammember">
-                主编：辛吉斯
-                副主编：苍耳<br />
-                宣传：没头脑
-                文书/财政：杉木<br />
-                文编：穗德 尘狭 归墟 阰芷 川岳 Yingace<br />
-                美编：橘桔 卷毛 西瞳 京口人 超新星 6+6<br />
-                技术：morula Eda<br />
-            </td>
-        </tr>
-        <tr>
-            <td class="teammember">
-                主编：NA君
-                副主编：微La<br />
-                宣传：Apprentice
-                文书/财政：憓霖<br />
-                文编：道口慕枫 乔白山人 锁骨君 杳伊 墨拦<br />
-                美编：Eda 会飞的猫 来自未来的我<br />Nobelium Stomacake<br />
-                技术：Aquilaria<br />
-            </td>
-            <td class="teamname">
-                第三届制作团体<br />三叠纪
-            </td>
-        </tr>
-        <tr>
-            <td class="teamname">
-                第二届制作团体<br />二进志
-            </td>
-            <td class="teammember">
-                主编：目田君<br />
-                外务副主编：LJC
-                内务副主编：Ursula<br />
-                宣传：落烬枫
-                文书/财政：tsunami<br />
-                文编：Jacinta 魏晋 种子与 攸攸 未名<br />
-                美编：sly Stomacake 费贤 九九 hazard<br />
-                技术：小星星 Blast<br />
-            </td>
-        </tr>
-        <tr>
-            <td class="teammember">
-                主编：绿茶<br />
-                外务副主编：跳格子
-                内务副主编：johnle<br />
-                宣传：栗子
-                文书／财政：Calla<br />
-                文编：SUNNA 目田君 cinsue 三叶 Lorraine Vanya<br />
-                美编：Encore Miu kane Ale Rox<br />
-                技术：snow
-            </td>
-            <td class="teamname">
-                第一届制作团体<br />创刊号
-            </td>
-        </tr>
-    </table>
-</div>
-<div class="socialmediadialog dialog">
-    <div class="introduction">
-        ————社交媒体————<br />
-    </div>
-    <div class="desktop">
-        <div class="textcenter"><br />点击可进入对应社交媒体页面</div>
-        <table class="textcenter">
+
+    <div class="dialogmask"></div>
+
+    <div class="aboutusdialog dialog">
+        <div class="introduction">
+            ————杂志介绍————<br />
+        </div>
+        <div class="textleft">
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这是求学于香港的我们所创办的电子杂志——《独立时代》！<br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;是我们的呐喊，独立在香港这个视野开阔的自由港口，倚靠着大陆，面迎着季风。是我们的灵魂，漂泊在中文大学这个异乡天地，感受着东西文化碰撞，思想受到撼动。<br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;于是我们思考，我们记录。但我们并不侈求匆匆改变所处时代，只是想让时代更多聆听到我们的声音——关注身边社会、描绘大千世界、记录点滴生活、表达见解感动、宣扬独立精神……贪婪的我们办了这个“杂”志。<br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;无论是心路散文还是时政评论，这里有着不同的人各自独立的思考与见解，期待与你一起分享这时代年轻人的所见、所思、所闻、所感。我们，也愿意在这个独立的时代，与你同行。<br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;让时代，听到你的声音！<br />
+            <br />
+        </div>
+        <div class="introduction">
+            ————成员介绍————<br />
+        </div>
+        <table>
             <tr>
-                <td>
-                    <a href="http://weixin.sogou.com/weixin?query=%E7%8B%AC%E7%AB%8B%E6%97%B6%E4%BB%A3%E7%94%B5%E5%AD%90%E6%9D%82%E5%BF%97">
-                        <img src="index_wechat.png" />
-                        <div>（搜索oneera）</div>
-                    </a>
+                <td class="teamname">
+                    第六届制作团体<br />六羡歌
                 </td>
-                <td>
-                    <a href="http://www.weibo.com/oneera">
-                        <img src="index_weibo.png" />
-                        <div>（搜索独立时代电子杂志社）</div>
-                    </a>
+                <td class="teammember">
+                    主编：怀海<br />
+                    外务副主编：沈念卿
+                    内务副主编：子艨<br />
+                    宣传：墨瞳
+                    文书/财政：Wendy<br />
+                    文编：叶空 墨拦 四饼 寒宇 伟哥 中文系<br />
+                    美编：HXI  月月鸟 君槐 贝贝 镜楼 安德烈<br />
+                    技术：凉君 老鱼<br />
                 </td>
             </tr>
             <tr>
-                <td>
-                    <a href="http://www.facebook.com/164238836966896">
-                        <img src="index_fb.png" />
-                        <div>（搜索獨立時代）</div>
-                    </a>
+                <td class="teammember">
+                    主编：林霏
+                    副主编：挡猿钺<br />
+                    宣传：泽木
+                    文书/财政：凝荷<br />
+                    文编：花房八二 简 秦维彧 诶呦喂 景深 子衿<br />
+                    美编：晓曦 蘑菇教主 K 梨尘 嘿嘿君 Kelly<br />
+                    技术：Kris iWalker
                 </td>
-                <td>
-                    <a href="http://www.renren.com/328165481">
-                        <img src="index_renren.png" />
-                        <div>（搜索独立志）</div>
-                    </a>
+                <td class="teamname">
+                    第五届制作团体<br />五味纸
+                </td>
+            </tr>
+            <tr>
+                <td class="teamname">
+                    第四届制作团体<br />创肆季
+                </td>
+                <td class="teammember">
+                    主编：辛吉斯
+                    副主编：苍耳<br />
+                    宣传：没头脑
+                    文书/财政：杉木<br />
+                    文编：穗德 尘狭 归墟 阰芷 川岳 Yingace<br />
+                    美编：橘桔 卷毛 西瞳 京口人 超新星 6+6<br />
+                    技术：morula Eda<br />
+                </td>
+            </tr>
+            <tr>
+                <td class="teammember">
+                    主编：NA君
+                    副主编：微La<br />
+                    宣传：Apprentice
+                    文书/财政：憓霖<br />
+                    文编：道口慕枫 乔白山人 锁骨君 杳伊 墨拦<br />
+                    美编：Eda 会飞的猫 来自未来的我<br />Nobelium Stomacake<br />
+                    技术：Aquilaria<br />
+                </td>
+                <td class="teamname">
+                    第三届制作团体<br />三叠纪
+                </td>
+            </tr>
+            <tr>
+                <td class="teamname">
+                    第二届制作团体<br />二进志
+                </td>
+                <td class="teammember">
+                    主编：目田君<br />
+                    外务副主编：LJC
+                    内务副主编：Ursula<br />
+                    宣传：落烬枫
+                    文书/财政：tsunami<br />
+                    文编：Jacinta 魏晋 种子与 攸攸 未名<br />
+                    美编：sly Stomacake 费贤 九九 hazard<br />
+                    技术：小星星 Blast<br />
+                </td>
+            </tr>
+            <tr>
+                <td class="teammember">
+                    主编：绿茶<br />
+                    外务副主编：跳格子
+                    内务副主编：johnle<br />
+                    宣传：栗子
+                    文书／财政：Calla<br />
+                    文编：SUNNA 目田君 cinsue 三叶 Lorraine Vanya<br />
+                    美编：Encore Miu kane Ale Rox<br />
+                    技术：snow
+                </td>
+                <td class="teamname">
+                    第一届制作团体<br />创刊号
                 </td>
             </tr>
         </table>
     </div>
-    <div class="introduction mobile">
-        <br />
-        <img src="index_wechat.png" /><br />
-        <i class="fa fa-weixin"></i> 扫描二维码或搜索oneera<br /><br />
-        <a href="http://www.weibo.com/oneera">
-            <i class="fa fa-weibo"></i> 点击或搜索独立时代电子杂志社<br /><br />
-        </a>
-        <a href="http://www.facebook.com/164238836966896">
-            <i class="fa fa-facebook"></i> 点击或搜索獨立時代<br /><br />
-        </a>
-        <a href="http://www.renren.com/328165481">
-            <i class="fa fa-renren"></i> 点击或搜索独立志<br /><br />
-        </a>
+    <div class="socialmediadialog dialog">
+        <div class="introduction">
+            ————社交媒体————<br />
+        </div>
+        <div class="desktop">
+            <div class="textcenter"><br />点击可进入对应社交媒体页面</div>
+            <table class="textcenter">
+                <tr>
+                    <td>
+                        <a href="http://weixin.sogou.com/weixin?query=%E7%8B%AC%E7%AB%8B%E6%97%B6%E4%BB%A3%E7%94%B5%E5%AD%90%E6%9D%82%E5%BF%97">
+                            <img src="index_wechat.png" />
+                            <div>（搜索oneera）</div>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="http://www.weibo.com/oneera">
+                            <img src="index_weibo.png" />
+                            <div>（搜索独立时代电子杂志社）</div>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="http://www.facebook.com/164238836966896">
+                            <img src="index_fb.png" />
+                            <div>（搜索獨立時代）</div>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="http://www.renren.com/328165481">
+                            <img src="index_renren.png" />
+                            <div>（搜索独立志）</div>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="introduction mobile">
+            <br />
+            <img src="index_wechat.png" width="400" height="400"/><br />
+            <i class="fa fa-weixin"></i> 扫描二维码或搜索oneera<br /><br />
+            <a href="http://www.weibo.com/oneera">
+                <i class="fa fa-weibo"></i> 点击或搜索独立时代电子杂志社<br /><br />
+            </a>
+            <a href="http://www.facebook.com/164238836966896">
+                <i class="fa fa-facebook"></i> 点击或搜索獨立時代<br /><br />
+            </a>
+            <a href="http://www.renren.com/328165481">
+                <i class="fa fa-renren"></i> 点击或搜索独立志<br /><br />
+            </a>
+        </div>
     </div>
-</div>
-<div class="magazinesdialog dialog">
-    <div class="introduction">
-        ————往期杂志————<br />
+    <div class="magazinesdialog dialog">
+        <div class="introduction">
+            ————往期杂志————<br />
+        </div>
+        <table>
+            <tr>
+                <td class="textright">2016.2/31</td>
+                <td class="textleft">笔与刀(<a href="31.pdf">pdf</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2016.1/30</td>
+                <td class="textleft">食·色(<a href="30.pdf">pdf</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2015.10/29</td>
+                <td class="textleft">恋爱·观(<a href="29.pdf">pdf</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2015.3/28</td>
+                <td class="textleft">海湾下的暗涌(<a href="28.pdf">pdf</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2015.2/27</td>
+                <td class="textleft">游(<a href="27.pdf">pdf</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2015.1/26</td>
+                <td class="textleft">装(<a href="26.pdf">pdf</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2014.11/25</td>
+                <td class="textleft">过期(<a href="25.pdf">pdf</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2014.9/24</td>
+                <td class="textleft">暑期特刊(<a href="24.pdf">pdf</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2014.5/23</td>
+                <td class="textleft">奇葩(<a href="23.pdf">pdf</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2014.3/特刊</td>
+                <td class="textleft">十年(<a href="22-sp-23.pdf">pdf</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2014.3/22</td>
+                <td class="textleft">初恋(<a href="22.pdf">pdf</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2014.2/21</td>
+                <td class="textleft">归去来兮(<a href="21.pdf">pdf</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2013.11/20</td>
+                <td class="textleft">江湖(<a href="20.pdf">pdf</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2013.10/19</td>
+                <td class="textleft">X(<a href="19.pdf">pdf</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2013.8/18</td>
+                <td class="textleft">暑期合刊(<a href="18.pdf">pdf</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2013.4/17</td>
+                <td class="textleft">城(<a href="17.pdf">pdf</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2013.3/16</td>
+                <td class="textleft">(<a href="16.pdf">pdf</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2013.2/15</td>
+                <td class="textleft">(<a href="15.pdf">pdf</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2013.1/14</td>
+                <td class="textleft">(<a href="14.pdf">pdf</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2012.11/13</td>
+                <td class="textleft">(<a href="13.pdf">pdf</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2012.9/12</td>
+                <td class="textleft">(<a href="12.pdf">pdf</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2012.5/11</td>
+                <td class="textleft">(<a href="11.pdf">pdf</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2012.3/10</td>
+                <td class="textleft">怪兽(<a href="10.pdf">pdf</a>)(<a href="10.exe">exe</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2011.12/9</td>
+                <td class="textleft">漂(<a href="09.exe">exe</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2011.10/8</td>
+                <td class="textleft">安全感(<a href="08.exe">exe</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2011.8/7</td>
+                <td class="textleft">WEI时代(<a href="07.pdf">pdf</a>)(<a href="07.exe">exe</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2011.6/6</td>
+                <td class="textleft">光(<a href="06.exe">exe</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2011.4/5</td>
+                <td class="textleft">愚(<a href="05.exe">exe</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2011.2/4</td>
+                <td class="textleft">最初(<a href="04.exe">exe</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2010.12/3</td>
+                <td class="textleft">荒(<a href="03.exe">exe</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2010.10/2</td>
+                <td class="textleft">表情(<a href="02.exe">exe</a>)</td>
+            </tr>
+            <tr>
+                <td class="textright">2010.8/1</td>
+                <td class="textleft">独立时代(<a href="01.exe">exe</a>)</td>
+            </tr>
+        </table>
     </div>
-    <table>
-        <tr>
-            <td class="textright">2016.2/31</td>
-            <td class="textleft">笔与刀(<a href="31.pdf">pdf</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2016.1/30</td>
-            <td class="textleft">食·色(<a href="30.pdf">pdf</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2015.10/29</td>
-            <td class="textleft">恋爱·观(<a href="29.pdf">pdf</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2015.3/28</td>
-            <td class="textleft">海湾下的暗涌(<a href="28.pdf">pdf</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2015.2/27</td>
-            <td class="textleft">游(<a href="27.pdf">pdf</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2015.1/26</td>
-            <td class="textleft">装(<a href="26.pdf">pdf</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2014.11/25</td>
-            <td class="textleft">过期(<a href="25.pdf">pdf</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2014.9/24</td>
-            <td class="textleft">暑期特刊(<a href="24.pdf">pdf</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2014.5/23</td>
-            <td class="textleft">奇葩(<a href="23.pdf">pdf</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2014.3/特刊</td>
-            <td class="textleft">十年(<a href="22-sp-23.pdf">pdf</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2014.3/22</td>
-            <td class="textleft">初恋(<a href="22.pdf">pdf</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2014.2/21</td>
-            <td class="textleft">归去来兮(<a href="21.pdf">pdf</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2013.11/20</td>
-            <td class="textleft">江湖(<a href="20.pdf">pdf</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2013.10/19</td>
-            <td class="textleft">X(<a href="19.pdf">pdf</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2013.8/18</td>
-            <td class="textleft">暑期合刊(<a href="18.pdf">pdf</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2013.4/17</td>
-            <td class="textleft">城(<a href="17.pdf">pdf</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2013.3/16</td>
-            <td class="textleft">(<a href="16.pdf">pdf</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2013.2/15</td>
-            <td class="textleft">(<a href="15.pdf">pdf</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2013.1/14</td>
-            <td class="textleft">(<a href="14.pdf">pdf</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2012.11/13</td>
-            <td class="textleft">(<a href="13.pdf">pdf</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2012.9/12</td>
-            <td class="textleft">(<a href="12.pdf">pdf</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2012.5/11</td>
-            <td class="textleft">(<a href="11.pdf">pdf</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2012.3/10</td>
-            <td class="textleft">怪兽(<a href="10.pdf">pdf</a>)(<a href="10.exe">exe</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2011.12/9</td>
-            <td class="textleft">漂(<a href="09.exe">exe</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2011.10/8</td>
-            <td class="textleft">安全感(<a href="08.exe">exe</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2011.8/7</td>
-            <td class="textleft">WEI时代(<a href="07.pdf">pdf</a>)(<a href="07.exe">exe</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2011.6/6</td>
-            <td class="textleft">光(<a href="06.exe">exe</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2011.4/5</td>
-            <td class="textleft">愚(<a href="05.exe">exe</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2011.2/4</td>
-            <td class="textleft">最初(<a href="04.exe">exe</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2010.12/3</td>
-            <td class="textleft">荒(<a href="03.exe">exe</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2010.10/2</td>
-            <td class="textleft">表情(<a href="02.exe">exe</a>)</td>
-        </tr>
-        <tr>
-            <td class="textright">2010.8/1</td>
-            <td class="textleft">独立时代(<a href="01.exe">exe</a>)</td>
-        </tr>
-    </table>
-</div>
-<div class="contactusdialog dialog">
-    <div class="introduction">
-        ————联系我们————<br />
-    </div>
-    <div class="textleft">
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果对我们任何意见建议或查询，或是想加入我们，请发送邮件至<a href="mailto:info@one-era.com">info@one-era.com</a>。<br />
-        <br />
-    </div>
-    <div class="introduction">
-        ————投稿须知————<br />
-    </div>
-    <div class="textleft">
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请在投稿的邮件中提供以下信息：姓名、所在省市、就读院校、联系电话、常用邮箱。投稿需要经过编辑人员的筛选才能决定是否录用，我们会以邮件的形式通知被录用稿件的作者。本杂志旨在提供一个畅所欲言，展示创意的空间，所有投稿者不会从中得到任何稿费。你、我、他也许并不相识，但我们一同分享，一同品尝青春年代中的那些或美丽或感动或愤怒的瞬间。君子之交，淡淡如水；金帛珠玉，非吾所求。<br />
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文字投稿请发至文字投稿邮箱：<a href="mailto:text@one-era.com">text@one-era.com</a>。稿件开头应注明“时政”或“非时政”字样。艺眼板块字数请不少于300字。其它文章字数则不少于800字。尺牍板块投稿时随稿请详细注明摘稿来源，且我们会优先刊登附有摘者简单感悟文字的优秀作品。<br />
-        <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图片投稿请发至图片投稿邮箱：<a href="mailto:art@one-era.com">art@one-era.com</a>。发送时，请将图像作为附件发送。我们将优先取用符合每期主题的作品，但我们也欢迎与主题无关的其他优秀作品（请附上阐释主题的简单文本）。<br />
-        <br />
+    <div class="contactusdialog dialog">
+        <div class="introduction">
+            ————联系我们————<br />
+        </div>
+        <div class="textleft">
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果对我们任何意见建议或查询，或是想加入我们，请发送邮件至<a href="mailto:info@one-era.com">info@one-era.com</a>。<br />
+            <br />
+        </div>
+        <div class="introduction">
+            ————投稿须知————<br />
+        </div>
+        <div class="textleft">
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请在投稿的邮件中提供以下信息：姓名、所在省市、就读院校、联系电话、常用邮箱。投稿需要经过编辑人员的筛选才能决定是否录用，我们会以邮件的形式通知被录用稿件的作者。本杂志旨在提供一个畅所欲言，展示创意的空间，所有投稿者不会从中得到任何稿费。你、我、他也许并不相识，但我们一同分享，一同品尝青春年代中的那些或美丽或感动或愤怒的瞬间。君子之交，淡淡如水；金帛珠玉，非吾所求。<br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文字投稿请发至文字投稿邮箱：<a href="mailto:text@one-era.com">text@one-era.com</a>。稿件开头应注明“时政”或“非时政”字样。艺眼板块字数请不少于300字。其它文章字数则不少于800字。尺牍板块投稿时随稿请详细注明摘稿来源，且我们会优先刊登附有摘者简单感悟文字的优秀作品。<br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图片投稿请发至图片投稿邮箱：<a href="mailto:art@one-era.com">art@one-era.com</a>。发送时，请将图像作为附件发送。我们将优先取用符合每期主题的作品，但我们也欢迎与主题无关的其他优秀作品（请附上阐释主题的简单文本）。<br />
+            <br />
+        </div>
     </div>
 </div>
