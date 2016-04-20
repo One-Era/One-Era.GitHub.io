@@ -1,15 +1,17 @@
-﻿<!DOCTYPE html>
-<html>
-<!--
-Written by Crist Xiaotian Ye in January 2016.
-Special thanks to Sodagreen and Bauhinia Lee.
+﻿<!--
+    Copyright 2016 One-Era Press, CUHK. All rights reserved.
+    Written by Crist Xiaotian Ye in January 2016.
+    Special thanks to Sodagreen and Bauhinia.
 -->
+<!DOCTYPE html>
+<html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>独立时代</title>
-    <meta name="description" content="独立时代" />
+    <meta name="description" content="香港中文大学独立时代电子杂志社的官方网站。在这里找到我们的最新动态、往期杂志、联系方式。" />
     <meta name="author" content="独立时代中文电子杂志社" />
     <meta name="keywords" content="独立时代,中文杂志,电子杂志,中文电子杂志,香港,香港中文大学" />
+    <meta name="google-site-verification" content="Ez7FnsZo3XzliwqLpWcXzlvqjHyvgi3BEK69krPtor4" />
     <link href="https://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/jquery.perfect-scrollbar/0.6.10/css/perfect-scrollbar.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
@@ -22,9 +24,9 @@ Special thanks to Sodagreen and Bauhinia Lee.
             text-align: center;
             background-size: cover;
             background-image: url(bg.jpg);
-            -webkit-user-select: none; /* Chrome/Safari */
-            -moz-user-select: none; /* Firefox */
-            -ms-user-select: none; /* IE10+ */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
             display: none;
             font-family: "Microsoft YaHei Light","Microsoft YaHei",sans-serif;
         }
@@ -119,40 +121,60 @@ Special thanks to Sodagreen and Bauhinia Lee.
                 font-size: 4vmin;
             }
 
-            .dialog .text {
+            .dialog .textleft {
                 text-align: left;
                 font-size: 2.5vmin;
-                line-height: 150%;
+                line-height: 180%;
             }
 
-            .dialog table {
+            .dialog .textcenter {
+                text-align: center;
+                font-size: 2.5vmin;
+                line-height: 180%;
+            }
+
+            .dialog .textright {
+                text-align: right;
+                font-size: 2.5vmin;
+                line-height: 180%;
+            }
+
+
+
+        .aboutusdialog {
+        }
+
+            .aboutusdialog table {
                 margin: auto;
             }
 
-            .dialog .teamname {
+            .aboutusdialog td {
+                width: 50%;
+            }
+
+            .aboutusdialog .teamname {
                 font-size: 4vmin;
                 line-height: 150%;
             }
 
-            .dialog .teammember {
-                font-size: 2vmin;
+            .aboutusdialog .teammember {
+                font-size: 1.8vmin;
                 line-height: 200%;
             }
 
         .socialmediadialog {
-            margin-left: 10vw;
-            margin-right: 10vw;
-            width: 80vw;
+            overflow-y: visible;
         }
 
-            .socialmediadialog .textcenter {
+            .socialmediadialog table {
+                margin: auto;
                 text-align: center;
-                font-size: 2.5vmin;
-                line-height: 150%;
+                overflow-y: visible;
             }
 
             .socialmediadialog td {
-                padding: 3vw;
+                padding: 1vw;
+                width: 50%;
             }
 
             .socialmediadialog .mobile {
@@ -162,6 +184,18 @@ Special thanks to Sodagreen and Bauhinia Lee.
             .socialmediadialog img {
                 width: 15vmin;
                 height: 15vmin;
+            }
+
+        .magazinesdialog {
+        }
+
+            .magazinesdialog table {
+                margin: auto;
+            }
+
+            .magazinesdialog td {
+                width: 33.3333%;
+                padding: 0.5vw;
             }
 
         /*responsive layout for phones*/
@@ -178,13 +212,23 @@ Special thanks to Sodagreen and Bauhinia Lee.
                 max-height: 80vh;
             }
 
-                .dialog .text {
+                .dialog .textleft {
                     font-size: 3.5vmin;
-                    line-height: 180%;
+                    line-height: 200%;
+                }
+
+                .dialog .textcenter {
+                    font-size: 3.5vmin;
+                    line-height: 200%;
+                }
+
+                .dialog .textright {
+                    font-size: 3.5vmin;
+                    line-height: 200%;
                 }
 
             .socialmediadialog {
-                top: 10vh;
+                top: 15vh;
             }
 
                 .socialmediadialog .mobile {
@@ -256,7 +300,7 @@ Special thanks to Sodagreen and Bauhinia Lee.
         </div>
 
         <div class="headline">
-            <h1><a href="https://one-era.com/download/v30.pdf">新年刊《食·色》已经上线<br>欢迎下载阅读</a></h1>
+            <h1><a href="/magazines/one-era-30.pdf">新年刊《食·色》已经上线<br>欢迎下载阅读</a></h1>
         </div>
 
         <div class="footermask"></div>
@@ -276,7 +320,7 @@ Special thanks to Sodagreen and Bauhinia Lee.
             <div class="introduction">
                 ————杂志介绍————<br />
             </div>
-            <div class="text">
+            <div class="textleft">
                 <br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这是求学于香港的我们所创办的电子杂志——《独立时代》！<br />
                 <br />
@@ -331,7 +375,7 @@ Special thanks to Sodagreen and Bauhinia Lee.
                         宣传：Apprentice
                         文书/财政：憓霖<br />
                         文编：道口慕枫 乔白山人 锁骨君 杳伊 墨拦<br />
-                        美编：Eda 会飞的猫 来自未来的我 Nobelium Stomacake<br />
+                        美编：Eda 会飞的猫 来自未来的我<br />Nobelium Stomacake<br />
                         技术：Aquilaria<br />
                     </td>
                 </tr>
@@ -372,50 +416,50 @@ Special thanks to Sodagreen and Bauhinia Lee.
                 ————社交媒体————<br />
             </div>
             <div class="desktop">
-                <div class="textcenter"><br />点击文字或二维码可以直接进入对应社交媒体页面<br /></div>
-                <table class="introduction">
+                <div class="textcenter"><br />点击可进入对应社交媒体页面</div>
+                <table class="textcenter">
                     <tr>
                         <td>
                             <a href="http://weixin.sogou.com/weixin?query=%E7%8B%AC%E7%AB%8B%E6%97%B6%E4%BB%A3%E7%94%B5%E5%AD%90%E6%9D%82%E5%BF%97">
-                                <i class="fa fa-weixin"></i> 微信<br /><br />
                                 <img src="qr_wechat.png" />
+                                <div>（搜索oneera）</div>
                             </a>
                         </td>
                         <td>
                             <a href="http://www.weibo.com/oneera">
-                                <i class="fa fa-weibo"></i> 微博<br /><br />
                                 <img src="qr_weibo.png" />
+                                <div>（搜索独立时代电子杂志社）</div>
                             </a>
                         </td>
+                    </tr>
+                    <tr>
                         <td>
                             <a href="http://www.facebook.com/164238836966896">
-                                <i class="fa fa-facebook"></i> Facebook<br /><br />
                                 <img src="qr_fb.png" />
+                                <div>（搜索獨立時代）</div>
                             </a>
                         </td>
                         <td>
                             <a href="http://www.renren.com/328165481">
-                                <i class="fa fa-renren"></i> 人人<br /><br />
                                 <img src="qr_renren.png" />
+                                <div>（搜索独立志）</div>
                             </a>
+                        </td>
                     </tr>
                 </table>
             </div>
             <div class="introduction mobile">
-                <div class="textcenter">微信扫描二维码关注，其余点击链接。</div>
                 <br />
-                <a href="http://weixin.sogou.com/weixin?query=%E7%8B%AC%E7%AB%8B%E6%97%B6%E4%BB%A3%E7%94%B5%E5%AD%90%E6%9D%82%E5%BF%97">
-                    <i class="fa fa-weixin"></i> 微信<br />
-                    <img src="qr_wechat.png" /><br /><br />
-                </a>
+                <img style="-webkit-user-select:all;-moz-user-select:all;-ms-user-select:all;" src="qr_wechat.png" /><br />
+                <i class="fa fa-weixin"></i> 扫描二维码或搜索oneera<br /><br />
                 <a href="http://www.weibo.com/oneera">
-                    <i class="fa fa-weibo"></i> 微博<br /><br />
+                    <i class="fa fa-weibo"></i> 点击或搜索独立时代电子杂志社<br /><br />
                 </a>
                 <a href="http://www.facebook.com/164238836966896">
-                    <i class="fa fa-facebook"></i> Facebook<br /><br />
+                    <i class="fa fa-facebook"></i> 点击或搜索獨立時代<br /><br />
                 </a>
                 <a href="http://www.renren.com/328165481">
-                    <i class="fa fa-renren"></i> 人人<br /><br />
+                    <i class="fa fa-renren"></i> 点击或搜索独立志<br /><br />
                 </a>
             </div>
         </div>
@@ -423,53 +467,190 @@ Special thanks to Sodagreen and Bauhinia Lee.
             <div class="introduction">
                 ————往期杂志————<br />
             </div>
-            <div class="text">
-                第三十期|201|食·色<br /><br />
-                第二十九期|201|恋爱·观<br /><br />
-                第二十八期|201|海湾下的暗涌<br /><br />
-                第二十七期|201|游<br /><br />
-                第二十六期|201|装<br /><br />
-                第二十五期|201|过期<br /><br />
-                第二十四期|201|暑期特刊<br /><br />
-                第二十三期|201|奇葩<br /><br />
-                特刊|201|十年<br /><br />
-                第二十二期|201|初恋<br /><br />
-                第二十一期|201|归去来兮<br /><br />
-                第二十期|201|江湖<br /><br />
-                第十九期|2013.10|X<br /><br />
-                第十八期<br /><br />
-                第十七期|2013.4|城<br /><br />
-                第十六期|2013.3<br /><br />
-                第十五期|2013.2<br /><br />
-                第十四期|2013.1<br /><br />
-                第十三期？<br /><br />
-                第十二期？<br /><br />
-                第十一期|2012.5<br /><br />
-                第十期|2012.3|怪兽<br /><br />
-                第九期|201？？|漂<br /><br />
-                第八期|2011.10|安全感<br /><br />
-                第七期|2011.8|WEI时代<br /><br />
-                第六期|2011.6|光<br /><br />
-                第五期|2011.4|愚<br /><br />
-                第四期|2011.2|最初<br /><br />
-                第三期|2010.12|荒<br /><br />
-                第二期|2010.10|表情<br /><br />
-                第一期|2010.8|独立时代<br /><br />
-            </div>
+
+            <table>
+                <tr>
+                    <td class="textright">
+                        2016.1
+                    </td>
+                    <td class="textcenter">
+                        第三十期
+                    </td>
+                    <td class="textleft">
+                        食·色(<a href="/magazines/one-era-30.pdf">pdf</a>)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="textright">
+                        2015.10
+                    </td>
+                    <td class="textcenter">
+                        第二十九期
+                    </td>
+                    <td class="textleft">
+                        恋爱·观(<a href="/magazines/one-era-29.pdf">pdf</a>)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="textright">2015.3</td>
+                    <td class="textcenter">第二十八期</td>
+                    <td class="textleft">海湾下的暗涌(<a href="/magazines/one-era-28.pdf">pdf</a>)</td>
+                </tr>
+                <tr>
+                    <td class="textright">2015.2</td>
+                    <td class="textcenter">第二十七期</td>
+                    <td class="textleft">游(<a href="/magazines/one-era-27.pdf">pdf</a>)</td>
+                </tr>
+                <tr>
+                    <td class="textright">2015.1</td>
+                    <td class="textcenter">第二十六期</td>
+                    <td class="textleft">装(<a href="/magazines/one-era-26.pdf">pdf</a>)</td>
+                </tr>
+                <tr>
+                    <td class="textright">2014.11</td>
+                    <td class="textcenter">第二十五期</td>
+                    <td class="textleft">过期(<a href="/magazines/one-era-25.pdf">pdf</a>)</td>
+                </tr>
+                <tr>
+                    <td class="textright">2014.9</td>
+                    <td class="textcenter">第二十四期</td>
+                    <td class="textleft">暑期特刊(<a href="/magazines/one-era-24.pdf">pdf</a>)</td>
+                </tr>
+                <tr>
+                    <td class="textright">2014.5</td>
+                    <td class="textcenter">第二十三期</td>
+                    <td class="textleft">奇葩(<a href="/magazines/one-era-23.pdf">pdf</a>)</td>
+                </tr>
+                <tr>
+                    <td class="textright">2014.3</td>
+                    <td class="textcenter">特刊</td>
+                    <td class="textleft">十年(<a href="/magazines/one-era-sp.pdf">pdf</a>)</td>
+                </tr>
+                <tr>
+                    <td class="textright">2014.3</td>
+                    <td class="textcenter">第二十二期</td>
+                    <td class="textleft">初恋(<a href="/magazines/one-era-22.pdf">pdf</a>)</td>
+                </tr>
+                <tr>
+                    <td class="textright">2014.2</td>
+                    <td class="textcenter">第二十一期</td>
+                    <td class="textleft">归去来兮(<a href="/magazines/one-era-21.pdf">pdf</a>)</td>
+                </tr>
+                <tr>
+                    <td class="textright">2013.11</td>
+                    <td class="textcenter">第二十期</td>
+                    <td class="textleft">江湖(<a href="/magazines/one-era-20.pdf">pdf</a>)</td>
+                </tr>
+                <tr>
+                    <td class="textright">2013.10</td>
+                    <td class="textcenter">第十九期</td>
+                    <td class="textleft">X(<a href="/magazines/one-era-19.pdf">pdf</a>)</td>
+                </tr>
+                <tr>
+                    <td class="textright">2013.8</td>
+                    <td class="textcenter">第十八期</td>
+                    <td class="textleft">暑期合刊(<a href="/magazines/one-era-18.pdf">pdf</a>)</td>
+                </tr>
+                <tr>
+                    <td class="textright">2013.8</td>
+                    <td class="textcenter">第十七期</td>
+                    <td class="textleft">城(<a href="/magazines/one-era-17.pdf">pdf</a>)</td>
+                </tr>
+                <tr>
+                    <td class="textright">2013.3</td>
+                    <td class="textcenter">第十六期</td>
+                    <td class="textleft">(<a href="/magazines/one-era-16.pdf">pdf</a>)</td>
+                </tr>
+                <tr>
+                    <td class="textright">2013.2</td>
+                    <td class="textcenter">第十五期</td>
+                    <td class="textleft">(<a href="/magazines/one-era-15.pdf">pdf</a>)</td>
+                </tr>
+                <tr>
+                    <td class="textright">2013.1</td>
+                    <td class="textcenter">第十四期</td>
+                    <td class="textleft">(<a href="/magazines/one-era-14.pdf">pdf</a>)</td>
+                </tr>
+                <tr>
+                    <td class="textright">2012.11</td>
+                    <td class="textcenter">第十三期</td>
+                    <td class="textleft">(<a href="/magazines/one-era-13.pdf">pdf</a>)</td>
+                </tr>
+                <tr>
+                    <td class="textright">2012.9</td>
+                    <td class="textcenter">第十二期</td>
+                    <td class="textleft">(<a href="/magazines/one-era-12.pdf">pdf</a>)</td>
+                </tr>
+                <tr>
+                    <td class="textright">2012.5</td>
+                    <td class="textcenter">第十一期</td>
+                    <td class="textleft">(<a href="/magazines/one-era-11.pdf">pdf</a>)</td>
+                </tr>
+                <tr>
+                    <td class="textright">2012.3</td>
+                    <td class="textcenter">第十期</td>
+                    <td class="textleft">怪兽(<a href="/magazines/one-era-10.pdf">pdf</a>)(<a href="/magazines/one-era-10.exe">exe</a>)</td>
+                </tr>
+                <tr>
+                    <td class="textright">2011.12</td>
+                    <td class="textcenter">第九期</td>
+                    <td class="textleft">漂(<a href="/magazines/one-era-09.exe">exe</a>)</td>
+                </tr>
+                <tr>
+                    <td class="textright">2011.10</td>
+                    <td class="textcenter">第八期</td>
+                    <td class="textleft">安全感(<a href="/magazines/one-era-08.exe">exe</a>)</td>
+                </tr>
+                <tr>
+                    <td class="textright">2011.8</td>
+                    <td class="textcenter">第七期</td>
+                    <td class="textleft">WEI时代(<a href="/magazines/one-era-07.pdf">pdf</a>)(<a href="/magazines/one-era-07.exe">exe</a>)</td>
+                </tr>
+                <tr>
+                    <td class="textright">2011.6</td>
+                    <td class="textcenter">第六期</td>
+                    <td class="textleft">光(<a href="/magazines/one-era-06.exe">exe</a>)</td>
+                </tr>
+                <tr>
+                    <td class="textright">2011.4</td>
+                    <td class="textcenter">第五期</td>
+                    <td class="textleft">愚(<a href="/magazines/one-era-05.exe">exe</a>)</td>
+                </tr>
+                <tr>
+                    <td class="textright">2011.2</td>
+                    <td class="textcenter">第四期</td>
+                    <td class="textleft">最初(<a href="/magazines/one-era-04.exe">exe</a>)</td>
+                </tr>
+                <tr>
+                    <td class="textright">2010.12</td>
+                    <td class="textcenter">第三期</td>
+                    <td class="textleft">荒(<a href="/magazines/one-era-03.exe">exe</a>)</td>
+                </tr>
+                <tr>
+                    <td class="textright">2010.10</td>
+                    <td class="textcenter">第二期</td>
+                    <td class="textleft">表情(<a href="/magazines/one-era-02.exe">exe</a>)</td>
+                </tr>
+                <tr>
+                    <td class="textright">2010.8</td>
+                    <td class="textcenter">第一期</td>
+                    <td class="textleft">独立时代(<a href="/magazines/one-era-01.exe">exe</a>)</td>
+                </tr>
+            </table>
         </div>
         <div class="contactusdialog dialog">
             <div class="introduction">
                 ————联系我们————<br />
             </div>
-            <div class="text">
+            <div class="textleft">
                 <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如有对我们任何意见建议或查询，或者是想加入我们，请发送邮件至<a href="mailto:info@one-era.com">info@one-era.com</a>。<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果对我们任何意见建议或查询，或是想加入我们，请发送邮件至<a href="mailto:info@one-era.com">info@one-era.com</a>。<br />
                 <br />
             </div>
             <div class="introduction">
                 ————投稿须知————<br />
             </div>
-            <div class="text">
+            <div class="textleft">
                 <br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请在投稿的邮件中提供以下信息：姓名、所在省市、就读院校、联系电话、常用邮箱。投稿需要经过编辑人员的筛选才能决定是否录用，我们会以邮件的形式通知被录用稿件的作者。本杂志旨在提供一个畅所欲言，展示创意的空间，所有投稿者不会从中得到任何稿费。你、我、他也许并不相识，但我们一同分享，一同品尝青春年代中的那些或美丽或感动或愤怒的瞬间。君子之交，淡淡如水；金帛珠玉，非吾所求。<br />
                 <br />
