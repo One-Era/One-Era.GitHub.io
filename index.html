@@ -1,6 +1,9 @@
 ﻿<!DOCTYPE html>
 <html>
-<!--© 2016 Crist Xiaotian Ye. Special thanks to Sodagreen and Bauhinia Lee.-->
+<!--
+Written by Crist Xiaotian Ye.
+Special thanks to Sodagreen and Bauhinia Lee.
+-->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>独立时代</title>
@@ -22,8 +25,10 @@
             animation-fill-mode: forwards;
             text-align: center;
             background-size: cover;
-            background-image: url(index/bg.jpg);
-            padding: 0 0 0 0;
+            background-image: url(bg.jpg);
+            -webkit-user-select: none; /* Chrome/Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+ */
         }
 
         .logo {
@@ -65,15 +70,14 @@
         .logo {
             width: 100%;
             position: absolute;
-            pointer-events: none;
             top: 15vmin;
             height: 40vmin;
-            -webkit-filter: drop-shadow(0px 0px 10px #000000);
-            filter: drop-shadow(0px 0px 10px #000);
         }
 
         .logopng {
             height: 100%;
+            filter: drop-shadow(0px 0px 10px #000);
+            -webkit-filter: drop-shadow(0px 0px 10px #000000);
         }
 
         .headline {
@@ -88,9 +92,6 @@
                 margin: 0;
                 padding: 0;
                 text-shadow: 0px 0px 20px #000;
-                -webkit-user-select: none; /* Chrome/Safari */
-                -moz-user-select: none; /* Firefox */
-                -ms-user-select: none; /* IE10+ */
                 text-decoration: none;
             }
 
@@ -100,21 +101,17 @@
             width: 100%;
             clear: both;
             color: #fff;
-            -webkit-user-select: none; /* Chrome/Safari */
-            -moz-user-select: none; /* Firefox */
-            -ms-user-select: none; /* IE10+ */
         }
 
         .dilannowrap {
             white-space: nowrap;
-            text-shadow: 0px 0px 15px #000;
+            text-shadow: 0px 0px 20px #000;
         }
         /*normal css ends*/
 
         /*responsive layout*/
         /*for potrtait phones*/
         @media only screen and (max-device-width: 736px) and (orientation : portrait) {
-
             .headline {
                 top: 100vmin;
             }
@@ -128,27 +125,23 @@
                 opacity: 0;
             }
         }
-
         /*for landscape phones*/
         @media only screen and (max-device-width: 736px) and (orientation : landscape) {
-
             .headline {
                 top: 60vmin;
             }
 
             .dilan {
                 bottom: 2vmin;
-                font-size: 4vmin;
+                font-size: 3.5vmin;
             }
 
             .phonehidden {
                 opacity: 1;
             }
         }
-
         /*for small windows on tablets and computers*/
         @media only screen and (min-device-width: 737px) and (max-width:699px) {
-
             .headline {
                 top: 60vmin;
             }
@@ -162,17 +155,19 @@
                 opacity: 0;
             }
         }
-
         /*for large windows on htablets and computers*/
         @media only screen and (min-device-width: 737px) and (min-width:700px) {
-
             .headline {
                 top: 60vmin;
             }
 
             .dilan {
                 bottom: 3vmin;
-                font-size: 2vmin;
+                font-size: 2.5vmin;
+            }
+
+            .phonehidden {
+                opacity: 1;
             }
         }
         /*responsive layout ends*/
@@ -190,7 +185,7 @@
 <body style="margin:0">
     <div id="fullpage">
         <div class="logo">
-            <img class="logopng" src="index/logo.png" unselectable="on" alt="" />
+            <img class="logopng" src="logo.png" unselectable="on" alt="" />
         </div>
 
         <div class="headline">
