@@ -1,316 +1,326 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <!--© 2016 Crist Xiaotian Ye. Special thanks to Sodagreen and Bauhinia Lee.-->
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>独立时代</title>
-	<meta name="description" content="独立时代" />
-	<meta name="author" content="独立时代中文电子杂志社" />
-	<meta name="keywords" content="独立时代,中文杂志,电子杂志,中文电子杂志,香港,香港中文大学" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>独立时代</title>
+    <meta name="description" content="独立时代" />
+    <meta name="author" content="独立时代中文电子杂志社" />
+    <meta name="keywords" content="独立时代,中文杂志,电子杂志,中文电子杂志,香港,香港中文大学" />
+    <link href="https://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://cdn.bootcss.com/fullPage.js/2.7.6/jquery.fullPage.js"></script>
 
-	<!--<link rel="stylesheet" href="jquery.fullPage.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/jquery.fullpage/2.5.9/jquery.fullPage.min.js"></script>-->
+    <link rel="stylesheet" href="index/normalize.css" />
+    <link rel="stylesheet" href="index/demo.css" />
+    <link rel="stylesheet" href="index/dialog.css" />
+    <link rel="stylesheet" href="index/dialog-annie.css" />
+    <script src="index/modernizr.custom.js"></script>
+    <script src="index/classie.js"></script>
+    <script src="index/dialogFx.js"></script>
 
-	<link href="https://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-	<script src="https://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
-	<script src="https://cdn.bootcss.com/jqueryui/1.11.4/jquery-ui.min.js"></script>
-	<script src="https://cdn.bootcss.com/fullPage.js/2.7.6/jquery.fullPage.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#fullpage').fullpage({
+                verticalCentered: false
+            });
+        });
+    </script>
 
-	<link rel="stylesheet" href="index/normalize.css" />
-	<link rel="stylesheet" href="index/demo.css" />
-	<link rel="stylesheet" href="index/dialog.css" />
-	<link rel="stylesheet" href="index/dialog-annie.css" />
-	<script src="index/modernizr.custom.js"></script>
-	<script src="index/classie.js"></script>
-	<script src="index/dialogFx.js"></script>
-
-	<script>
-		$(document).ready(function () {
-			$('#fullpage').fullpage({
-				verticalCentered: false
-			});
-		});
-	</script>
-
-	<script>
-		$(document).ready(function () {
-			var dlgtrigger = document.querySelector('[data-dialog1]'),
+    <script>
+        $(document).ready(function () {
+            var dlgtrigger = document.querySelector('[data-dialog1]'),
 			somedialog = document.getElementById(dlgtrigger.getAttribute('data-dialog1')),
 			dlg = new DialogFx(somedialog);
-			dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
-		});
-	</script>
+            dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
+        });
+    </script>
 
-	<script>
-		$(document).ready(function () {
-			var dlgtrigger = document.querySelector('[data-dialog2]'),
+    <script>
+        $(document).ready(function () {
+            var dlgtrigger = document.querySelector('[data-dialog2]'),
 			somedialog = document.getElementById(dlgtrigger.getAttribute('data-dialog2')),
 			dlg = new DialogFx(somedialog);
-			dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
-		});
-	</script>
+            dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
+        });
+    </script>
 
-	<script>
-		$(document).ready(function () {
-			var dlgtrigger = document.querySelector('[data-dialog3]'),
+    <script>
+        $(document).ready(function () {
+            var dlgtrigger = document.querySelector('[data-dialog3]'),
 			somedialog = document.getElementById(dlgtrigger.getAttribute('data-dialog3')),
 			dlg = new DialogFx(somedialog);
-			dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
-		});
-	</script>
+            dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
+        });
+    </script>
 
-	<script>
-		$(document).ready(function () {
-			var dlgtrigger = document.querySelector('[data-dialog4]'),
+    <script>
+        $(document).ready(function () {
+            var dlgtrigger = document.querySelector('[data-dialog4]'),
 			somedialog = document.getElementById(dlgtrigger.getAttribute('data-dialog4')),
 			dlg = new DialogFx(somedialog);
-			dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
-		});
-	</script>
+            dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
+        });
+    </script>
 
-	<script>
-		$(document).ready(function () {
-			var dlgtrigger = document.querySelector('[data-dialog5]'),
+    <script>
+        $(document).ready(function () {
+            var dlgtrigger = document.querySelector('[data-dialog5]'),
 			somedialog = document.getElementById(dlgtrigger.getAttribute('data-dialog5')),
 			dlg = new DialogFx(somedialog);
-			dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
-		});
-	</script>
+            dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
+        });
+    </script>
 
-	<script>
-		$(document).ready(function () {
-			var dlgtrigger = document.querySelector('[data-dialog6]'),
+    <script>
+        $(document).ready(function () {
+            var dlgtrigger = document.querySelector('[data-dialog6]'),
 			somedialog = document.getElementById(dlgtrigger.getAttribute('data-dialog6')),
 			dlg = new DialogFx(somedialog);
-			dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
-		});
-	</script>
+            dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
+        });
+    </script>
 
 
 
-	<style>
-		#fullpage {
-			opacity: 0;
-			animation: fadein;
-			animation-duration: 1.5s;
-			animation-delay: 0s;
-			animation-fill-mode: forwards;
-		}
+    <style>
+        #fullpage {
+            opacity: 0;
+            animation: fadein;
+            animation-duration: 1.5s;
+            animation-delay: 0s;
+            animation-fill-mode: forwards;
+        }
 
-		.logo {
-			opacity: 0;
-			animation: fadein;
-			animation-duration: 1s;
-			animation-delay: 0.6s;
-			animation-fill-mode: forwards;
-		}
+        .logo {
+            opacity: 0;
+            animation: fadein;
+            animation-duration: 1s;
+            animation-delay: 0.6s;
+            animation-fill-mode: forwards;
+        }
 
-		.headline {
-			opacity: 0;
-			animation: fadein;
-			animation-duration: 1s;
-			animation-delay: 1s;
-			animation-fill-mode: forwards;
-		}
+        .headline {
+            opacity: 0;
+            animation: fadein;
+            animation-duration: 1s;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+        }
 
-		.dilan {
-			opacity: 0;
-			animation: fadein;
-			animation-duration: 1s;
-			animation-delay: 1.4s;
-			animation-fill-mode: forwards;
-		}
+        .dilan {
+            opacity: 0;
+            animation: fadein;
+            animation-duration: 1s;
+            animation-delay: 1.4s;
+            animation-fill-mode: forwards;
+        }
 
-		@keyframes fadein {
-			from {
-				opacity: 0;
-			}
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
 
-			to {
-				opacity: 1;
-			}
-		}
-
-
-		.section {
-			text-align: center;
-			background-size: cover;
-		}
-
-		#section0 {
-			background-image: url(index/bg.jpg);
-			padding: 8% 0 0 0;
-		}
-
-		.dialog__content {
-			color: #000;
-		}
-
-		.logo {
-			width: 100%;
-			position: absolute;
-			pointer-events: none;
-			top: 15vmin;
-			height: 40vmin;
-		}
-
-		.logopng {
-			height: 100%;
-			-webkit-filter: drop-shadow(0px 0px 10px #000);
-			filter: drop-shadow(0px 0px 10px #000);
-		}
-
-		.headline {
-			width: 100%;
-			position: absolute;
-		}
-
-			.headline a {
-				font-size: 5vmin;
-				font-family: "Microsoft YaHei Light","Microsoft YaHei",sans-serif;
-				color: #fff;
-				margin: 0;
-				padding: 0;
-				text-shadow: 0px 0px 20px #000;
-				-webkit-user-select: none; /* Chrome/Safari */
-				-moz-user-select: none; /* Firefox */
-				-ms-user-select: none; /* IE10+ */
-			}
+            to {
+                opacity: 1;
+            }
+        }
 
 
+        .section {
+            text-align: center;
+            background-size: cover;
+        }
 
-		.dilan {
-			position: absolute;
-			font-family: "Microsoft YaHei Light","Microsoft YaHei",sans-serif;
-			width: 100%;
-			clear: both;
-			color: #fff;
-			-webkit-user-select: none; /* Chrome/Safari */
-			-moz-user-select: none; /* Firefox */
-			-ms-user-select: none; /* IE10+ */
-		}
+        #section0 {
+            background-image: url(index/bg.jpg);
+            padding: 8% 0 0 0;
+        }
+
+        .dialog__content {
+            color: #000;
+        }
+
+        .logo {
+            width: 100%;
+            position: absolute;
+            pointer-events: none;
+            top: 15vmin;
+            height: 40vmin;
+            -webkit-filter: drop-shadow(0px 0px 10px #000000);
+            filter: drop-shadow(0px 0px 10px #000);
+        }
+
+        .logopng {
+            height: 100%;
+        }
+
+        .headline {
+            width: 100%;
+            position: absolute;
+        }
+
+            .headline a {
+                font-size: 5vmin;
+                font-family: "Microsoft YaHei Light","Microsoft YaHei",sans-serif;
+                color: #fff;
+                margin: 0;
+                padding: 0;
+                text-shadow: 0px 0px 20px #000;
+                -webkit-user-select: none; /* Chrome/Safari */
+                -moz-user-select: none; /* Firefox */
+                -ms-user-select: none; /* IE10+ */
+            }
 
 
-		.dilannowrap {
-			white-space: nowrap;
-			text-shadow: 0px 0px 15px #000;
-		}
 
-		/*responsive layout*/
+        .dilan {
+            position: absolute;
+            font-family: "Microsoft YaHei Light","Microsoft YaHei",sans-serif;
+            width: 100%;
+            clear: both;
+            color: #fff;
+            -webkit-user-select: none; /* Chrome/Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+ */
+        }
 
-		/*for phones*/
-		@media only screen and (max-device-width: 736px) {
 
-			.headline {
-				top: 100vmin;
-			}
+        .dilannowrap {
+            white-space: nowrap;
+            text-shadow: 0px 0px 15px #000;
+        }
 
-			.dilan {
-				bottom: 2vmin;
-				font-size: 4vmin;
-			}
+        /*responsive layout*/
 
-			.phonehidden {
-				opacity: 0;
-			}
-		}
+        /*for potrtait phones*/
+        @media only screen and (max-device-width: 736px) and (orientation : portrait) {
 
-		/*for small windows on tablets and computers*/
-		@media only screen and (min-device-width: 737px) and (max-width:699px) {
+            .headline {
+                top: 100vmin;
+            }
 
-			.headline {
-				top: 60vmin;
-			}
+            .dilan {
+                bottom: 2vmin;
+                font-size: 4vmin;
+            }
 
-			.dilan {
-				bottom: 2vmin;
-				font-size: 4vmin;
-			}
+            .phonehidden {
+                opacity: 0;
+            }
+        }
 
-			.phonehidden {
-				opacity: 0;
-			}
-		}
+        /*for landscape phones*/
+        @media only screen and (max-device-width: 736px) and (orientation : landscape) {
 
-		/*for large windows on htablets and computers*/
-		@media only screen and (min-device-width: 737px) and (min-width:700px) {
+            .headline {
+                top: 60vmin;
+            }
 
-			.headline {
-				top: 60vmin;
-			}
+            .dilan {
+                bottom: 2vmin;
+                font-size: 4vmin;
+            }
 
-			.dilan {
-				bottom: 5vmin;
-				font-size: 2vmin;
-			}
-		}
-	</style>
+            .phonehidden {
+                opacity: 1;
+            }
+        }
+
+        /*for small windows on tablets and computers*/
+        @media only screen and (min-device-width: 737px) and (max-width:699px) {
+
+            .headline {
+                top: 60vmin;
+            }
+
+            .dilan {
+                bottom: 2vmin;
+                font-size: 4vmin;
+            }
+
+            .phonehidden {
+                opacity: 0;
+            }
+        }
+
+        /*for large windows on htablets and computers*/
+        @media only screen and (min-device-width: 737px) and (min-width:700px) {
+
+            .headline {
+                top: 60vmin;
+            }
+
+            .dilan {
+                bottom: 3vmin;
+                font-size: 2vmin;
+            }
+        }
+    </style>
 
 </head>
 <body>
-	<div id="fullpage">
-		<div class="section" id="section0">
+    <div id="fullpage">
+        <div class="section" id="section0">
 
-			<div class="logo">
-				<img class="logopng" src="index/logo.png" unselectable="on" alt="" />
-			</div>
-
-
-			<div class="headline">
-				<h1><a class="headlineword" href="https://one-era.com/download/v30.pdf">新年刊《食·色》已经上线<br>欢迎下载阅读</a></h1>
-			</div>
-
-			<div class="dilan">
-
-				<span class="dilannowrap"><span class="phonehidden">| </span>© 2016《独立时代》中文电子杂志社</span>
-
-				<span class="dilannowrap">
-					<span class="button-wrap,trigger" data-dialog1="somedialog1"><span class="phonehidden">| </span><i class="fa fa-users"></i> 关于我们 </span>
-					<span id="somedialog1" class="dialog">
-						<span class="dialog__overlay"></span>
-						<span class="dialog__content">
-							<p>?????。</p>
-							<div><button class="action" data-dialog-close>关闭</button></div>
-						</span>
-					</span>
-
-					<span class="button-wrap,trigger" data-dialog2="somedialog2">| <i class="fa fa-share-alt"></i> 社交媒体 </span>
-					<span id="somedialog2" class="dialog">
-						<span class="dialog__overlay"></span>
-						<span class="dialog__content">
-							<p>???。</p>
-							<div><button class="action" data-dialog-close>关闭</button></div>
-						</span>
-					</span>
-
-					<span class="button-wrap,trigger" data-dialog4="somedialog4">| <i class="fa fa-book"></i> 往期杂志 </span>
-					<span id="somedialog4" class="dialog">
-						<span class="dialog__overlay"></span>
-						<span class="dialog__content">
-							<p>???同行。</p>
-							<div><button class="action" data-dialog-close>关闭</button></div>
-						</span>
-					</span>
-
-					<span class="button-wrap,trigger" data-dialog5="somedialog5">| <i class="fa fa-envelope"></i> 来信来稿 <span class="phonehidden">| </span></span>
-					<span id="somedialog5" class="dialog">
-						<span class="dialog__overlay"></span>
-						<span class="dialog__content">
-							<div><button class="action" data-dialog-close>关闭</button></div>
-						</span>
-					</span>
-				</span>
+            <div class="logo">
+                <img class="logopng" src="index/logo.png" unselectable="on" alt="" />
+            </div>
 
 
+            <div class="headline">
+                <h1><a class="headlineword" href="https://one-era.com/download/v30.pdf">新年刊《食·色》已经上线<br>欢迎下载阅读</a></h1>
+            </div>
+
+            <div class="dilan">
+
+                <span class="dilannowrap"><span class="phonehidden">| </span>© 2016《独立时代》中文电子杂志社</span>
+
+                <span class="dilannowrap">
+                    <span class="button-wrap,trigger" data-dialog1="somedialog1"><span class="phonehidden">| </span><i class="fa fa-users"></i> 关于我们 </span>
+                    <span id="somedialog1" class="dialog">
+                        <span class="dialog__overlay"></span>
+                        <span class="dialog__content">
+                            <p>?????。</p>
+                            <div><button class="action" data-dialog-close>关闭</button></div>
+                        </span>
+                    </span>
+
+                    <span class="button-wrap,trigger" data-dialog2="somedialog2">| <i class="fa fa-share-alt"></i> 社交媒体 </span>
+                    <span id="somedialog2" class="dialog">
+                        <span class="dialog__overlay"></span>
+                        <span class="dialog__content">
+                            <p>???。</p>
+                            <div><button class="action" data-dialog-close>关闭</button></div>
+                        </span>
+                    </span>
+
+                    <span class="button-wrap,trigger" data-dialog4="somedialog4">| <i class="fa fa-book"></i> 往期杂志 </span>
+                    <span id="somedialog4" class="dialog">
+                        <span class="dialog__overlay"></span>
+                        <span class="dialog__content">
+                            <p>???同行。</p>
+                            <div><button class="action" data-dialog-close>关闭</button></div>
+                        </span>
+                    </span>
+
+                    <span class="button-wrap,trigger" data-dialog5="somedialog5">| <i class="fa fa-envelope"></i> 来信来稿 <span class="phonehidden">| </span></span>
+                    <span id="somedialog5" class="dialog">
+                        <span class="dialog__overlay"></span>
+                        <span class="dialog__content">
+                            <div><button class="action" data-dialog-close>关闭</button></div>
+                        </span>
+                    </span>
+                </span>
 
 
 
-			</div>
-		</div>
-	</div>
+
+
+            </div>
+        </div>
+    </div>
 
 
 </body>
