@@ -1,0 +1,1672 @@
+﻿<!DOCTYPE html>
+<!--
+    Copyright           2016 authors and One-Era Press, CUHK. All rights reserved.
+    Handcrafted by      Crist Xiaotian Ye
+    Special thanks to   Sodagreen and Bauhinia
+-->
+<head>
+    <title>独立时代·32·毕业季</title>
+    <meta name="author" content="独立时代中文电子杂志社">
+    <meta name="keywords" content="独立时代,中文杂志,电子杂志,中文电子杂志,香港,香港中文大学,CUHK,CUHK One-Era,CUHK One-Era Press,毕业季,graduation">
+    <meta name="description" content="独立时代第三十二期·毕业季：自我感动的大学生活、你都如何回忆八百米、两个夏天、春秋大梦、说、人虫、人之困境、怀旧·理性·未来、《奥义书》中梵我观与道家哲学相似之初探、《年月日》中的 “神” 与 “实”、说棋、牛肉饼、富贵闲人、王小波到底有多伟大">
+    <meta name="theme-color" content="#5c5c5c">
+    <meta name="msapplication-navbutton-color" content="#5c5c5c">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#5c5c5c">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.7/jquery.fullPage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/js/min/perfect-scrollbar.jquery.min.js"></script>
+</head>
+<style>
+    /*fullpage.js*/
+    body {
+        margin: 0;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        font-family: "Microsoft YaHei Light","Microsoft YaHei",sans-serif;
+    }
+
+    /*顶栏*/
+    .header {
+        position: fixed;
+        height: 10vh;
+        display: block;
+        width: 100%;
+        z-index: 3;
+        text-align: center;
+        background-color: rgba(51,51,51,0.8);
+        padding: 0 0 0 0;
+        top: 0px;
+    }
+        /*顶栏目录图标*/
+        .header .contents-icon {
+            position: fixed;
+            z-index: 4;
+            font-size: 5vh;
+            top: 5vh;
+            transform: translate(0, -50%);
+            left: 2.5vh;
+            cursor: pointer;
+            color: white;
+        }
+        /*顶栏logo*/
+        .header .top-logo img {
+            position: fixed;
+            z-index: 4;
+            top: 5vh;
+            left: 50%;
+            max-height: 7vh;
+            transform: translate(-50%, -50%);
+        }
+        /*顶栏分享图标*/
+        .header .share-icon {
+            position: fixed;
+            z-index: 4;
+            font-size: 5vh;
+            top: 5vh;
+            transform: translate(0, -50%);
+            right: 2.5vh;
+            cursor: pointer;
+            color: white;
+        }
+
+    /*整个目录背景*/
+    .contents-menu {
+        position: fixed;
+        height: 100vh;
+        display: none;
+        width: 100%;
+        background: rgba(51,51,51,0.9);
+        z-index: 6;
+        top: 0;
+    }
+        /*目录顶栏*/
+        .contents-menu .contents-header {
+            position: fixed;
+            height: 10vh;
+            width: 100%;
+            z-index: 5;
+            background-color: rgb(51,51,51);
+            padding: 0 0 0 0;
+            top: 0px;
+        }
+        /*目录关闭按钮*/
+        .contents-menu .close-icon {
+            position: fixed;
+            z-index: 8;
+            font-size: 5vh;
+            top: 5vh;
+            transform: translate(0, -50%);
+            left: 2.5vh;
+            cursor: pointer;
+            color: white;
+        }
+        /*目录两个字*/
+        .contents-menu .contents-header-text {
+            position: fixed;
+            color: white;
+            font-size: 3vh;
+            z-index: 8;
+            top: 5vh;
+            left: 50%;
+            max-height: 7vh;
+            transform: translate(-50%, -50%);
+            font-weight: bold;
+        }
+        /*真正的目录*/
+        .contents-menu .contents-links {
+            width: 100%;
+            z-index: 7;
+            margin-top: 12vh;
+        }
+            /*真正的目录中*/
+            .contents-menu .contents-links td {
+                padding: 0 0 0 0;
+                vertical-align: top;
+            }
+            /*栏目名*/
+            .contents-menu .contents-links tr .column {
+                font-size: 2.5vh;
+                line-height: 200%;
+                text-align: right;
+                color: white;
+                padding-right: 5vw;
+                font-weight: bold;
+            }
+            /*文章和作者*/
+            .contents-menu .contents-links tr a {
+                font-size: 2.5vh;
+                line-height: 200%;
+                text-decoration: none;
+                text-align: left;
+                color: white;
+            }
+
+    /*整个分享背景*/
+    .share-menu {
+        position: fixed;
+        height: 100vh;
+        display: none;
+        width: 100%;
+        background: rgba(51,51,51,0.9);
+        z-index: 6;
+        top: 0;
+    }
+        /*分享顶栏*/
+        .share-menu .share-header {
+            position: fixed;
+            height: 10vh;
+            width: 100%;
+            z-index: 5;
+            background-color: rgb(51,51,51);
+            padding: 0 0 0 0;
+            top: 0px;
+        }
+        /*分享关闭按钮*/
+        .share-menu .close-icon {
+            position: fixed;
+            z-index: 8;
+            font-size: 5vh;
+            top: 5vh;
+            transform: translate(0, -50%);
+            right: 2.5vh;
+            cursor: pointer;
+            color: white;
+        }
+        /*分享两个字*/
+        .share-menu .share-header-text {
+            position: fixed;
+            color: white;
+            font-size: 3vh;
+            z-index: 8;
+            top: 5vh;
+            left: 50%;
+            max-height: 7vh;
+            transform: translate(-50%, -50%);
+            font-weight: bold;
+        }
+
+        /*微博分享按钮*/
+        .share-menu .weibo-share-icon {
+            position: fixed;
+            z-index: 8;
+            font-size: 5vh;
+            cursor: pointer;
+            color: white;
+            top: 20vh;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /*Facebook分享按钮*/
+        .share-menu .facebook-share-icon {
+            position: fixed;
+            z-index: 8;
+            font-size: 5vh;
+            cursor: pointer;
+            color: white;
+            top: 30vh;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /*二维码*/
+        .share-menu .qrcode {
+            position: fixed;
+            color: white;
+            z-index: 8;
+            max-height: 40vh;
+            top: 60vh;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+    /*介绍*/
+    .introtext {
+        text-shadow: 0px 0px 20px #000000;
+        color: white;
+    }
+        /*介绍文字*/
+        .introtext .text {
+            font-size: 2.5vh;
+            line-height: 250%;
+            text-align: center;
+        }
+        /*介绍标题*/
+        .introtext .title {
+            font-size: 4vh;
+            text-align: center;
+            line-height: 300%;
+        }
+        /*介绍链接*/
+        .introtext a {
+            text-shadow: 0px 0px 20px #000000;
+            color: white;
+            text-decoration: none;
+        }
+
+
+    /*文章*/
+    .article {
+        padding: 15vh 20vw 10vh 20vw;
+    }
+        /*文章中标题*/
+        .article .title {
+            font-size: 6vh;
+            line-height: 200%;
+            text-align: center;
+        }
+        /*文章中作者*/
+        .article .author {
+            font-size: 4vh;
+            line-height: 300%;
+            text-align: right;
+        }
+        /*文章中副标题*/
+        .article .subtitle {
+            font-size: 4vh;
+            line-height: 400%;
+            text-align: center;
+        }
+        /*文章中正文*/
+        .article .text {
+            font-size: 2.5vh;
+            text-indent: 5vh;
+            line-height: 250%;
+            text-align: justify;
+        }
+        /*文章中诗歌*/
+        .article .poem {
+            font-size: 2.5vh;
+            line-height: 250%;
+            text-align: center;
+        }
+        /*文章中脚注*/
+        .article .footnote {
+            font-size: 1.5vh;
+            line-height: 150%;
+            text-align: left;
+        }
+
+    /*responsive layout*/
+    @media only screen and (max-width: 1000px) {
+        .article {
+            padding: 15vh 5vw 5vh 5vw;
+        }
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        //fullpage.js
+        $('#fullpage').fullpage({
+            loopBottom: true,
+            afterLoad: function (anchorLink, index) {
+                switch (index) {
+                    case 1:
+                        document.title = "独立时代·32·毕业季";
+                        break;
+                    case 2:
+                        document.title = "自我感动的大学生活";
+                        break;
+                    case 3:
+                        document.title = "你都如何回忆八百米";
+                        break;
+                    case 4:
+                        document.title = "两个夏天";
+                        break;
+                    case 5:
+                        document.title = "春秋大梦";
+                        break;
+                    case 6:
+                        document.title = "说";
+                        break;
+                    case 7:
+                        document.title = "人虫";
+                        break;
+                    case 8:
+                        document.title = "人之困境";
+                        break;
+                    case 9:
+                        document.title = "怀旧·理性·未来";
+                        break;
+                    case 10:
+                        document.title = "《奥义书》中梵我观与道家哲学相似之初探";
+                        break;
+                    case 11:
+                        document.title = "《年月日》中的 “神” 与 “实”";
+                        break;
+                    case 12:
+                        document.title = "说棋";
+                        break;
+                    case 13:
+                        document.title = "牛肉饼";
+                        break;
+                    case 14:
+                        document.title = "富贵闲人";
+                        break;
+                    case 15:
+                        document.title = "王小波到底有多伟大";
+                        break;
+                }
+            }
+        });
+        $.fn.fullpage.setAllowScrolling(false, 'down, up');
+
+        //滚动
+        $('.section').perfectScrollbar({ maxScrollbarLength: 1 });
+
+        var just_moved = false;
+        var menu_opened = false;
+
+        document.addEventListener('ps-y-reach-start', function () {
+            if (just_moved == false && menu_opened == false) {
+                $.fn.fullpage.moveSectionUp();
+                just_moved = true;
+                setTimeout(function () { just_moved = false; }, 1000);
+            }
+        });
+
+        document.addEventListener('ps-y-reach-end', function () {
+            if (just_moved == false && menu_opened == false) {
+                $.fn.fullpage.moveSectionDown();
+                just_moved = true;
+                setTimeout(function () { just_moved = false; }, 1000);
+            }
+        });
+
+        //目录
+        $(".contents-icon").click(function () {
+            $(".contents-menu").slideDown(300);
+            menu_opened = true;
+        });
+
+        $(".contents-menu .close-icon").click(function () {
+            $(".contents-menu").slideUp(300);
+            menu_opened = false;
+        });
+
+        $(".contents-menu a").click(function () {
+            $(".contents-menu").slideUp(300);
+            menu_opened = false;
+        });
+
+        //分享
+        var currenturl;
+
+        $(".share-icon").click(function () {
+            $(".share-menu").slideDown(300);
+            menu_opened = true;
+            currenturl = window.location.href;
+            currenturl = currenturl.replace("#", "%23");
+            $(".share-menu img").attr("src", "https://api.qrserver.com/v1/create-qr-code/?&size=1000x1000&margin=50&data=" + currenturl);
+        });
+
+        $(".share-menu .close-icon").click(function () {
+            $(".share-menu").slideUp(300);
+            menu_opened = false;
+            $(".share-menu img").attr("src", "");
+        });
+
+        $(".share-menu .weibo-share-icon").click(function () {
+            window.open("http://v.t.sina.com.cn/share/share.php?title=我刚在独立时代第三十二期《毕业季》里发现一篇不错的文章，一起看看吧~%20@独立时代电子杂志社&url=" + currenturl);
+        });
+
+        $(".share-menu .facebook-share-icon").click(function () {
+            window.open("https://www.facebook.com/sharer/sharer.php?picture=one-era.com/favicon.ico&description=我剛在獨立時代第三十二期《畢業季》裡發現到一篇不錯的文章，一起看看吧~&u=" + currenturl);
+        });
+    });
+</script>
+<body>
+    <div class="header">
+        <div class="contents-icon">
+            <i class="fa fa-bars fa-fw"></i>
+        </div>
+        <div class="top-logo">
+            <a href="https://one-era.com"><img src="../logo.png" unselectable="on" /></a>
+        </div>
+        <div class="share-icon">
+            <i class="fa fa-share-alt fa-fw"></i>
+        </div>
+    </div>
+
+    <div class="contents-menu">
+        <div class="contents-header">
+        </div>
+        <div class="close-icon">
+            <i class="fa fa-times fa-fw"></i><br />
+        </div>
+        <div class="contents-header-text">
+            目录
+        </div>
+        <div class="contents-links">
+            <table>
+                <tr>
+                    <td style="width:20vw;"></td>
+                    <td><a href="#intro">本期介绍</a></td>
+                </tr>
+                <tr>
+                    <td class="column" rowspan="3">专题</td>
+                    <td><a href="#self-moving-u-life">自我感动的大学生活/吴岱晖</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#how-do-you-recall-800-meters">你都如何回忆八百米/马料水小野猪</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#two-summers">两个夏天/西班牙小苍蝇</a></td>
+                </tr>
+                <tr>
+                    <td class="column" rowspan="3">行吟</td>
+                    <td><a href="#big-dream">春秋大梦/西班牙小苍蝇</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#talking">说/西班牙小苍蝇</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#human-worm">人虫/朱恋淮</a></td>
+                </tr>
+                <tr>
+                    <td class="column" rowspan="2">世见</td>
+                    <td><a href="#people-in-dilemma">人之困境/詹哥哥</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#reminiscence-reason-future">怀旧·理性·未来/马鞍山小麋鹿</a></td>
+                </tr>
+                <tr>
+                    <td class="column" rowspan="2">艺眼</td>
+                    <td><a href="#about-upanishad">《奥义书》中梵我观与道家哲学相似之初探/西班牙小苍蝇</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#about-year-month-day">《年月日》中的 “神” 与 “实”/张韵秋</a></td>
+                </tr>
+                <tr>
+                    <td class="column" rowspan="3">故事</td>
+                    <td><a href="#chess">说棋/醒月楼主人</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#burgers">牛肉饼/佚名</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#wealthy-idler">富贵闲人/西班牙小苍蝇</a></td>
+                </tr>
+                <tr>
+                    <td class="column" rowspan="1">尺牍</td>
+                    <td><a href="#how-great-is-wang-xiaobo">王小波到底有多伟大/冯唐</a></td>
+                </tr>
+            </table>
+            <br /><br /><br /><br />
+        </div>
+    </div>
+
+    <div class="share-menu">
+        <div class="share-header">
+        </div>
+        <div class="close-icon">
+            <i class="fa fa-times fa-fw"></i><br />
+        </div>
+        <div class="share-header-text">
+            分享
+        </div>
+        <div class="weibo-share-icon">
+            <i class="fa fa-weibo fa-fw"></i><br />
+        </div>
+        <div class="facebook-share-icon">
+            <i class="fa fa-facebook fa-fw"></i><br />
+        </div>
+        <div>
+            <img class="qrcode" src="" alt="" title="" />
+        </div>
+    </div>
+
+    <div id="fullpage">
+        <div class="section" style="background-image:url(1.jpg);background-size:cover" data-anchor="intro">
+            <div class="introtext">
+                <div class="text">
+                    <br /><br /><br />
+                    曾经睡在你上铺下铺、<br />熄灯后与你彻夜长谈的那个人，<br />你还记得吗？<br />
+                    那个在你迷茫彷徨时为你指点方向的人，<br />你还记得吗？<br />
+                    经常向你抱怨生活太无聊，<br />提起离别却红了眼眶的那个人，<br />你还记得吗？<br />
+                    那个陪伴着你的青春、<br />互相刻进生命里的人，<br />你还记得吗？<br />
+                </div>
+                <div class="title">
+                    <br />
+                    独立时代第三十二期<br />
+                    毕业季<br />
+                    你的青春纪念册，你的故事<br />
+                    我们一起见证，一起怀念<br />
+                    <br />
+                </div>
+                <div class="text">
+                    策划：怀海 沈念卿 子艨 墨瞳 Wendy<br />
+                    文编：叶空 墨拦 马鞍山小麋鹿<br />西班牙小苍蝇 吐露港小贼鸥 马料水小野猪<br />
+                    美编：HXI 月月鸟 君槐 贝贝 镜楼 安德烈<br />
+                    技术：凉君 老鱼<br />
+                </div>
+                <div class="title">
+                    <br />
+                    未经允许，请勿转载。<br />
+                    <br />
+                </div>
+                <div class="text">
+                    微信：<a target="_blank" href="http://t.cn/RqZwYYm">oneera</a><br />
+                    微博：<a target="_blank" href="http://www.weibo.com/oneera">独立时代电子杂志社</a><br />
+                    Facebook：<a target="_blank" href="http://www.facebook.com/164238836966896">獨立時代</a><br />
+                    网站：<a target="_blank" href="https://one-era.com">one-era.com</a><br />
+                    咨询邮箱：<a href="mailto:info@one-era.com">info@one-era.com</a><br />
+                    文字来稿：<a href="mailto:text@one-era.com">text@one-era.com</a><br />
+                    图片来稿： <a href="mailto:art@one-era.com">art@one-era.com</a><br />
+                    具体投稿要求请点击上方网站链接查看<br />
+                </div>
+                <div class="text"><br /><br /><br /><br /><br /><br /></div>
+            </div>
+        </div>
+
+        <div class="section" style="background-image:url(2.jpg);background-size:cover" data-anchor="self-moving-u-life">
+            <div class="article">
+                <div class="title"><br />自我感动的大学生活<br /></div>
+                <div class="author">吴岱晖<br /></div>
+                <div class="text">
+                    我们就活在这样的自我感动之中：平时欠债太多，不得已考前突击熬夜通宵却当作自己努力的证据感动不已；跑上一次步，去了一次健身房，早起了一天，一定要发一条朋友圈求得大家的佩服和点赞；出去穷游一次，当一次志愿者，做一次支教，仿佛整个人得到了升华，一定要在各大网络上广而告之；办完社团活动，不论收效如何，一定要熬夜出去把酒言欢而且把社团的意义拔高描述到“事业”的高度然后所有人一同煽情。大学生活的所谓“青春”，所谓“情怀”，不过是爱作爱闹，找借口吃喝玩乐，自恋而又伴随着被害妄想症罢了。<br />
+                </div>
+                <div class="subtitle">
+                    别熬个夜就觉得自己多努力<br />
+                </div>
+                <div class="text">
+                    有时候边玩手机边写东西到清晨，或者期末考试突击，一边刷网页一边刷题，然后在黎明升起的时候发一条布满血丝的咆哮贴，潜台词是，你们看我辣么努力！然后便有同学朋友一脸崇拜地留言，哇你好辛苦，好拼命，都不用睡觉的么，我要好好向你学习。在昏昏沉沉头疼欲裂的白天中，我们欣喜地看着状态点赞量狂升。<br />
+                </div>
+                <div class="text">
+                    真相是，我们都是白天上课的时候睡，下课的时候刷手机刷社交网络，回宿舍先玩一会儿游戏吃个夜宵。等到十一点了，泡杯咖啡，想起了deadline是明天早上九点，恩，再看一下朋友圈。<br />
+                </div>
+                <div class="text">
+                    第二天清晨六点半，拍张日出，配段文字“熬了一个晚上的学术成果一定不会差的哦吼吼”，43个赞。回头想想，骗骗别人，挺容易的。骗骗自己，也挺容易。<br />
+                </div>
+                <div class="text">
+                    有些话说着说着自己也就信了，于是自动修改了记忆里的偏差，比如连续一个礼拜熬夜做slides，比如彻夜不眠才赶出来的论文，大部分看起来努力到要吐血的状态，其实不过是懒癌加上拖延症晚期并发的结果。然而回忆起来，毕竟有大量的时间投入在里面，哪怕结果并不如人意，自己也可以安慰自己说，没关系啊，只要努力了就好了呢。<br />
+                </div>
+                <div class="text">
+                    就好像努力是可以用时间量化，且与结果成正比一样。<br />
+                </div>
+                <div class="text">
+                    我们就是没有意识到：很多事情，做不到就是做不到，做的不好就是做的不好，不管你投入了多少时间、心血和精力，世界只认结果。一部电影，不管投入了多少人力物力财力，烂片，就是烂片；一部小说，不管作者身世有多么坎坷，际遇多么悲惨，差评，就是差评。<br />
+                </div>
+                <div class="text">
+                    你真正付出了多少，真正收获了多少，这些东西，是无法用欺骗和自我欺骗换来的。熬夜除了证明你的时间管理非常差之外说明不了任何问题，通宵除了之后连续几天的头疼和永久的神经损伤之外什么也给不了你。没有一个合理的timetable，没有足够的自我控制，你所谓的努力所谓的心酸在别人眼里就是个笑话。我们一边膜拜着学霸，一边继续刷着手机电脑；一边自我神圣地说港科大是香港最chur的高校，一边忘记了大陆的top10高校的同学们个个比我们紧张。懒而不自知，恶而不自省。<br />
+                </div>
+                <div class="text">
+                    以大部分人的努力程度，还远远谈不上拼天赋。<br />
+                </div>
+                <div class="subtitle">
+                    社交圈：“关你屁事”&“关我屁事”<br />
+                </div>
+                <div class="text">
+                    跟朋友闲聊的时候了一个很有趣的问题：在朋友圈里po今天又去健身房的，必是一个月才去一次的主；感慨一句今天的朝阳真棒，新的一天就开始了的，十有八九是个成天睡懒觉的宅男；自拍一张汗流浃背的照片的同学，也许这是他本学期唯一一次跑步。<br />
+                </div>
+                <div class="text">
+                    真正坚持早睡早起健身的人们，在状态里从来没提过这些事。<br />
+                </div>
+                <div class="text">
+                    我们的社交网络，到底是为了什么？展现给别人一个想展现的自己，感动着别人也希望感动自己。在这里所呈现的，大多是修改后的人生。旅途中可能抓拍了七八十张照片，最后能通过层层遴选的，不过那么三两张。通宵做pre3，脑内奔腾过千万匹草泥马，最后公开的，却是PPT页面和一句“年轻就属于奋斗”。和伙伴一道做项目，不管过程多么跌宕起伏抱怨过多少次对方的不靠谱，结束时还是要po集体照，感慨“相聚是缘，有你真好”。 有心灵鸡汤、成功学、励志故事，让我感觉自己离成功（或心灵的幸福）近了一步；有心理测试、星座运程、智力测验帮助我们从上千万的网友中，定位到自己的位置（不管它准与不准）；有很多的段子、故事、小游戏，可以让我们聚精会神地沉浸在其中一段时间，假装我们已经从现实生活中解脱出来；最妙的是，我们还可以有选择地发照片、发状态，呈现出希望让别人看到的那个自己，然后收获大家的点赞。这里简直是一个百宝箱，供我在想象中随意搭建“另一种生活可能是这样”。当然，围观群众也很上道，女生自拍一律默契点赞，发侧颜挑战的就高喊“女神”，发凌晨两点落地窗前万家灯火的就恭称“X总”，至于考前拍课本封面声称终于要开始预习的，评论里都会默契地回“学霸轻虐”。<br />
+                </div>
+                <div class="text">
+                    这种互动，也未必不出于真心。就像街上有人爬梯子，行人都会下意识搀扶一把，当他人用心也用力地证明自我时，我们也乐于从点头之交，进化为点赞之交。这种看似虚伪的社交下，其实藏着一点“搵食不易”的同理心，一点礼尚往来的私心，一点想开疆拓土人际关系的野心，这些心意或者心思拼凑起来，也够大家和和睦睦地在朋友圈里天天见。<br />
+                </div>
+                <div class="text">
+                    所有人都像被催眠了一样，会孜孜于追求想象中的另一种生活，而无法满足于正在发生的快乐。何等光怪陆离的众生相。——直到我们意识到这些只是廉价的过家家为止。<br />
+                </div>
+                <div class="text">
+                    你的状态，关别人屁事；别人的信息，关你屁事。<br />
+                </div>
+                <div class="text">
+                    接受你现在的状态，并且不断尝试去改进它而不是掩饰种种不堪；淡化对别人的窥视，你所看到的不过是他想让你看到的东西；每个人的生活都应该以自己为中心，以真实的自我为中心。<br />
+                </div>
+                <div class="text">
+                    当你有一天不再以从社交网络获得他人的认可为人生目标时，当你终于不再对他人的私生活感兴趣时，当你熟练运用关你屁事和关我屁事时，你会由衷地发现，生活其实可以这样。<br />
+                </div>
+                <div class="text">
+                    不要为了证明自己而证明，不要因为虚伪而相互吹捧。这是病，得治。<br />
+                </div>
+                <div class="subtitle">
+                    关于上庄的二三事<br />
+                </div>
+                <div class="text">
+                    其实这段文字是在主持模联的AGM上构思的，看着对面的青涩的面孔，自信的态度，总觉得自己有太多想说的话，有太多经验想传授，有太多弯路想让他们少走，但是最后也化为一句“good luck”。<br />
+                </div>
+                <div class="text">
+                    所为社团，所谓上庄，到底让我收获了什么？<br />
+                </div>
+                <div class="text">
+                    团队领导能力？一个十几人的小团队，举办一个几十人的活动，在各个机构中间协调，设计宣传方案，准备操作严防死守，真正活动开始时按部就班，紧急情况考虑到位。确实，这种经验能够让我们在丰富阅历的同时获得领导力的提升和意识到团队合作的重要性。<br />
+                </div>
+                <div class="text">
+                    一群像家人一样的伙伴？十几人面对整个校园，能够依靠的只有身边的队友，合作无间亲密配合，举办一场盛大活动之后把酒言欢，自信于扩大了社团的知名度，感动于自己的能力提升，在联庄会议上像模像样的相互发张名片，庄聚一次不亦乐乎，面对外界的风雨阳光，总会和自己的庄员坚守在一起。<br />
+                </div>
+                <div class="text">
+                    国际文化/本土文化？庄员来自五湖四海，在英语的官方语言下共同交流自己的故土，体会各自性格的差异，面对local和国际生与自己的巨大差异到底是求同存异继续配合还是回到大陆生的圈子找那些和自己对胃口的伙伴？每个人都会有不同的选择。<br />
+                </div>
+                <div class="text">
+                    情侣？……嗯好吧这个我没有相关体验就不说了= =<br />
+                </div>
+                <div class="text">
+                    但是，以上提到的东西，只有庄，只有社团才能提供给你么？<br />
+                </div>
+                <div class="text">
+                    培养团队领导合作能力？学校的各种各样的活动都会形成各种队伍，社团仅仅是其中一种；十几个伙伴？大学的交友圈子这么广泛，活动各式各样，旅行一次就能成为挚友，就算是讲座都可以和邻座的同学相谈甚欢，这样的庄员，到底是扩大了我们的交友圈，还是限制了我们的选择？国际文化？参加校外校内的语言会话角，和自己一个学院一个专业的同学沟通，为什么不能起到同样的效果？情侣？……好吧我还是不说这个问题了。<br />
+                </div>
+                <div class="text">
+                    在之前安慰几个quit庄的同学的时候，我总会说“庄从来不是大学生必须经历的内容，它能提供的各种提升其他活动也会给你，有人圆满的完成了一年的庄务成就感满满，有人做了一年庄什么都没有收获只有一身怨气，有人明智地及时离开社团按照自己的需求提升自己的技能，有人即使没有庄务也照样荒废了一年。”有的庄员感动于自己的“事业”，感动于自己的团队，每次活动之后必要煽情仿佛自己的生命都燃烧给了伟大的工作；有的不上庄的同学，在奔波于各种讲座和活动时，冷眼旁观。<br />
+                </div>
+                <div class="text">
+                    香港高校和内地最大的不同也许就在于对每个人选择的尊重，但是同样的你的大学生活就完全靠你自己来编织。四年之后究竟是一个废柴还是一个精英，关键还是自己的决心。<br />
+                </div>
+                <div class="text">
+                    社团，庄，只是一个工具，你可以通过庄学到很多，但是这些东西不是只有庄才能提供。我自信于圆满地完成了我的任期，AGM退休之后的那个晚上我也同样在反思：如果我没有上庄，我会不会学到更多的东西？<br />
+                </div>
+                <div class="text">
+                    上庄，或者不上，你的大学四年都会流逝，希望新一届的同学们对于自己，对于未来，有足够的构思和信心。加油，你是你的社团，你是你的大学。<br />
+                </div>
+                <div class="text">
+                    <br />
+                </div>
+                <div class="text">
+                    不知不觉就写了三千多字，终于也要进入尾声了。过去的一年好像是个情怀满满的年份，青春和梦想的大旗被高高举起，没有个二两青春追忆，三斤梦想打底，都不好意思出来混。其实，喜欢做的事情就安安静静去做就好了，真的不需要一遍一遍地强调，实现这些有多难。根本没有那么多人对你的梦想妄加评议，横加打击么。真实的世界，大多数人都懒得理你。只有你自己心里住着个小人，每天负责粉饰回忆，脑补出各种各样的苦情戏感动自己。
+                    <br />
+                </div>
+                <div class="text">
+                    停止自我感动，不要去在意他人的看法，多去做些实事。我们遇到的问题也许都可以归纳为一胖二懒三不读书。你说你为了梦想可以付出一切，但是连简单的早起早睡多锻炼都根本做不到。每个人都有自己的路，但是大学四年，多读书，多看报，少吃零食多睡觉，总是好的。<br />
+                </div>
+                <div class="text">
+                    上士闻道，勤而行之；中士闻道，若存若亡；下士闻道，大笑之。如果找到了自己的梦想，那就赶紧去做；如果没找到自己的梦想，那就赶紧去找。<br />
+                </div>
+                <div class="text">
+                    愿你找到你的大学。<br />
+                </div>
+                <div class="text"><br /><br /><br /><br /><br /><br /></div>
+            </div>
+        </div>
+
+        <div class="section" style="background-image:url(3.jpg);background-size:cover" data-anchor="how-do-you-recall-800-meters">
+            <div class="article" style="text-shadow :0px 0px 20px #000000; color :white;">
+                <div class="title"><br />你都如何回忆八百米<br /></div>
+                <div class="author">马料水小野猪<br /></div>
+                <div class="text">
+                    学生时代活过了看老师手舞足蹈四十分钟一个字也听不懂的力学课，编成了错别字连篇从头扯淡到尾的八百字，选下了完全不知所云还迷之自信的英语阅读的一个个C，然而这些精神的困苦却从未成为我真正的搅扰，身体上的羸弱反倒成了我的阿克琉斯脚踝了。那么可想而知，我最大的梦魇就是八百米了。从开学紧张到开跑紧张到躺在床上翘着二郎腿的今时今日，想起八百米这三个字，二郎腿都抖不起来了。<br />
+                </div>
+                <div class="text">
+                    本来这二十年，我也没指望从八百米上得什么强健的筋骨与惊人的毅力了，仿佛能不死，就是谢天谢地造化纵我如获新生了。<br />
+                </div>
+                <div class="text">
+                    可是，可是，我总还有一句可是要说呀。<br />
+                </div>
+                <div class="text">
+                    其实回忆这样的事情，现在说来轻轻松松，手指在键盘上敲敲打打，即便是修辞描写乱用一发，感情有多真挚诚恳，到底是经过了的，至于彼时的连天地都为之的颤抖，究竟是不可复制了。操场上的水杉默然肃立，我们要跑最后一次八百米。<br />
+                </div>
+                <div class="text">
+                    说怕，那是真怕。怕到随时随地觉得自己要见姨妈，怕到希望往操场走的那段路长到永远没有尽头，怕到望着水杉盼它马上倒下来——砸死砸伤都好，给我一个不跑八百米的理由就好。<br />
+                </div>
+                <div class="text">
+                    可是跑了无数趟厕所姨妈也没有来看我，可是三步一挪上课铃还没响我也已经到了操场，可是那些水杉还稳稳当当站在那——它不躺倒，大概我只能自己躺倒去了。<br />
+                </div>
+                <div class="text">
+                    好了，什么都完了，我要跑八百米了。<br />
+                </div>
+                <div class="text">
+                    装作若无其事谈笑风生等着那个杀千刀的老师的到来，看着他从体育馆仿佛很健康快活的样子向我们走过来——好了，那棵本来要砸我的水杉，你可以倒了，你快倒，你赶紧倒呀，你倒是倒啊……然而原来所有浮想联翩的故事结局都相同，上帝为我站稳了一棵树的同时，也为杀千刀站稳了一棵树。没有地震，没有海啸，没有火山喷发没有大姨妈，他不死，我不死，八百米还是要跑。<br />
+                </div>
+                <div class="text">
+                    身边的女孩子们大约也没有不紧张的，我却是格外要死了，都想一头往那国旗杆上撞过去，又怕不锈钢不够硬，撞个脑震荡选择性失忆不说，一世英名毁于一旦不提，倘手脚健全，那醒过来，八百米还是逃不过去。真真百无一用，一动不能动。<br />
+                </div>
+                <div class="text">
+                    哎！然而从来天无绝人之路，人有旦夕祸福。正当我长吁短叹迎风洒泪之际，班上一位顶可爱的女孩子见我惆怅，好意询问，我便将苦水大倒如滔滔江河连绵不绝，不意我正诉完苦楚，欲舍命上跑道以谢苍生，她却微微一笑，而我的贵人至此终于现身——“你不要怕，跟着我跑，保证你在四分钟内跑完，且腰不酸腿不痛，还是大活人。”她朝我眨了眨眼睛——那弯弯的、带着桃花的小眼睛，我舍不得躲开。<br />
+                </div>
+                <div class="text">
+                    这样的说辞，确实诱人了。想我六年十二学期二十四次八百米跑下，无一次不欲仙欲死，扶墙而走，几可上天，怎能还如大活人一般——然而心回意转一番，女孩子是可爱的了，被她骗一骗也是心甘情愿的了——总是要死，跳楼跳海跳崖，还不是一样？倒是死前有可爱的女孩子陪着，那也算不枉死了。<br />
+                </div>
+                <div class="text">
+                    于是乎便大方应承，且信且疑，拖着一副皮囊上了跑道——发令枪似是响过了吧？总之我眼里心里，便跟定了那个人，也不论手快腿慢，便在她身后，随着她向前去了。<br />
+                </div>
+                <div class="text">
+                    然而我真是得了大造化了！<br />
+                </div>
+                <div class="text">
+                    一圈下来时，竟无甚感觉，腿还轻健迈着，呼吸还自如调匀着，头抬着看着前面的身影，也想不了许多了——跟着她，跟紧她，跟定她，就好了。<br />
+                </div>
+                <div class="text">
+                    我今日能把这小小的故事写在这，那么结局自然是好的了。3分57秒——听到这数字时我的第一反应却是，其实我还能再多看那个背影三秒钟。<br />
+                </div>
+                <div class="text">
+                    于是这次的经历之后，我再不怕八百米了。只是，我也再不用跑八百米了。<br />
+                </div>
+                <div class="text">
+                    入了大学，从来不会锻炼的我竟也成了往健身房去的人了。我在跑步机上，望着吐露港的沙田海，望着南岭阻隔的遥遥方向，望着一千两百公里外的上海——一跑总是许多个八百米，只是可惜眼前再没有那个带着我笃定绕着苏州中学那小小操场两圈的身影了。<br />
+                </div>
+                <div class="text">
+                    说起以前的日子，无非是快乐、悲伤、疲惫、紧张、后悔、拼搏、惋惜、运气这些东西。赢了一起笑一笑，输了各自哭一哭。感人，不是那个感人，是真的感人。<br />
+                </div>
+                <div class="text">
+                    你是怎么回忆你的八百米的呢？<br />
+                </div>
+                <div class="text">
+                    反正我想起那天黄昏的风掠过发际，四点钟的太阳光穿过操场边的水杉林，想起她穿着我最喜欢的天蓝色大衣，那是且仅是苏州上空的蓝天的颜色，一步一步听得见自己的心跳，还有前面那人的呼吸。<br />
+                </div>
+                <div class="text">
+                    原来你是我最想留住的背影。<br />
+                </div>
+                <div class="text">
+                    <br />
+                </div>
+                <div class="text">
+                    好了，却不能再说下去了，我要跑步去了。不是八百米，可能要八公里了吧，我想。<br />
+                </div>
+                <div class="text"><br /><br /><br /><br /><br /><br /></div>
+            </div>
+        </div>
+
+        <div class="section" style="background-image:url(4.jpg);background-size:cover" data-anchor="two-summers">
+            <div class="article" style="text-shadow :0px 0px 20px black; color :white;">
+                <div class="title"><br />两个夏天<br /></div>
+                <div class="author">西班牙小苍蝇<br /></div>
+                <div class="subtitle">
+                    一<br />
+                </div>
+                <div class="text">
+                    考完高考，心灰意冷，每天和舍友窝在宿舍里打英雄联盟。那年夏天热得早，网管不舍得开空调，大大小小的网吧都弥漫着泡面和雄性荷尔蒙以及臭脚汗的混合味道，还不如待在宿舍里和宿管大爷斗智斗勇顺便打游戏。只可惜一开始手太臭，怎么玩怎么输，干脆右手放下鼠标，两只手的功力都集中到键盘上来，开发喷人流。<br />
+                </div>
+                <div class="text">
+                    “你个孙子，你要是赢我，你亲妈骨灰拌饭，我去你亲妈坟头蹦迪。”<br />
+                </div>
+                <div class="text">
+                    “看你那傻逼的样子，要是赢我，一辈子没老婆撸管撸到死。”<br />
+                </div>
+                <div class="text">
+                    “诶孙子信不信你报地址给我，我打你丫屎出来。”<br />
+                </div>
+                <div class="text">
+                    大概国服的脏话从那个时候开始多了起来，我的排位胜率也一路走高。一直跟我一起颓宿打机的阿翔于是和我商量着，不如开一个代打工作室，帮别人上分，顺便赚点外快，我们一拍即合，好像两条嗅到商机的狗。<br />
+                </div>
+                <div class="text">
+                    代打是需要人手的，至于招人还是要去那些个气息浓郁的网吧寻找隐世高手帮忙接单子。<br />
+                </div>
+                <div class="text">
+                    所谓隐士高手，之前很多都是我们学校里或者学校附近出了名的混混，有的原来帮人打架赚些外快，有的小偷小摸挣点零碎钱，还有的私底下我们叫做“校妓”，具体怎么个盈利模式我们没试过也就不得而知了；这帮人原本常在街上惹是生非，一到放学时间人流涌动就东家拿点吃的，西家拎个钱包，当然我们从来不说那是“偷”，这可是人家的忌讳，犯不着为了不挨着自己的事儿和混混们理论“偷”和“拿”的区别。学校里大部分学生碰着他们都是绕着走，其实别介，而且你越绕着走，他们越愿意逼近着你，动手动脚，看你笑话；大概好多人都搁在课堂上被那些教导主任忽悠傻了，其实一人一个活法，但说到底都还是人，所以我们哥几个和这些混混也算坦诚相待，一碗水端平了都是朋友。这不，说到了代打工作室，也离不开这批朋友呗。自从有了英雄联盟这个游戏，有什么事情想找这帮人帮忙都用不着海边烧烤摊找找，学校后山找找，就去学校前边那个雨燕网吧，准三五成群里边坐着打游戏呢；所以我顶瞧不起那群说什么网络游戏造成社会不安定因素的专家，您要是真来网吧看过，您就知道网络游戏不但没危害社会，还把网吧变成了混混收容所加劳管所。<br />
+                </div>
+                <div class="text">
+                    我和阿翔推门进去，强忍住掩鼻的冲动，拍了拍低头玩手机的网管，问他诚哥今天来了吗，网管没抬头指了指台子后边。我把阿翔拉到我前边，推着他在满地烟头、废纸、饮料瓶子、和印着泡椒凤爪的塑料袋的海洋里划过去，这样我在后头就舒服很多。诚哥瘫在沙发里，抬了抬手意思是等他打完这一局。我和阿翔坐在沙发后边两角上，结果阿翔坐下去的时候才发现那沙发左后角坏掉了，一屁股下去，发黑的棉花瓤子都泼了出来，阿翔只好慢慢塞回去，然后站在沙发旁边，等诚哥打完。<br />
+                </div>
+                <div class="text">
+                    约么过了十分钟，大概是赢了，诚哥长啸一声，一只带着烟灰的右手拍在我的肩上，“伟哥，找老子什么事？”<br />
+                </div>
+                <div class="text">
+                    “别他妈老子老子的，你还是孙子呢”，和这帮人打交道就得和他们一样说话，“我这打算开个帮人代练的工作室，我在学校里面联系客户，你们出几个玩的好的帮我接下单子，我和阿翔也一起打，钱一半一半，行不行？”<br />
+                </div>
+                <div class="text">
+                    “行吧，反正就我们这几个人，原本那批明年不在这混了，上了一年高四还没上个屁大学，都要去上技校，老子哥们几个今年懒得学了，明年上个复习班混个大学上，这个暑假就和你们赚一票。还是那几个出来玩的人，狗涛、芳盛、明逼然后老王这几天被他爹逮回去修理了，估计一时半会是出不来了。就我们几个打吧。”<br />
+                </div>
+                <div class="text">
+                    我刚准备说行，阿翔趴在我耳边说，“进来的时候看到个漂亮妹子，应该也是我们学校的，看着脸熟有印象，不问问怎么回事？”<br />
+                </div>
+                <div class="text">
+                    我一回头，还真是个色相白嫩的姑娘坐在无烟区不知道在玩什么，我反身拍在诚哥肩膀上，“狗诚啊狗诚，又不给我介绍漂亮妹子！不厚道吧？”<br />
+                </div>
+                <div class="text">
+                    诚哥一巴掌拍回来，他最恨别人叫他狗诚：“我知道你说哪个，小莹，低咱俩一届，贼漂亮，就是他妈的冷得和冰块似的话都不说，不过据说是个校妓吧，我和她不熟也就知道个名字，看上了自己勾搭去”，说完了继续打游戏不再理我和阿翔了。<br />
+                </div>
+                <div class="text">
+                    阿翔问：“要不走吧，该谈的都谈妥了，等着回去数钱吧？”<br />
+                </div>
+                <div class="text">
+                    我又回头看一眼小莹，刚好她也抬头，大眼睛装作四处张望地飘着，其实我知道她在看向这边，于是我干脆扳过来身子正对着她，肆无忌惮地上下打量，大概高二的小女生总是受不了这样的目光，低下头继续玩别的了，我和阿翔说：“长的是不错，就是眼线太他妈深了，嘴唇快滴出来血了，吓得慌，走吧。”<br />
+                </div>
+                <div class="subtitle">
+                    二<br />
+                </div>
+                <div class="text">
+                    因为高考结束了，再也没奇奇怪怪的各路神仙检查自习迟到，旷课不去之类的了。虽然老师要求成绩下来之前，每天还要去学校听这个那个报考指南的讲座，那个这个给学弟学妹学习心得的交流，可是这些通通与我无关啦，好像我活十八年，都是为了这个暑假，好像我上了十二年学都是为了这个暑假，好像我因为高考熬的夜吃得苦都是为了这个暑假。也因为没了人管，去雨燕网吧终于可以肆无忌惮地坐在大厅而不是风味清奇弥漫潮气的地下室了。和诚哥商量完的第二天就接了一批单子，早上吃了饭火急火燎地喊上阿翔，阿翔一路嘀咕着自己还没吃饭，一路兴奋地直搓手，说终于能赚人生第一桶金了。<br />
+                </div>
+                <div class="text">
+                    我说：“别他妈的第一桶金了，听着就别扭，高考都完了，就说能赚钱了不就完了？”<br />
+                </div>
+                <div class="text">
+                    阿翔这时候暴露出一个书呆子不该有的敏捷：“只有你第一次赚的钱才他妈爽得像挖到了金子。”<br />
+                </div>
+                <div class="text">
+                    我一脚踢在他屁股上让他别墨迹，等到了网吧，估计还记恨我那脚，非嚷嚷着要出去吃个早饭，我也没招儿，少他一个我自己开不了工，于是先在无烟区坐下，打开一个奇葩说看着。<br />
+                </div>
+                <div class="text">
+                    看了十分钟，阿翔还没回来，正把窗口切出去准备发消息，突然旁边有人拍我：“诶，你怎么不看了啊，我觉得挺有意思的啊。”<br />
+                </div>
+                <div class="text">
+                    我被吓了一跳，一转头才看见身后站了个人，再仔细一看，是昨天那个小莹，就是今天脸上只有淡妆，看着到不像什么不良少女之类的。她大概看明白了我这表情，嘴角挑起来，似笑非笑地说：“昨天你们说话动静大的整个网吧都能听见，我今天哪敢画烟熏妆哟？”一边说，一边拉开椅子在我旁边坐下。<br />
+                </div>
+                <div class="text">
+                    我一听，这姑娘是来气了，赶忙先打个哈哈，“你听错了吧，我说你美啊，阿翔，就昨天站我旁边那小子诋毁你来着，说什么眼线浓、嘴唇太红……我倒觉得那样好看。” <br />
+                </div>
+                <div class="text">
+                    “那你意思是我今天不好看咯？” <br />
+                </div>
+                <div class="text">
+                    “没没没，今天也好看。” <br />
+                </div>
+                <div class="text">
+                    小莹拉出个键盘，开始输入账号，然后伸出手，很大人样子地和我握了握手，（我是说真的很大人样子，那时候我们认识人都是推推搡搡拍拍打打的，怎么会握手），然后说：“学长好啊，我叫苏莹，叫我小莹就行。” <br />
+                </div>
+                <div class="text">
+                    “你怎么知道我是学长？” <br />
+                </div>
+                <div class="text">
+                    “你在学校还是挺出名的啊，从高一我进了校门就看见你挂在排行榜上，从来没掉下三十；要不就是在学生会里看到你占着个副主席的位子啥都没干……千算万算没想到老师面前的大红人竟然和网吧里的小混混熟的和哥们一样。” <br />
+                </div>
+                <div class="text">
+                    我推了推眼睛，想着这事和我一届的都知道，也就老师和学弟学妹不知道啦，“交朋友嘛，校内校外都是可以滴，当然……” <br />
+                </div>
+                <div class="text">
+                    我的话没说完就被小莹打断了，小莹歪着头问：“那我也可以交个朋友咯？” <br />
+                </div>
+                <div class="text">
+                    这话我没法接，我上一句本来想说，当然还是校内比较好，摆明了想拒绝她的意思，况且昨天诚哥说她是个校妓，我怎么想沾上她呢？但是话都赶到这了，也只好答应：“那就算是吧。”
+                    我干坐着等阿翔回来，小莹也就在屏幕上点三点四的不知道在干嘛。我余光撇着她，看见她打开一个窗口，还没载入，就关掉了，如此数次漫无目的地开关，过了半天才进了一个音乐网站，点了个随机然后戴上耳机开始掏出手机刷微博。<br />
+                </div>
+                <div class="text">
+                    又过了一会，阿翔终于回来了，我拉上他马上开始代练，等练完两个号十场已经晚上了，阿翔接了个电话说回家吃饭，我想着反正打完了也就没留他。收拾收拾我也准备吃饭去，关了电脑往外走，才发现小莹也跟着，我回头看她一眼，她跟上来并排着走，说一起吃饭去。<br />
+                </div>
+                <div class="subtitle">
+                    三<br />
+                </div>
+                <div class="text">
+                    到了吃饭的地方，我也不说话。点好了菜，就坐下拿出手机看小说。小莹大概觉得百无聊赖，从兜里掏出烟开始抽。我一开始没发觉，直到她把烟气吐到我脸上，我才抬头看见她抽烟，那种极细的女士香烟在我的印象里向来和“昂贵”“淫荡”这样的词汇连在一起，可是那天在一个高二女生的手上显得些许纯洁。我一愣神，然后在心里哀叹，好看是好看，可惜当个校妓，况且在这年纪就抽起烟来的女人总有股子邪魅劲，烟气从嘴唇溢出飘荡到锁骨边上，打一个弯落进我的鼻翼里，那一瞬间我突然就有了和她交谈的欲望。<br />
+                </div>
+                <div class="text">
+                    “你叫小莹，高二的，98年的？” <br />
+                </div>
+                <div class="text">
+                    “恩。”<br />
+                </div>
+                <div class="text">
+                    我一时间想不出再问点什么，半天没说话，女孩也没说话，只是盯着手里的烟丝看，像美滋滋地看着天边夕阳消逝后迅即黯淡下来，却又不失瑰丽的云彩，“学长大我一岁吧？”还是她打破僵局。<br />
+                </div>
+                <div class="text">
+                    “是啊，我97的。” <br />
+                </div>
+                <div class="text">
+                    “学长过去没怎么和女孩接触吧，看着我都不知道说什么？” <br />
+                </div>
+                <div class="text">
+                    “恩，没有。”我面不改色的骗她。<br />
+                </div>
+                <div class="text">
+                    “我还以为你混得这么开还有什么没做过啊。”语气里欢脱起来，一边说一边晃着两条腿，大热天里赤条条的白的耀眼。<br />
+                </div>
+                <div class="text">
+                    “哈哈，我还真什么都做过，你那些私底下的小活动我也做过。”我适当反击，顺便刺一刺她校妓的事实。<br />
+                </div>
+                <div class="text">
+                    倒是没像我想的那样，她不知道是装没听懂还是真没听懂，换了个话题，“你们这几天一直在网吧倒腾什么呢？”一边问，一边用大眼睛扫我。<br />
+                </div>
+                <div class="text">
+                    我这人最禁不起女孩子用眼睛扫，尤其这种狐媚脸蛋儿大眼睛的，赶紧侧了侧身子，说是商业机密。她又是一阵央求，大概好奇心从她外表硬裹上的那层冰壳子里抑制不住的钻了出来，她开始拉着我的手晃我的胳膊，我心想当校妓的果然开放，就告诉她那是帮人打LOL的排位赛，赚点小钱花。她一听来劲了，说她也玩过，能不能和我们合伙干。我说游戏怎么敢让女孩子打啊，你要是没玩好，感情被西瓜刀追着满操场哭爹喊娘的不是你。<br />
+                </div>
+                <div class="text">
+                    小莹弹了弹烟，样子还有些生涩，抽了半支就按在烟灰缸里熄了。撩了撩刘海说：“那明天solo吧，你要是赢我了，我就不烦你了，你要是输了，就带我一个。” <br />
+                </div>
+                <div class="text">
+                    我心说小姑娘面子不舍得落，估计明儿就不来了吧，于是说：“好。”<br />
+                </div>
+                <div class="subtitle">
+                    四<br />
+                </div>
+                <div class="text">谁成想小莹竟然来了。大清早我进网吧的时候，她已经在那里严阵以待地调着键位准备和我solo了。我披挂上阵，一阵厮杀，键盘拍的劈啪作响，十分钟后，我脑海中的画面是优雅的胜利然后请她回家再修炼几年，可是现实是，小莹摘下耳机，趴在我肩膀上摘掉我的耳机，在我耳朵边上说：“学长，输了哟。” <br /></div>
+                <div class="text">
+                    这下没辙了，确实厉害，只能带她玩了。其实不是带她玩，该说是她带我玩，我很有信心至少有生之年电脑游戏我是玩不过她了。<br />
+                </div>
+                <div class="subtitle">五<br /></div>
+                <div class="text">
+                    单子越接越多，我和阿翔还有小莹加上诚哥那几个哥们，每天没日没夜的凑在网吧里。小莹还好，到了放学时间就回家去，但是估计家里也没个人管她，不然也不能才高二就放弃了。我们哥几个更不讲究，为了节省时间，晚上有时候就住在网吧里，睡醒了接着玩。小莹白天就坐在我旁边，有时候和我们一起玩，有时候就看着我们玩；中午的时候，小莹就出去帮忙买饭，晚上还泡好大碗面给我们吃。哥几个有时候开玩笑说她该是个贤妻良母，快回学校上课吧；这时候她就满不在乎地点起根烟，习惯性地把烟圈吐在我脸上，我装作嫌弃地样子享受着，她大概知道我的奇怪趣味和享受，每次都吐完一整支烟，再也没有浪费过。<br />
+                </div>
+                <div class="text">
+                    日子一天一天地过着，差不多两个周没日没夜的，终于打完了单子，每个人分了几千块钱，累得恨不得一觉不起。打完单子那天下午，接到班里电话通知说回学校领高考成绩单子，阿翔一溜烟就跑了，好像早去就能上清华北大一样。我慢慢悠悠地收拾着，准备走的时候问小莹要不要一起回去看看我的高考成绩，小莹说没啥好看的，不是清华就是北大，反正她也考不上，就不起打击自己啦。我懒得解释，拉上她就出发回学校了。<br />
+                </div>
+                <div class="text">
+                    领成绩的地方人山人海，成绩单子在门前的桌子上，学生们埋头寻找自己的名字，屁股朝外撅着，一个挨着一个，我问小莹看着像不像小菊花组成的大菊花，小莹懒得搭理我，使劲掐我胳膊，让我快去找成绩。<br />
+                </div>
+                <div class="text">
+                    我挤进人群，一半同学认出来是我，都嚷嚷着让学霸看看成绩然后留出条道来；还有一半不认识我的，被我身上喷薄欲出的浓厚的网瘾少年的烟味驱散，我顺利地从上往下沿着榜单找到了自己的成绩，还像平时那样，年级二十几名的样子。看看老霖头永远挂在第一的名字，这次也不例外，挂了三年第一我都捏把汗，你说要是最后一次不是第一是不是就得身败名裂
+                    剖腹自杀了？我看看我名字上下，还是那几位仁兄，那几位每天头拱地学到半夜三更的也就和我一个成绩，真不知道是我自己可乐还是他们几位回家拍大腿好。<br />
+                </div>
+                <div class="text">
+                    我挤出人群找小莹，小莹问我成绩，我如实告诉她。她沉默那么几秒钟，低下头又抬起来，说叫上哥几个庆祝庆祝吧，我说行啊，阿翔那孙子也考得不错，在我上边呢。<br />
+                </div>
+                <div class="text">
+                    晚上的海边暖洋洋的，晒了一天的大海反哺给城市水汽和温润。烧烤摊上的海鲜和啤酒猝不及防地填满了我们的肚子，阿翔和那几个人大概是这几天太乏了又不胜酒力倒在沙滩上，没几分钟就传出鼾声。小莹也有点醉了的样子，脸蛋红扑扑的，拉着我从沙地上站起来说：“这时候睡在这准会感冒。”要拉我在海边溜溜。我也不想叫醒那几个，就脱了鞋子，和小莹并排沿着海岸走，有一搭没一搭地踩在浪花上。<br />
+                </div>
+                <div class="text">
+                    微凉的海水一激，酒意消了七分。低头看见小莹的脚白白嫩嫩的，足弓下乳白的浪花生灭，仿佛头顶的银河闪烁。海风吹起来的时候，不知道什么鬼使神差，我牵起了她的手，另一只手不老实地攀上了她的腰。四野无人，沿着海的味道走了好久，我也不知道为什么，就那样牵着她的手，走的都看不到远处的灯火和炊烟，看不到睡死在地上的阿翔几个人。我们什么都没说，像刚认识那样互相打量着，也像刚认识那样疯狂地触摸、试探，打破一个又一个边境。夏日的火热融化在身体的火热里，我们纠缠在一起，寻到海边为情侣开设的旅馆，第二天早上醒来，身子底下是几点艳如桃花的色彩。<br />
+                </div>
+                <div class="text">
+                    宿醉未消，我看着那片桃花有些失神。我在潜意识里把她定义为不良少女、校妓，怎么可能想到昨天晚上竟然是她的第一次！亲吻的时候她和我说这是她的第一次，我也说是我的第一次。我呆坐着，等她起来，她睁开眼的时候，就像刚出世的婴儿，一脸娇嗔地要一个吻；我更不知所措了，“你真是第一次？”她转过身去，不吭声。我不知道第一次对她意味着什么，但我一定不想被她死死缠住！<br />
+                </div>
+                <div class="text">
+                    僵持了好久，她坐了起来，转过脸来对住我，看着我的眼睛。“学长，我…我爱你。”说完之后流出眼泪，像是勇气耗尽再也忍不住的样子。我不知道该说什么，我不知道她说的爱是什么意思，也不知道她是不是真的爱我，更不知道有多爱……但我至少知道，我不爱她。“爱”被我们哥几个玩的太随意了，我都快忘记了它的原意，只知道说出来像“屁”一样顺其自然，但此刻仍挂在嘴边力道千钧，我不知道该怎么回答小莹。<br />
+                </div>
+                <div class="text">
+                    看我不吱声，小莹穿上衣服要回家，估计就算再不管孩子的家长，一晚上女孩子没回家也炸了窝了，我什么都没说，躺下准备继续睡觉，一晚上折腾头痛得厉害。我蒙上被子，隐约听到小莹出门的时候说下午电话联系。<br />
+                </div>
+                <div class="subtitle">六<br /></div>
+                <div class="text">
+                    下午时候，电话吵醒我。我穿戴整齐，照照镜子，摸摸下巴，看看自己，确认自己还是一副正人君子三好学生的做派，既没有变成衣冠禽兽，也没长出狼心狗肺，这让我放心多了。我到栈桥上和小莹会面，夕阳一半沉在海里，一半挂在月亮下边，余辉都洒在小莹脸上，涂着一层挥之不去的倦意。我伸出手拍拍她的肩膀，她没回头，一声长叹问道：“唉，你为什么不喜欢我啊？”那声长叹听起来怯怯的却那样苍老，至今留在我的脑海挥之不去，世界上怎么能有一声叹，让人听了之后同感悲戚？<br />
+                </div>
+                <div class="text">
+                    我说：“你知道的，咱俩没什么未来。我暑假完了就去上大学了，你还一直在这混着……” <br />
+                </div>
+                <div class="text">
+                    “你是嫌我不能和你上一样好的大学？” <br />
+                </div>
+                <div class="text">
+                    “我当然不是这个意思，虽然这也是一个原因。但是你知道，大家都说你是……” <br />
+                </div>
+                <div class="text">
+                    “我是什么？”她转过身看我，一脸迷惑。<br />
+                </div>
+                <div class="text">
+                    我不知道为什么这个迷惑的表情突然让我怒火中烧，那样彻底，那样干烈，我吼道：“你是个校妓你装什么装！我不信那是你第一次！大不了给你钱！” <br />
+                </div>
+                <div class="text">
+                    小莹哭了，默默的。她坐在玻璃栈桥上，头顶青天，脚下是大海，无依无靠的，漂流在风里。我站在旁边，却像另一个世界。我伸出手想扶她起来，却怎么也触不到她；我开始在记忆里寻找她的声音、气味、模样，脑子里却好像下了一场洋洋洒洒的大雪把一切都掩盖了；我努力克制自己的惊慌失措，才发现最让我惊慌失措的只是眼前这个女孩的哭泣。我坐下，就坐在她旁边，极近极近的，甚至能感到她哭泣抽动时带起的身边的气息流动，却不敢贴在一起。过了不久，夕阳完完全全的落了下去，一整个世界突然暗了，像每个世界末日那样，又冷又暗。我不知道该做什么，我不知道该不该走，我不知道该不该叫上她一起走。<br />
+                </div>
+                <div class="text">
+                    还是小莹打破沉默，“那我们打个赌吧。” <br />
+                </div>
+                <div class="text">
+                    我一愣，她没等我回答，说：“我要是能考上你那个大学…” <br />
+                </div>
+                <div class="text">
+                    我打断她，“那我就都听你的。”仿佛这个时候抢先一步能弥补刚刚作为一个男人的龌龊。<br />
+                </div>
+                <div class="text">
+                    “但是你要帮我，学长。” <br />
+                </div>
+                <div class="text">
+                    “好。”<br />
+                </div>
+                <div class="subtitle">
+                    七<br />
+                </div>
+                <div class="text">
+                    小莹开始回学校上课。<br />
+                </div>
+                <div class="text">
+                    我仍每天窝在网吧里，有时候小莹中午还给我送个午饭，我嘱咐她好好听讲好好学习。有一天看她又画了个烟熏妆，不知道自己又抽了哪根筋，问她：“怎么又是这个烟熏妆，又重操就业了？” <br />
+                </div>
+                <div class="text">
+                    小莹的脸一瞬间就僵直了，然后泪一下子涌出来，把手里还没泡的大碗面朝我脸上砸过来，大喊着：“我从来就没做过！你去死！” <br />
+                </div>
+                <div class="text">
+                    我躲过这个大碗面，大碗面砸醒了窝在我后边睡觉的阿翔，阿翔揉了揉眼睛嘀咕着这种事谁说的准啊，越抹越黑或者被人黑谁知道啊，然后又睡过去。<br />
+                </div>
+                <div class="text">
+                    我想也是，一下子迷茫起来，对于她不置可否了。<br />
+                </div>
+                <div class="text">
+                    那之后，小莹很久没来过网吧了，平时有事没事和我在微信上聊几句问问考试题目什么的，直到我快要上大学了，她来看了我一眼，就算送行了。<br />
+                </div>
+                <div class="subtitle">
+                    八<br />
+                </div>
+                <div class="text">有些许躲避的原因，大学我选择了香港。和高中跨越大半个中国的距离，仿佛也给我和往事画上一个大大的句号。我是说，虽然时间上只间隔了几个月，却已是墙里秋千、墙外行人的滋味，回首往事，褪去火热可以冷眼旁观。<br /></div>
+                <div class="text">
+                    但有时候，我开始想小莹了。<br />
+                </div>
+                <div class="text">
+                    一开始，想着网吧遇到她之后点点滴滴，想一起拿了高考成绩的疯疯癫癫，想那晚上的痴痴缠缠，想我的浑浑噩噩和她的悲悲戚戚。再后来，她的那声长叹涌上心头，对她的每次想念都被那声长叹唤起，又以那声长叹结束。那声长叹在我脑海里，越叹越长，有时候连绵一整夜的梦境，小莹在那些梦里只是长叹，再也没有转过身来。我至今仍不知道这种后知后觉地状态是否叫做……“爱”？<br />
+                </div>
+                <div class="text">
+                    我被自己折磨的不行，打电话找阿翔聊天。<br />
+                </div>
+                <div class="text">
+                    “你说我老想她怎么办？” <br />
+                </div>
+                <div class="text">
+                    “凉拌啊，我也不能替你想也不能替你不想。” <br />
+                </div>
+                <div class="text">
+                    “狗日的你，你爸爸我难受呢，别说这些风凉话。” <br />
+                </div>
+                <div class="text">
+                    “得得得，要我说当时你就不该下手。” <br />
+                </div>
+                <div class="text">
+                    “怎么说啊？” <br />
+                </div>
+                <div class="text">
+                    “你这人，面子上什么都不在乎，心里面什么都在乎。初三那年牵人家小闺女的手，都得写一本子诗，都得记挂着好些年直到人家出国；妈的你这会儿和人家啪啪啪了，鬼知道你得不得记一辈子。” <br />
+                </div>
+                <div class="text">
+                    我给小莹发消息，每天都发，毫无新意，无非是嘘寒问暖或者讲讲学习经验；小莹有一搭没一搭的回我，用的少女字体，每句话都带着慵懒。<br />
+                </div>
+                <div class="text">
+                    诚哥说我走之后小莹再没去过网吧，可能真好好学习去了。<br />
+                </div>
+                <div class="text">
+                    再后来，我也忙了起来，大学社团和学业充斥在每天的时间里，时间被切得碎碎的，一片一片的甚至不够我仔细想想遣词造句地给她发个消息。<br />
+                </div>
+                <div class="text">
+                    一年转过来，五月份的初夏，香港学校放假，我也背起行囊返乡。<br />
+                </div>
+                <div class="text">
+                    走在高中的林荫道上，阳光足满，丝丝缕缕地透过树叶，落在地上。远远看到诚哥和几个哥们在操场上打球，一个染了紫发的女孩子在篮球架上坐着看。<br />
+                </div>
+                <div class="text">
+                    我走过去，看出来是小莹。小莹朝我笑了笑，大眼睛对着我从上扫到下，我仿佛遇劫般竟然红起脸来，才想起我对她长久以来的朝思暮想，一见面竟不知道从何说起。<br />
+                </div>
+                <div class="text">
+                    “你怎么和诚哥这帮人混在一起，不是说好回去学习吗？” <br />
+                </div>
+                <div class="text">
+                    “不，用，你，管。反正你也并不想管。” <br />
+                </div>
+                <div class="text">
+                    小莹开始抽烟，扭过头烟气吐在别处；我干站着，行尸走肉般。<br />
+                </div>
+                <div class="subtitle">
+                    九<br />
+                </div>
+                <div class="text">诚哥看见我回来了，说叫上说哥们几个晚上聚一聚吧。<br /></div>
+                <div class="text">
+                    我想起去年夏天的聚会，忙不迭地拒绝。<br />
+                </div>
+                <div class="text">
+                    小莹在一旁说：“不愿意就算了吧。” <br />
+                </div>
+                <div class="text">
+                    然后众人散了。<br />
+                </div>
+                <div class="text">
+                    我坐在篮球场上，小莹从后边拍了拍我，意思是一起走走。走着就走到了海边。栈桥还是那般冷清，残阳如血，海水收敛光华，舔着礁石冷壁。<br />
+                </div>
+                <div class="text">
+                    “那年不是答应我开始读书？怎么又和这帮人混在一起？” <br />
+                </div>
+                <div class="text">
+                    “哪年？不就是去年吗？哪帮人？去年你不就是这帮人吗？” <br />
+                </div>
+                <div class="text">
+                    我一时语塞不知从何说起。<br />
+                </div>
+                <div class="text">
+                    小莹娴熟地抽出一根烟，点上说道，“你知道的，咱俩没什么未来。” <br />
+                </div>
+                <div class="text">
+                    “我一直都知道。只是……” <br />
+                </div>
+                <div class="text">
+                    “放不下我？”<br />
+                </div>
+                <div class="text">
+                    “恩。”<br />
+                </div>
+                <div class="text">
+                    “何苦。你知道他们都叫我校妓吧。这样你能容易一些？” <br />
+                </div>
+                <div class="text">
+                    “无所谓的。”<br />
+                </div>
+                <div class="text">
+                    “什么无所谓？”<br />
+                </div>
+                <div class="text">
+                    “事到如今，什么都无所谓了。不过你真的自甘堕落到万人骑？” <br />
+                </div>
+                <div class="text">
+                    “呵呵。说实话，认识你们之前，他们叫我校妓就是说着玩的，我陪别人看个电影吃个饭拿个零花钱算什么啊。还得谢谢你那晚上之后还托阿翔给我五百块，到是让我觉得反正都被叫做校妓了，名不副实多难看啊，对吗？” <br />
+                </div>
+                <div class="text">
+                    “五百块钱？” <br />
+                </div>
+                <div class="text">
+                    “是啊，我到现在每次也还是收五百块钱，你们男的没什么区别。” <br />
+                </div>
+                <div class="text">
+                    “这样啊，那保重。” <br />
+                </div>
+                <div class="text">
+                    “保重。”她转过身去，看着远空的夜幕，冷的像我刚遇见她时一样。<br />
+                </div>
+                <div class="subtitle">
+                    十<br />
+                </div>
+                <div class="text">后来阿翔和我坦白，他想帮我把事情结了，就去给小莹送了五百块，小莹问他是我想把事情结了吗，他说是，小莹没收那五百块，和阿翔说那就结了，然后头也不回就走了。<br /></div>
+                <div class="text">
+                    再过了两个月，小莹也到了她的毕业季，不知道谁陪她去取得成绩，她也没告诉我最后上的什么学校。大概毕业之后，连高中这条最后的纽带都断掉了，我和她再也没有互通消息。<br />
+                </div>
+                <div class="text">
+                    时间兜兜转转，山水重重叠叠，只是再相逢时，物是人非，至今没人懂得什么是“爱”。于是长久陪伴我的，除了故乡的海浪声，一浪高过一浪，还有怎么也洗刷不掉的那声长叹的悲婉。<br />
+                </div>
+                <div class="text"><br /><br /><br /><br /><br /><br /></div>
+            </div>
+        </div>
+
+        <div class="section" style="background-image:url(5.jpg);background-size:cover" data-anchor="big-dream">
+            <div class="article" style="text-shadow :0px 0px 20px white; color:black;">
+                <div class="title"><br />春秋大梦<br /></div>
+                <div class="author">西班牙小苍蝇<br /></div>
+                <div class="poem">
+                    风驱赶我<br />
+                    我挽弓射落太阳<br />
+                    金乌哀嚎四野黯淡<br />
+                    风也看不见了<br />
+                    三足鸟落在大泽<br />
+                    水汽蒸腾如酒<br />
+                    累世积年的藻荇如绿蚁<br />
+                    氤氲出无始无终的呓语<br />
+                    <br />
+                    花慢慢死去<br />
+                    零落成泥淹没在草灰里<br />
+                    大地沉降<br />
+                    高者如石板一样清脆地破碎<br />
+                    低者如岁月般粘稠迂回<br />
+                    一世界的来来去去<br />
+                    一世界的生生死死<br />
+                    一世界的分分离离<br />
+                    <br />
+                    又遇到风<br />
+                    同样疲倦的你我<br />
+                    躲避在末世的大悲寂里<br />
+                    “还是原来有太阳好。” <br />
+                    “奈何以死相逼。” <br />
+                    <br />
+                    苟延残喘的情愫相依为命的怀疑<br />
+                    很久以后<br />
+                    沿着一颗苹果树的毛细管升腾<br />
+                    而在冬季<br />
+                    当苹果被孩子咬了一口时<br />
+                    我和你会猛地惊醒<br />
+                    记录下这场大梦<br />
+                </div>
+                <div class="text"><br /><br /><br /><br /><br /><br /></div>
+            </div>
+        </div>
+
+        <div class="section" style="background-image:url(6.jpg);background-size:cover" data-anchor="talking">
+            <div class="article" style="text-shadow :0px 0px 20px white; color:black;">
+                <div class="title"><br />说<br /></div>
+                <div class="author">西班牙小苍蝇<br /></div>
+                <div class="poem">
+                    朔风干冷寒枝惊雀<br />
+                    算命瞎子袖着手<br />
+                    说要摸遍全身骨头<br />
+                    说能摸到你深处 摸透爱恨情仇<br />
+                    <br />
+                    你说千古便宜事<br />
+                    最是不信命<br />
+                    再说你本就钟情<br />
+                    那场流浪<br />
+                    <br />
+                    远方太远 家又太近<br />
+                    雨季太多雨水<br />
+                    寒带难耐苦寒<br />
+                    春来的时候<br />
+                    你遇见垂死的诗人<br />
+                    一树一树的梨花<br />
+                    掩映华发<br />
+                    你闻到那种味道<br />
+                    流浪到最后的味道<br />
+                    <br />
+                    土<br />
+                    甜湿的土<br />
+                    葬下诗人和诗人吐出的句子<br />
+                    拱手拜时<br />
+                    你蓦地想起<br />
+                    那年你说<br />
+                    你爱流浪<br />
+                    你蓦地想起<br />
+                    越圆满越孤单的道理<br />
+                </div>
+                <div class="text"><br /><br /><br /><br /><br /><br /></div>
+            </div>
+        </div>
+
+        <div class="section" style="background-image:url(7.jpg);background-size:cover" data-anchor="human-worm">
+            <div class="article" style="text-shadow :0px 0px 20px white; color:black;">
+                <div class="title"><br />人虫<br /></div>
+                <div class="author">朱恋淮<br /></div>
+                <div class="poem">
+                    米饭上放着一只虫子<br />
+                    当我看着它的尸体时<br />
+                    我害怕了<br />
+                    我怕有一天<br />
+                    即便自己成了一具尸体<br />
+                    也有人在饭菜中滴着口水 在用筷子<br />
+                    将我夹出来扔到垃圾桶里<br />
+                </div>
+                <div class="text"><br /><br /><br /><br /><br /><br /></div>
+            </div>
+        </div>
+
+        <div class="section" style="background-image:url(8.jpg);background-size:cover" data-anchor="people-in-dilemma">
+            <div class="article">
+                <div class="title"><br />人之困境<br /></div>
+                <div class="author">詹哥哥<br /></div>
+                <div class="text">
+                    很小的时候，尚未听说过“哲学”，但有很多很多疑惑与恐惧。<br />
+                </div>
+                <div class="text">
+                    最大的疑惑与恐惧是死亡。五六岁的时候问妈妈人死之后到底是怎样的，她的回答是“什么都没有”。那时我真的很特别特别害怕，因为我不可以想象什么是“什么都没有”。我害怕，死亡之后与出生之前一样，世界感知不到我，我也感知不到这个世界。我害怕，在不久之后，世界将了无我的痕迹，我也将遗忘在这个世界上所有的经历。甚至，连“我”这个意识都不再拥有。我祈求有个天堂，或者地狱也好，总之是仍存在于另一个地方就好。因为最让人害怕的，是“不存在”——彻彻底底地不存在，没有感知、没有意识、没有记忆，连空白与黑暗都是没有的。<br />
+                </div>
+                <div class="text">
+                    我恐惧将来的“不存在”，因而也疑惑着如今的“存在”。同样在很小的时候，我疑惑，对于我来说，“我”与别人有没有不同？我所感知到的世界与别人所感知到的世界有没有不同？如果世界在每个人的眼中都是不一样的话，真实的世界到底是怎样的？真的有一个真实的世界存在着吗？还是说，只存在着我的世界，一切东西都不过是我的幻觉而已。但如果是这样，我又是别人的幻觉吗？我害怕我所以为的真实都不过是假相，我怀疑真实与假相也许并没有实实在在的分野与对立。那时的我还不知道什么“岩中花树”，还不知道什么唯物唯心，只是朴素地单纯地害怕着、怀疑着我的世界是不是和“楚门的世界”一样，我能不能逃离，应不应逃离？<br />
+                </div>
+                <div class="text">
+                    儿时常听老人们在闲话家常后感慨一声“这都是命”。我疑惑着“命运”究竟是一个什么样的东西。那时的我还没有听说过俄狄浦斯弑父娶母的故事，却近乎出于本能地害怕自己无法逃脱如俄狄浦斯般被命运玩弄于股掌之间的悲剧。十二三岁的时候读到《苏菲的世界》，抛开它展现的哲学史不谈，在我看来，它的情节是可怕的——导师艾伯特对苏菲说，你与我两人的对话，其实只是一人的独白。苏菲与艾伯特，只是席德的父亲虚构的书中的人物；而席德的父亲，却也只是作者乔斯坦•贾德虚构的书中的人物——那么，乔斯坦•贾德以及与他同处于一个世界的我们，会不会仍是一个更高一级的作者的虚构呢？我害怕，我不过是钵中之脑，不过是上帝的提线玩偶罢了。而我的“害怕”，会不会也只是情节设置之一呢？<br />
+                </div>
+                <div class="text">
+                    一个从未听说过“哲学”一词的小孩子，在他还不懂得如何用语言表达他的恐惧与疑惑的时候，他的恐惧与疑惑已经产生了。我想不仅是我，几乎每个人都会在童年的时候产生这样的恐惧与疑惑。我想，这与知识的积累无关，也许这只关系到人类本性中的困境。只不过，随着我们渐渐长大、变老，我们渐渐熟悉了、习惯了这个世界。生存的压力与生活的琐事迫使我们把这些永远无法得到解决的恐惧与疑惑压在心底。于是我们渐渐淡忘了儿时的那些问题，我们渐渐变得麻木，渐渐不会再问“为什么会这样”，而选择告诉自己“就是这样”。<br />
+                </div>
+                <div class="text">
+                    一直记得自己刚上小学的时候和父母说：“我有好多的问题，可是不知道怎么说出来。”当时父母的回答是：“那就先放在心里，以后你会遇到答案的。”小学六年级的时候，在一堂心理健康课上才第一次听闻了“哲学”一词，才第一次发现，原来还有那么一大群人，和我有着同样的恐惧与困惑。而这一大群人，不仅知道如何把这些问题说出来、写下来，还提出与论证了那么多的可能的答案。这给了我很大的安慰，即便每个人寻求困境出口的旅程都注定是孤独的，但前人的火把，或许可以照亮我漆黑的前路。<br />
+                </div>
+                <div class="text">
+                    读哲学史，看着哲学家们长达两三千年的讨论，甚至不禁参与一场场没有回复者的对话。听他们争论世界的本原是什么，听他们讨论形而上学，争论到底有没有自由意志，论证上帝是否存在。在对这旷世持久的讨论的观看之中，自己对“哲学”二字的理解扩大了不少：原来，“哲学”远比生死问题、世界本原、终极意义的“出世”的讨论要宽阔得多。谈及自由人权国家社会的政治哲学、谈及善与应当的伦理学，甚至是美学、逻辑学、宗教学等等——它们都是哲学。也许哲学是没有限定与范围的，它可以是对任何事物的反思。所以，它不仅仅是“出世”的，更是“入世”的，因为它反思的对象是生活、是人间。“形而上者谓之道，形而下者谓之器。”我们生活在“形而下”的世界之中，我们既不能脱离它，也不能囿于它，所以我们得站在更高的角度去俯视它、反思它。而那个更高的角度，也许就是“形而上者”吧。又或许，哲学是，当我们看不清世界的正面的时候，我们从反面看。<br />
+                </div>
+                <div class="text">
+                    如果柏拉图的“理念世界”存在，那么死亡让我失去的，不过是影子而已；如果世界真如德谟克利特所说一切由原子组成的话，那么死亡之后，组成我的原子分解之后还会去组成别的东西，所以我仍会以另外某种形式存在；如果真如笛卡尔的“我思故我在”那样——我怀疑，我怀疑我在怀疑，那么此时此刻正在怀疑的我，便不必再怀疑自己是否真正存在；如果康德的三大公设是绝对必要的话，那么一定拥有自由意志的我便不再需要担心自己不过是个提线木偶，那么一定拥有不死灵魂的我也不再需要害怕死后的虚无了。<br />
+                </div>
+                <div class="text">
+                    虽然，他们并没有说服我。但他们让我知道，有恐惧、有疑惑的绝不仅仅只有我一个人。<br />
+                </div>
+                <div class="text">
+                    罗素说，我永远不会为信仰而死，因为我可能是错的。时至今日，我依然不知道什么才是评判真理的标准，甚至不敢肯定真理是否可能寻得。听每一个哲学家说的话，然后在他们的矛盾中去怀疑所谓的“真理”。也许，这就是学习哲学史的意义之一吧。当不可试探的信仰与不必言明的默示占据主流时，有人追求有严密逻辑论证的理性。当诉诸理性成为公认的标尺时，又出现了后现代的反理性主义与解构主义。如果说科学以自然为对象，故可以用理性解决；宗教以超自然为对象，故必须诉诸信仰。那么既欲追求超越与终极关怀，又试图以理性与怀疑作为基本认知工具的矛盾，也许恰恰是哲学最大的困境。所以我常会怀疑，所有对终极答案的追寻，会不会只是徒劳。我们能够认识一支粉笔、一个杯子，那是是不是因为作为认识对象的他们在作为认识主体的我们之外？如果是这样的话，我们自己能够认清自己吗？我们能认清这个把我们本身也包含在其中的宇宙吗？生命是有限的，人类历史是有限的，我们语言的表达范围是有限的，我们的认知能力也是有限——那么，这样有限的我们，真的能够去认识、去理解那个无限吗？。如果真如维特根斯坦所言哲学的本质是语言的话，那么，我们说不清楚的一切，就只能保持永远的沉默了吗？那么，所有似是而非的问题，都只不过是一场文字游戏而已吗？我不知道。<br />
+                </div>
+                <div class="text">
+                    不过，既然哲学是爱智慧——是一个动词，一种趋势，一个转识成智的过程，那么，“不知道”也并不是一件可怕的事情。正如“我不知道活着的意义是什么，所以我要活下去来寻找它”——我也不知道在“哲学”究竟是什么，所以我要学习它。哲学的困境即使人的困境。那些恐惧与疑惑，也许是人之所以为人的本性使然。生而为人，即便答案终不可得，也不应可悲地逃避本性中对于追求它的渴望。即便可能是徒劳。<br />
+                </div>
+                <div class="text"><br /><br /><br /><br /><br /><br /></div>
+            </div>
+        </div>
+
+        <div class="section" style="background-image:url(9.jpg);background-size:cover" data-anchor="reminiscence-reason-future">
+            <div class="article" style="text-shadow :0px 0px 20px #000000; color :white;">
+                <div class="title"><br />怀旧·理性·未来<br /></div>
+                <div class="author">马鞍山小麋鹿<br /></div>
+                <div class="text">
+                    今天路过大学书店，在桑德尔三本市场伦理学的译本旁驻足了良久，最后把三本英文原版都买了下来。<br />
+                </div>
+                <div class="text">
+                    在以前，面对译版和原版，我往往会选择前者。译版的价格一般更加便宜，差个七十港币是正常的事。当然，我更在意的是两种语言的阅读速度，毕竟每周都有几十页的英文教科书要看，英文阅读已经不再成为闲暇时光偷来的乐趣。<br />
+                </div>
+                <div class="text">
+                    这是我第一次买真正意义的英文原版书，这是一种挑战，但更像是一种担忧：我真的有毅力把这三本都认真读完吗？<br />
+                </div>
+                <div class="text">
+                    但这次，在钱包逐渐缩水、每本书都贴着上百块的标签时，让我拒绝了译本的原因看起来很不足：竖版排版。<br />
+                </div>
+                <div class="text">
+                    竖版书是大部分台版书和一小部分港版书的一贯作风。除了承袭传统汉字数千年的书写传统以外，我找不到任何理由支持竖排，它不符合眼睛的阅读方式，更不符合汉字的书写规律：笔划自左而右。每次从图书馆里借回了竖版书，看着看着就不知道焦点到哪里了。<br />
+                </div>
+                <div class="text">
+                    我并不是说竖排没有任何存在的价值，相反，总有些人热衷于竖排，就像我对横排偏执的喜爱一样。竖排的书看起来也是有那么一点与众不同的味道，好似自恃其高的隐居道士，飘飘独立于世。它的存在，让中文书籍的世界显得更加多彩，更加古朴。<br />
+                </div>
+                <div class="text">
+                    但对于有些竖排的狂热粉来说，横排却没有那么受待见了。在他们看来，我宁愿买英文原版而抛弃竖排译版，简直无法理解，甚至还会耻笑我无法参透汉字区别于西洋文字的独特形体美。<br />
+                </div>
+                <div class="text">
+                    他们的角度其实只有一个：保护传统。但单单「传统」这一个角度，就能给无数张偏激而保守的嘴巴填满火药，变成一把把马克沁机关枪，对着异见者扫出一道道火红的弹道。而无论如何，在这一场关于传统的嘴仗的较量中，你好似已经身处劣势。<br />
+                </div>
+                <div class="text">
+                    因为这是一个「传统至上」的时代。在这个时代里，站在传统这一边，就意味着占据了制高点。所以，当「传统至上」的思维方式渗入到这一代人的骨髓里面，我们口口声声说道要提防的「文化复古主义」其实已经悄悄复苏了。<br />
+                </div>
+                <div class="text">
+                    我们思考问题，总爱对比起古今，靠着世俗强加于我们记忆中「传统」的美好烙印，姑且意淫，当作古时的真实模样。<br />
+                </div>
+                <div class="text">
+                    读过高中的，就对这类思维并不陌生。在语文课里，你总要写作文。而一篇篇作文的材料，很多时候都会引导你从传统与现代对比的角度去思考。我依稀能记起的有两篇：2014北京高考的《老规矩》和2015广州调研考的《年味》。出题人似乎已经把一个潜意识——传统中潜藏着很多美好的东西，安插在材料的字里行间里。如果对现代社会，尤其是市场经济批判一番，再怀念一下古代封建社会的传统美德，想必会得到阅卷老师心内的赞赏，不管你有没有这样写过，反正我就曾经在作文里这样写过，还能骗两三分卖个身价——入读高等学府的身价。学生全然不对教育权威所渗透的印象和观念加任何分辨，盲目全然相信，胡乱一通加到作文里作为一个角度进行论述。看起来，学生们学会用批判性思维去思考，新材料作文的考察目标也好像很好地实现了。殊不知，这等批判性思维，该加双引号——不加思考地采用世俗的思考方式，是盲从，是丧失了批判精神与独立精神。当经历了一篇篇这种作文训练以后，为了取得高分，你的思考方式也为之改变，变得很自然地按照世俗和权威的要求去想，丢失了自己真实的本性。如果你要说应试教育扭曲的「一试定终生」的唯分数论是现今教育制度之大害，那我会说真正的要害更在于它对学生思想和思维的灌输和控制——碾碎了一个又一个独立思考的精神个体，锻造了一块又一块现今世俗社会主义社会接班人的完美模板，这才是应试教育对学生的奴役，而不是让你每天脑部都始终亢奋而痛苦地奋战的练习和试卷以及外在的分数。<br />
+                </div>
+                <div class="text">
+                    而学生作文里浮现的盲目怀旧情怀，恰恰又是当代中国社会懒惰于思考而丢失了自由主体性的现象的折射。当习惯于夸大传统社会的美好之处去思考以后，人们就习惯了把现代社会发展中暴露出的问题怪罪于传统价值的缺失，甚至深情歌颂旧社会的方方面面。典型的例子，便是将社会弊病归咎于市场经济、商品经济的发展。我们怀念以前有多么美好，想要重拾过去时代的方方面面和点点滴滴，但过去其实并无你心中所想的那样美好。我们片面地关注了存在于以前的美，又或是过去不美而现在觉得很美的事物和价值，但却忽视了美的背后隐藏着无数丑与恶。人们借歌颂过去以逃避现今社会的种种问题和矛盾，这是思维懒惰的表现，也是逃避思考的表现。懒惰是因为仅仅寄托于过去，逃避是因为不吸纳这个时代真正的哲学思想，不为社会的未来做出大胆的思考和设想，总是碍于现实所加的种种枷锁。能够解决市场经济发展中不断出现的问题的方法，是以桑德尔所著的What money can’t buy为代表的市场伦理学和道德哲学，而非孔孟之道。能够解决当今社会频发的群体性事件和不断加深的官民矛盾等问题，是种种现代「普·世」精神和一个更有活力的公民社会，绝非以「二十四字」略过的的社会主义核心价值观和空喊改革而踌躇不决迈不出任何步子。<br />
+                </div>
+                <div class="text">
+                    当我们呐喊着「捍卫传统」，抨击着这个时代一批又一批老去的事物被遗忘和消失，何妨拿出自己的理智和自由意志，去思考一下这到底是不是自己所想，自己所求，这种呼喊是不是真的合理，真的科学。若是合理，我会很高兴，因为人们愿意为社会的种种丑与恶而振臂高呼，勇敢发声，这总比人人噤声要好。但当人们拿不出理性和足够的思考，盲目走上公共的讲台，随波逐流地跟随者世俗和权威的口号，那么，这难道要比人人噤声会好到哪里去吗？或许这比人人都闭口的时代更差，就像五十年前的那场浩劫——人人丢掉自由主体性而高喊毛主席万岁，背诵毛主席语录，总比就要到来的「人人都要闭口」的时代更差？<br />
+                </div>
+                <div class="text">
+                    犹记得几年前香港公开大学一位中文讲师曾经抨击过，中文、粤语正在不断引入外来词和英文的趋势，改变了数十代人沿用的话语体系。<br />
+                </div>
+                <div class="text">
+                    难道我用的词语和说的语句要和我妈那个年代的一样吗？<br />
+                </div>
+                <div class="text">
+                    这就好像说，我用的表情包要和长辈们的一样。<br />
+                </div>
+                <div class="text">
+                    <br />
+                </div>
+                <div class="text">
+                    于2016.3.10 十八时<br />
+                </div>
+                <div class="text">
+                    不认真听中国哲学结果没听懂<br />
+                </div>
+                <div class="text"><br /><br /><br /><br /><br /><br /></div>
+            </div>
+        </div>
+
+        <div class="section" style="background-image:url(10.jpg);background-size:cover" data-anchor="about-upanishad">
+            <div class="article">
+                <div class="title"><br />《奥义书》中梵我观与道家哲学相似之初探<br /></div>
+                <div class="author">西班牙小苍蝇<br /></div>
+                <div class="subtitle">
+                    小序<br />
+                </div>
+                <div class="text">
+                    《奥义书》是印度哲学起源之经典，每读是书，浮想联翩，想黄帝之于广成子，西王母之于昆仑山，更欲慨叹，“梵”、“道”何其相似乃尔！印中古代文化之相似，岂是华夏自昆仑迁徙？抑或《奥义书》乃中华先人之遗留？吾实不可知也，然仍可专寻道家之语句注之习之，以明其乐。<br />
+                </div>
+                <div class="subtitle">
+                    从创世讲起<br />
+                </div>
+                <div class="text">
+                    在《奥义书》之前，《梨俱吠陀》曾用原人创世解释世界的起源，《原人赞歌》描述了原人Purusa作为祭品，而后化为世界万物；但《奥义书》将“原人创世说”加以改造，提出了“自我创世说”，如《爱多雷耶奥义书》所载：“太初，此世界唯独“自我”也。无有任何其他睒眼者。彼自思维：我其创造世界夫！”而这个创造出世界万物的“自我”也就是“梵”。这种世界太初之时的描述，恰如《道德经》中“有物混成，先天地生。”按照《奥义书》的种种描述，梵创造一切，存在于一切，又超越一切，与《道德经》开宗明义之“道可道，非恒道也”如出一辙。又因为梵创造世界，于是你我所见世界的一切本源皆是梵，令人不禁想起《庄子·知北游》中东郭子问道于庄子，庄子答曰：“所谓道，无所不在，在蝼蚁，在稊稗，在瓦甓，在屎溺。”于一切之中可以得梵，于一切之中可以悟得真知，此亦《奥义书》以之为己任也。<br />
+                </div>
+                <div class="subtitle">
+                    认知“梵”<br />
+                </div>
+                <div class="text">
+                    奥义书对于梵的认知常见两端。一是拟人或譬喻，如《自在奥义书》载：“它既动又不动，既遥远又临近，即在一切之中，又在一切之外。”又如《剃发奥义书》中：“他的头是火，双眼是月亮和太阳，耳朵是方位，语言是展示的吠陀，呼吸是风，心是宇宙，双足产生大地…”而这在《道德经》中也是俯拾皆是，譬如：”道冲 ，而用之或不盈。渊兮，似万物之宗﹔湛 兮，似或存。”又如：“知其雄，守其雌，为天下溪。为天下溪，常德不离，复归于婴儿。知其白，守其黑，为天下式，为天下式，常德不忒，复归于无极。知其荣，守其辱，为天下谷。为天下谷，常德乃足，复归于朴。”想来梵与道皆是如此，大音希声，大象无形，大道至简，非言语所能尽其妙，只好比拟之，譬喻之。二是遮诠，如《大森林奥义书》中“不是这个，不是那个”的认知和表达方式，恰如《道德经》里：“大方无隅，大器晚成，大音希声，大象无形，道隐无名。”思来人生的终极关怀，宇宙的最真道理，皆要否定本体之外的旁生错节，如同深受《奥义书》影响的印度佛家所讲求的“悟”和“明”以及中国禅宗棒喝时清远禅师那一句：脱了衣服去。<br />
+                </div>
+                <div class="subtitle">
+                    “梵”与本体<br />
+                </div>
+                <div class="text">
+                    《奥义书》中对梵的探讨始终与人的个体自我联系在一起。《蛙氏奥义书》将自我意识分为四位：觉醒位，梦位，熟眠位，第四位。四位递进，从认知外在开始，认知内在，获得智慧，而第四位超越三种状态，既非“认知”也非“不认知”，从而达到不二；这与《道德经》中：“五色令人目盲，五音令人耳聋﹔五味令人口爽﹔驰骋畋猎，令人心发狂﹔难得之货，令人行妨。是以圣人为腹不为目，故去彼取此。”所讲的物我两忘的境界颇为相似。人生于世，之所以不得安心，不得见大真实，就是因为对于外在的认识总多于对于自己的认识。《奥义书》中由梵于自我的联系，常常推而广之于宇宙，如《大森林奥义书》的“蜜说”将宇宙的水、火、风、太阳、方位、月亮等等与人体之精液入乎肾、语言入乎口、气息入乎鼻、见入乎眼、闻入乎耳、意入乎心等等相对应，并且不只将宇宙中各种自然称为神，也将人体的感官称为神，此中之神，即如《黄庭经》中所谓：“五脏六腑皆有神之神。”这都在一定程度上表明，对身体和自然进一步理解，《奥义书》将吠陀讼诗中的神祇还原为自然和人。<br />
+                </div>
+                <div class="subtitle">
+                    获得知识与思想领域革故鼎新<br />
+                </div>
+                <div class="text">
+                    从知识方面看，《奥义书》是印度哲学的开端，是对之前以祭祀为中心的转移，《奥义书》不讲天神、不讲鬼怪，单讲“梵”创造世界，“梵”是最高真理，是当时思想领域的革故鼎新，这也与《道德经》的成书背景相似。据李零先生考证，《道德经》晚于儒墨，仿佛绕到所有仁义礼智信之前，单讲世界本源皆是“道”。《奥义书》崇尚知识，确认梵是最高真实，梵我同一是人生最高目的，如《道德经》中：“人法地，地法天，天法道，道法自然”的要求。《奥义书》将知识分为“上知”和“下知”（或“上梵”与“下梵”），如《剃发奥义书》载：“下知是梨俱吠陀、夜柔吠陀、娑摩吠陀、阿婆达吠陀、语音学、礼仪学、语法学、词源学、诗律学和天文学。然后，是上知。依靠它，认识不灭者。”这与《庄子·逍遥游》中小大之辩和《庄子·外物》中：“去小知而大知明，去善而自善矣”有异曲同工之妙。<br />
+                </div>
+                <div class="subtitle">
+                    关注现世生活<br />
+                </div>
+                <div class="text">
+                    与更早的吠陀和梵书相比，《奥义书》更关注现世的生活，对食物和生殖尤其重视。《奥义书》被称为刹帝利王族的知识，如《大森林奥义书》所载：“这却是次序颠倒，婆罗门拜刹帝利为师。”之所以更多对现世关注我想也与这有关。当生产力发展，社会结构发生改变，宗教和神秘学的祭祀阶层将权利逐渐过渡到掌握生产资料的世俗权力手中；于是对于知识的认知，也从神话的、形象的思维向哲学的、抽象的思维转变。而《道德经》中也是如此，除却飘然出世的一面，《道德经》的另一面是帝王之术，念念不忘天下。<br />
+                </div>
+                <div class="text">
+                    <br />
+                </div>
+                <div class="text">
+                    大概伟大之学问，既可徘徊于云洞仙窟打通形而上的路，亦可为世人读懂一二慰济苍生。<br /><br /><br /><br />
+                </div>
+                <div class="footnote">
+                    【参考文献】<br />
+                    黄宝生译注，《奥义书》，北京：商务印书馆，2012<br />
+                    徐梵澄译注，《五十奥义书》，北京：中国社会科学出版社，2007<br />
+                    憨山大师注，《老子道德经憨山注》，上海：同济大学出版社，2013<br />
+                    李零著，《人往低处走——&lt;老子&gt;天下第一》，北京：生活·读书·新知三联书店，2008<br />
+                    庄子著，《庄子》，长春：吉林文史出版社，2003<br />
+                    王叔岷著，《庄子管窥》，北京：中华书局，2007<br />
+                    季羡林著，《季羡林谈国学》，北京：华艺出版社，2008<br />
+                    孙晶著，《印度吠檀多哲学的梵我观与朱子理学之比较》，昆明：云南大学出版社，2015<br />
+                    YAO Zhihua (姚治華)著，《Brahman and Dao: Comparative Studies of Indian and Chinese Philosophy and Religion》，Publisher:Lexington Books，2014<br />
+                </div>
+                <div class="text"><br /><br /><br /><br /><br /><br /></div>
+            </div>
+        </div>
+
+        <div class="section" style="background-image:url(11.jpg);background-size:cover" data-anchor="about-year-month-day">
+            <div class="article">
+                <div class="title"><br />《年月日》中的 “神” 与 “实”<br /></div>
+                <div class="author">张韵秋<br /></div>
+                <div class="text">
+                    1997年，阎连科发表了自己的中篇小说《年月日》，小说发表后在文坛引起广泛关注，并获得了第二届鲁迅文学奖中篇小说奖，小说以遭遇干旱饥荒的村庄为背景，在村民纷纷逃难之际，主人公先爷发现了一株存活的玉蜀黍苗并决心和自己收养的盲狗一起留在村庄等玉蜀黍苗长大。在之后几个月中，先爷和盲狗为活着守护玉蜀黍的成长，在久旱无雨的土地上艰难地与老鼠争夺剩余的粮食并在饿狼的威胁下寻找水源，最终在极度饥饿的情况下吃光埋在土地里的玉蜀黍种子粒和死老鼠肉之后，先爷将自己的身体作为最后的肥料将自己埋在了玉蜀黍下。故事的最后，当人们再次返回村庄的时候，发现由于玉蜀黍的根已经扎入了先爷的身体，并且结出了七粒玉蜀黍子。<br />
+                </div>
+                <div class="text">
+                    作者将小说的主要人物，七十二岁的先爷，被太阳灼瞎双眼的盲狗和方圆几十里内唯一一棵存活的玉蜀黍苗设置在经历千古大旱，居民放弃家乡出逃，方圆几十里之内植物全都枯死的村庄内。正生存必需的粮食水源极为有限而玉蜀黍还仅仅只长成幼苗，正是在这种看似不可能的情况下，无论是从翻出土地里被人们遗弃的庄稼种子充饥，与饥饿的狼群对峙一天一夜得来的水源，还是到最后在饥饿的威胁下以死去的老鼠为食，先爷与盲狗为了活着而做出的一切努力挣扎都显得极为惊心动魄。虽然小说本身无法打破其能够展现的时间以及地域跨度的限制，但阎连科却在这有限的空间里通过极端的甚至接近幻想的场景设置，将人与自然的冲突，人对生存的本质追求以及人作为个体存在的渺小集中地展示了出来，这不得不说是他所个人提出的 “神实主义” 写作手法的极好运用，即由作者自己创造出来了一个看似非真实的场景，但这样的场景却能直接而准地反应出人类最真实的生存逻辑，也就是神实主义所谓的 “创造真实”。<br />
+                </div>
+                <div class="text">
+                    “我希望我的创作能充满一种疼痛的感觉。”阎连科曾在采访中如是说，而这种疼痛也许就是人类生存的最真实地感受，也是我们揭开掩盖在表层的掩饰直面现实时最真实地感受。在《年月日》当中阎连科通过先爷在饥饿的威胁下，一次次吃尽现有的食物又一次次开始寻找新的充饥物的反复中不断地带给读者希望又迅速将其抛入绝望中，作者利用这样的反复带领读者一步步逼近真实，读者的关注点由开始的急于知道主人公怎样解决困境到最后的聚焦于困境本身，其中对于生存威胁的恐惧，焦虑一次次被无限拉长放大，最终变成生存本身。而在这一过程中，读者的内心与主人公也逐渐接近。在最初满怀希望返回村庄找食物却发现村中人家没有剩下一颗粮食，先爷将唯一找来的盐粒吃下去一颗之后，“忽然拿起地上的鞭子，站在路的中央，对着太阳噼噼啪啪抽起来。”，这可以看做是先爷许久以来情绪的集中爆发，其中有着对久旱不雨的老天爷的抱怨，对命运如此的反抗，对一颗粮食都不留的村民的不满，对一场雨的接近疯狂地期望，甚至有对为了一棵玉蜀黍苗选择留下来的懊悔，满载的是个体对于可能即将到来的死亡的极度恐惧与对生的极度渴望。然而当历经了多次反复，最后鼠肉终于吃尽，死亡真正要来临的时候，先爷则是 “盯着天空沉默得岁岁年年”，“他不指望有雨水落下，可他指望能熬持到秋熟的日子，能把那穗玉蜀黍棒儿掰下。”，相较拾起鞭子抽打太阳，先爷反而变得平静，没有激烈地抱怨愤恨，剩下的只有怎么多熬几天，熬到玉蜀黍成熟的那天，而以后的日子则不必再想，生存的意义越来越小，一直小到挑回最后一担水，煮了最后一只鼠，确认了玉蜀黍的生长状况，然后准备一枚硬币，认真地决定起自己应该怎么死。而这夸张离奇的故事本身就是回归真实，挖掘真实的过程。真实的我们没能为关于主义的伟大事业献身，却为了一箪食，一豆羹相互争抢，渺小而卑微地活着，真实的个体相互矛盾的存在着，真实的是人生短暂，苦难永恒。 <br />
+                </div>
+                <div class="text">
+                    就小说写作本身来讲，《年月日》在语言及情节上都富有独特的吸引力，阎连科成功地运用写作的技巧构建出 “神” 的一面，小说中对盲狗有着极其细致的描写，不同于《边城》中陪伴翠翠的狗，这只狗有名有姓有详细的身世，并且被赋予情感从而被人格化。在寻找粮食的过程中，不仅听得懂先爷的话，盲狗也一直做出富有人类感情的回应，例如盲眼中多次流下泪水，在粮食袋遭到老鼠破坏时表现得惊慌失措，直至最后对先爷的一跪。这种类似寓言的写法为先爷内心变化的展示提供了一个极好的平台，同时也展现出了生存威胁下生命的相互依靠与生的多种可能性。无论人还是狗，都对活着一样渴望；无论人还是狗，都可以爆发出惊人的忍耐与力量；无论人还是狗，都可以为了接近狂想的期望一往无前。这是属于生命的特质，生命不会被苦难埋没，生命不应被苦难埋没，生命应该永远存在于在战胜苦难的激情中，活着即是英雄，无论悲剧与喜剧，无论人还是狗。同样地，生命如同那棵奇迹般结出颗粒的玉蜀黍，在漫漫干裂的土地上孤独地长久地伫立着。那颗曾经被肥料和老鼠的气味烧出旱斑，因为几天的断水而全身枯黄，又差点被狂风和老鼠弄断根部的玉蜀黍却成为了最后唯一一个活下来的生命体。七粒种子又被留下的人们种入土中，生根发芽，最后 “种出了七棵嫩绿如油的玉蜀黍苗”。单看这结尾，毫无悲凉呻吟，竟满是一往无前的力量。<br />
+                </div>
+                <div class="text">
+                    在这个作者在现实之外人为地创造出的世界里，在夸张离奇的情节中，读者反而获得了更大的自由去直面真实，无论是荒谬还是激情，至少我们可以冷静地思考，冷静地回答与评价。这也许就是神实主义的意义所在，而无可争议的是，《年月日》是其中的经典的代表。如果现实主义可以展示出事实的样貌的话，神实主义则通过文学的手段最大程度得接近事实背后的真相。因此当我们阅读《年月日》的时候有眼泪却无法流出，因为当我们揭开文字渲染出的那层气氛之后仿佛可以看到一个活生生自己，真实带给人的震撼也许在此了吧。<br />
+                </div>
+                <div class="text"><br /><br /><br /><br /><br /><br /></div>
+            </div>
+        </div>
+
+        <div class="section" style="background-image:url(12.jpg);background-size:cover" data-anchor="chess">
+            <div class="article">
+                <div class="title"><br />说棋<br /></div>
+                <div class="author">香港大学 醒月楼主人<br /></div>
+                <div class="text">
+                    直到在华夏文化节上陪人下棋，拿起第一个棋子时，我才发现自己的心情竟然如此复杂。<br />
+                </div>
+                <div class="text">
+                    上一次同人真正意义地下一盘棋，似乎是很久很久以前的事了。连续一年乃至数年不摸棋盘棋子，这恐怕是小时候的我怎么也无法想像得到的吧。<br />
+                </div>
+                <div class="text">
+                    我大概四五岁就开始下象棋了，启蒙老师是我外祖父。他是一个退休以后也不愿意成天在家里闲待着的人，所以他每天都会在出门买菜散步时，驻足于离家很近的一个小公园里，和他的同龄人下下象棋或者打打扑克，这一习惯一直持续到他脑梗病发瘫痪在床为止。多年以后我回想起来，外祖父与我下棋的过程就如同他衰老的过程一样，从最开始的思路灵敏到后来时不时地忘记马会蹩腿这种基本规则。这所有的所有，当你身处其中时会觉得再自然不过，只有再回首时才能发现隐于其中的人生的淡淡的无力感。如今想来，外祖父的病似乎早已有所征兆，只是我不曾发现，所以才会在高一假期回家看到躺在病床上的他时不甘心地躲进厕所里哭泣。<br />
+                </div>
+                <div class="text">
+                    正式学象棋的第一步是我在六岁时踏出的。当时父母决定送我去学象棋，一是因为我本身有这方面的兴趣，二是希望我能在老去之时，存有一两样可以消磨时光度过残年的娱乐技能。可以说父母对我这一方面的培养是付出了相当大心血的。还记得有一次上课，我在听一盘已经学会的的残局时溜了号，下课后被我母亲狠狠地教训了一顿，那时我才知道，她经常站在教室的窗外看我的听课状态。大概我小学时就养成听课时与老师保持对视的习惯也受益于此。<br />
+                </div>
+                <div class="text">
+                    整个小学的六年里，我几乎周周不断地下棋，几乎是同届里面留在班里最久的人了。我从一个只会重炮杀法的菜鸟慢慢变成了班里数一数二的小棋手，渐渐地同学们开始以偶尔能够胜我一局感到荣耀。<br />
+                </div>
+                <div class="text">
+                    而我的象棋生涯似乎就要到此为止了。上了中学之后我的每一样补习学习的业余爱好——象棋、乒乓球、单簧管、魔术等等，渐渐地为学习让了位。我并不后悔考进了一所军事化管理甚至允许体罚的学校，因为若非如此我现在恐怕没有机会走出小小的辽宁。我唯一后悔的是，当年没能再挤出一点点时间，让我的几样爱好得以苟延残喘下去。<br />
+                </div>
+                <div class="text">
+                    当然象棋并没有被我完全地抛弃掉。除了偶尔同那时已经有些迟钝的外祖父下两盘棋解解闷外，在寒暑假里我偶尔有机会打开电脑，在网络平台上与人过两招。然而说句实在话，棋这种东西于我来说并不适合虚拟的切磋。在游戏平台里，对手之间彼此不能相见，心中所求并非棋的本身而是等级的高低；下棋之时，手中只有一个鼠标，排兵步阵索然无味；一局终了，各自散去，没人再为这盘棋负责，只是机械地寻找下一个对手，甚至希望碰见比自己级别低的人以便升级。可以说在虚拟的平台中与人对弈，棋之意义了然无存。<br />
+                </div>
+                <div class="text">
+                    时隔多年，当我再次用手衔起棋子时，除了那一抹与棋久别重逢的激动之外，我似乎还体会到了心里多出的一分淡然。是的，多年以后，我终于不再是以前坐在棋盘前的自己，不再一步一步地经营、 一兵一卒地计较。此时方知，内心不陷于胜负、落子不泥于规矩，布局之间，随意自在，才是下棋之灵魂。<br />
+                </div>
+                <div class="text"><br /><br /><br /><br /><br /><br /></div>
+            </div>
+        </div>
+
+        <div class="section" style="background-image:url(13.jpg);background-size:cover" data-anchor="burgers">
+            <div class="article">
+                <div class="title"><br />牛肉饼<br /></div>
+                <div class="author">佚名<br /></div>
+                <div class="text">
+                    我是一块牛肉饼。制造我的妈妈说我们牛肉饼就要规规矩矩，认认真真地做好我们的职责。当个好牛肉饼等待人们来吃。<br />
+                </div>
+                <div class="text">
+                    每次我听到这样的话的时候，都会挺起腰板，和其他的牛肉饼一起大声说是。而这时候总有一块牛肉饼小A是一言不发的。小A是我们之间的异类。他每次都只是轻蔑地撇撇嘴，对这样的口号不置一词。我问他为什么总是这样，他总是不太在乎地冷笑，“你们当然不会明白。模范牛肉饼们。” <br />
+                </div>
+                <div class="text">
+                    有一天，妈妈终于对这样的态度表达了看法。她拿出棒子狠狠地打在小A的身上，原本平整漂亮的表面汁液飞溅，面目模糊。我听着那一声声撞击声瑟缩了起来。<br />
+                </div>
+                <div class="text">
+                    晚上的时候，我去小A那里看望他。在好几块牛肉饼里，我犹豫了很久才认出哪一块是他，他原本的模样已经被棒子磨得无法辨认。他听到声音抬起头，看见是我时惊讶地挑了挑眉毛。似乎是因为刚才的事件，他的态度较平常稍稍缓和了一点，我坐在他旁边他也没有太抵触。<br />
+                </div>
+                <div class="text">
+                    “是不是很痛？”我条件反射地想要触碰他，却被他躲了过去。<br />
+                </div>
+                <div class="text">
+                    他咳了一声，咬字模糊，“还好。”<br />
+                </div>
+                <div class="text">
+                    一阵尴尬的沉默。有个话题一直含在嗓子里，我不知道是否该讲。而让小A主动说些什么似乎是不可能的。思考了一下，我还是开口了。<br />
+                </div>
+                <div class="text">
+                    “小A，你这是何苦呢？现在一点都不好看了，到时没人买我们吃怎么办。” <br />
+                </div>
+                <div class="text">
+                    他刚刚变得柔和的线条几乎是立刻冷硬了起来。“所以我说你这种牛肉饼根本不会懂。”他不容置喙地将我推了出去，“谢谢你来看我，但是我们还是离远一点比较好。” <br />
+                </div>
+                <div class="text">
+                    从那一天以后，小A就不再和我亲近。甚至连最开始时那样的，我去问他的想法的对话都不再有。但是过了几天之后，他的样子还是变了回来。看着他似乎心情还可以，我试探地对他说看来妈妈原谅他了。而他只是冷笑，“那女人还不是为了赚钱。” <br />
+                </div>
+                <div class="text">
+                    “反正你现在这样是好看多了！”我没有听懂，只是笑嘻嘻地告诉他我真实的想法。他的冷笑僵在脸上，无奈地扭过头，不再看我。<br />
+                </div>
+                <div class="text">
+                    那天，有个高高壮壮的男人来了。他和妈妈聊着天，眼神不时往我和我的同伴身边瞟。“这是，牛肉饼？” <br />
+                </div>
+                <div class="text">
+                    “对的。”妈妈很快地回答。<br />
+                </div>
+                <div class="text">
+                    “嗯，看上去不错。这一袋我都要了。” <br />
+                </div>
+                <div class="text">
+                    被男人带走的时候妈妈悄悄的，认真地在我们耳边说：记住，你们都是牛肉饼。<br />
+                </div>
+                <div class="text">
+                    来到男人家里之后，我们被随意地扔在了厨房的一角。每日都有同伴被男人拿出，带走。我看着他们离开，心里不是难过而是羡慕。我努力地在袋子里跳跳。什么时候我才能被带走呢。小A告诉我这有什么好期待的，总有一天是会被吃掉的。但他这么说的时候，我分明看到了他眼里的那一丝希冀。<br />
+                </div>
+                <div class="text">
+                    那天下午的时候，又有只脏兮兮的大手在我们的袋子里摸索着，旋即我就感到身体被拉离了原处。忽如其来的上升感让我感到眩晕。小A的身体令人不舒服地紧紧贴着我的，他的脸上除了尴尬还有种若有若无的伤感。<br />
+                </div>
+                <div class="text">
+                    我明白了这是我们要被吃掉的那一天。<br />
+                </div>
+                <div class="text">
+                    我被制造出来，今日终于可以上桌供人们食用。和同伴们一齐躺在热腾腾的锅里，我想起妈妈的话，规矩地和衣而卧，认真地忍耐着高温。小A一贯不屑的脸上也和我一样紧张却认真。<br />
+                </div>
+                <div class="text">
+                    上了桌之后，我试图打量周围的环境。除了那个高大的男人，似乎还有他的老婆和孩子，然后另一边还坐着另一家人。而餐桌上，除了我们还有另一盘物质。他们也是小个的饼状，但比我们大一些，薄一些，凹凸不平，色泽也不够好看。我看着自己的样子，骄傲地用力挺起胸脯。他们却只是懒洋洋地看了我们一眼就不再动作。<br />
+                </div>
+                <div class="text">
+                    “哥哥，这些是什么啊？”做客的小女孩好奇地指着我们问。“是牛肉饼啊。”“真的吗，可是这边这盘才是啊。我尝一块。”小女孩夹起我的一个同伴，咬了一口，略微咀嚼了几口就吐了出来。“哥哥，你骗我！这才不是什么牛肉饼，根本没有牛肉的味道！” <br />
+                </div>
+                <div class="text">
+                    “老张啊，你怎么还吃这些东西啊。明明知道不是牛肉饼。” <br />
+                </div>
+                <div class="text">
+                    “哎，我这不是省钱么。谁不知道牛肉的现在多贵。素牛肉当然便宜多了。” <br />
+                </div>
+                <div class="text">
+                    这句话宛若惊雷，我听了之后无法动弹。<br />
+                </div>
+                <div class="text">
+                    不是牛肉饼。那我应该是什么呢。<br />
+                </div>
+                <div class="text">
+                    那天晚餐，对面的一盘牛肉饼被吃得干干净净，我们这一盘除了小女孩好奇吃了一口的同伴，其余全颓唐地躺在盘子里。<br />
+                </div>
+                <div class="text">
+                    真正的，被承认的东西是不用刻意假装的，就算形状不似，也可以理直气壮地向世人宣称。然而，假的东西总是费尽心机，被打扮成最可爱的样子，但到了最后也总会自我怀疑，永远无法掩饰那些虚假。<br />
+                </div>
+                <div class="text">
+                    小A跟我说他早就怀疑他是素牛肉，不是什么牛肉饼。他说跟这样见异思迁的男人在一起简直毫无意义。“小C，跟我逃走吧。”他这么说。<br />
+                </div>
+                <div class="text">
+                    我犹豫地看着他，缓缓摇了摇头。<br />
+                </div>
+                <div class="text">
+                    “难道你还要自欺欺人么？！”第一次看到小A这么情绪激动。“我们根本就不是什么牛肉饼啊。那男人喜欢吃的也不是真正的我们！妈妈欺骗了我们那么久，你还要自己蒙起自己的眼睛来吗！” <br />
+                </div>
+                <div class="text">
+                    “小A，我知道他们都说我们不是牛肉饼，但我为什么就一定是素牛肉呢。为什么一定要听男人说什么，我就一定是什么呢。我觉得，若是我认为自己是牛肉饼，那么我就是牛肉饼了。别人说什么，我也是牛肉饼。” <br />
+                </div>
+                <div class="text">
+                    小A久久没有讲话。不知过了多久，才叹了口气，“你真的，很固执呢。但又固执得让人无法反驳。” <br />
+                </div>
+                <div class="text">
+                    “你若是愿意的话，这样也好。<br />
+                </div>
+                <div class="text">
+                    本来我们就有不同的自我认知，我去找我的素食主义者，你的话，这条路不会好走，但是——<br />
+                </div>
+                <div class="text">
+                    祝你好运。” <br />
+                </div>
+                <div class="text">
+                    <br />
+                </div>
+                <div class="text">
+                    题外话：
+                    牛肉饼的故事记事第一天：中午brunch时吃sorority house里的牛肉饼产生的灵感。当时被哪个是素的哪个是肉的困扰了很久，后来用真的总是其貌不扬不用印证的逻辑顺利吃到了肉的。周四晚饭也为之困扰，拿了大块的，卖相不错的香肠结果发现是素的。真是辨别不利啊。<br />
+                </div>
+                <div class="text">
+                    不过也正因为辨别力太差，才会久久地在饭桌上纠结，才有了关于牛肉饼的思考，也才有了这篇牛肉饼的故事。<br />
+                </div>
+                <div class="text">
+                    牛肉饼的故事记事第二天：昨天只写出了大纲。为了扩充牛肉饼的故事，我今天中午特地跑去Joy Yee吃了牛仔骨。<br />
+                </div>
+                <div class="text">
+                    P.S. 昨天晚上吃饭的时候，查学姐告诉我我吃的应该不是牛肉饼，而是猪肉饼。果然辨别能力比我想像得还要差，并且关于社会进步，肉饼identity的讨论永远不会结束。<br />
+                </div>
+                <div class="text"><br /><br /><br /><br /><br /><br /></div>
+            </div>
+        </div>
+
+        <div class="section" style="background-image:url(14.jpg);background-size:cover" data-anchor="wealthy-idler">
+            <div class="article" style="text-shadow :0px 0px 20px #000000; color :white;">
+                <div class="title"><br />富贵闲人<br /></div>
+                <div class="author">西班牙小苍蝇<br /></div>
+                <div class="text">
+                    秋风开始转凉，阿李站在校巴站的时候，这种刺骨寒凉的体验格外清楚。其实不该叫做秋风，这座孤岛上的大学四季不明，春天短的几乎没有，夏天的热度仿佛占据一年，只有在太阳快接近南回归线的时候冷那么几个周。可是很难把这几个周叫做秋天，这的树木连落叶都没学会，怎么好意思妄称秋天。唯一和阿李老家相仿的，大概只有这种刺骨的寒风，每次风从袖子口灌进去的时候，阿李都有些明白为什么对待敌人要像秋风扫落叶一样。阿李的老家离他的学校十万八千里，讲起来，总可以说自己是来自北方的狼，只是没想到会在亚热带的地方冻成一条狗。<br />
+                </div>
+                <div class="text">
+                    阿李早些年的生活泛善可陈。其实不该说是乏善，实在是没什么好讲起的。阿李长到二十岁，除去襁褓中的几年，打记事起，就在学校里用功读书。阿李也不是没有梦想的人，上了高中以后，曾和最好的朋友范爷发过毒誓，高中怎么也得拉一拉小闺女的手，范爷听完不予评论，拍了拍坐在自己后边的女同学，让女同学和阿李聊聊天，阿李一下午低着头，左手拉着右手，从后耳朵根一直红到脖子，女生问什么都只回答是是是，好好好。范爷后来拍拍阿李，什么都没说，那意思是就这德行还想着拉拉手? <br />
+                </div>
+                <div class="text">
+                    不过阿李是个聪明人，高考成绩下来了，数得上名字的大学都向他抛出橄榄枝。李爸李妈一时间看花了眼，觉得这离家挺远的国际化都市的大学怎么看怎么顺眼，问都没问，就给阿李填了志愿。阿李离开学还有一个月才知道自己上这个大学，阿李也不怨爸妈私自就定了他的前程，反正在他看来大学都差不多，无所谓的。<br />
+                </div>
+                <div class="text">
+                    不知道从什么时候开始，反正是上了大学之后，阿李每天起床，都有一种短暂的失忆感。无论多早或多晚从枕头上起来，都需要几分钟想想自己在哪里，昨天做了什么，今天要做什么。当然这不是一般意义上的那种刚起床的迷茫感，而是实实在在的真实的迷茫感，这种迷茫感比真实的存在还要真实，就好像比眼瞥见床头的杯子，比身体踏踏实实地躺在坚硬的床板上，比手里握着手机的触感更真实。说到手机，阿李也总记不起来为什么每天一起床时候总握在手里，甚至有种长在手心的错觉，仿佛手机从自己右手的血肉里不停地吸取能量。阿李低头看了看，右手还是拿着手机，自己还穿着那双穿了很久的耐克鞋，可今天总感觉有些不对劲，阿李起床以后想起了自己昨天什么也没做，可是记不起今天打算做什么了。阿李常常漫无目的的坐在椅子上，或许躺在床上，以前的他大概还喜欢在闲暇时候做点自己喜欢的事情，比如在电脑上打打游戏，可现在他连游戏都懒得打啦。他就是一动不动的，也并非发呆，每过几分钟忽然从裤子的兜里拎出手机，依次打开几个聊天软件，戳进带红点的对话框，眼神飘忽地略过，然后退出，关闭屏锁，再把手机装进兜里，整个过程行云流水到连他自己都没发觉。<br />
+                </div>
+                <div class="text">
+                    阿李想回宿舍里面坐着好好想想今天打算干什么，可是回头看了看长长的队伍，打消了先回去再来排队的冲动。校巴来了一辆，是往山下走的，阿李想了想觉得下山去逛逛也好，一步一挪地往前走着，顿时来了些兴致。可等他走近那校巴，校巴却上满了人，校巴门在阿李的鼻子前面砰的合上，阿李终于明白什么是碰了一鼻子灰。过了不久，又来了一辆校巴，是去后山的，阿李顶清楚后山荒荒凉凉的，天涯海角一样，可谁让他站在第一个呢，阿李想想也没什么大不了的，就上了车了。阿李也不知道自己要在哪一站下车，这种不确定感时时刻刻地包围着他，却没有让他感到丝毫的不适，正相反，他把这种飘飘荡荡的感觉当成大海上最浪漫的航行，因为没有目标，又或者随处都是目标。阿李看着车窗外灿烂的阳光和冷风吹起参差浮动的树叶，婆娑的光影里想起高考完的假期；也是这样漫无目的地坐在不知道哪一辆公车上，沿着海岸线仿佛永远也走不到头。阿李拉开书包的拉锁，从里面拿出一本书来读。阿李记得昨天好像看过一本有趣的书，又好像没看过，但如果看了应该是没看完，如果没看那那本好看的书应该就是手上这本了，于是从扉页开始看起。说起看书，阿李也是颇有心得，阿李每个周会列一个长长的书单，然后照单全买，摆在屋子里。有人来玩的时候，看到书架上书满为患就会问阿李都看完了吗，阿李也不记得自己看了还是没看，更不记得一本书看了几次看没看完，阿李这时候都会表情羞涩地挠挠头，不回答，于是阿李看书多还谦虚的名声越来越大。阿李看书的时候，总觉得一个一个字从书里面飞起来，然后在眼前飞过去，每个字都认识，可每句话都懒得费心思连起来读，一页翻过去，所有字都读了，就是不知道在讲什么。当然阿李对自己的专业书籍还是真真正正看明白的，虽然到现在他也不清楚自己这么爱看闲书为什么要学理科。<br />
+                </div>
+                <div class="text">
+                    校巴往后山开得招招摇摇的，阿李放下手里剧烈摇晃的书准备下车。此时晌午，校巴站对面正是一家餐厅。摸了摸肚子，阿李想起今天还什么都没有吃过，于是站在菜单前面端详起来。起先，阿李在看菜单的人群里排最后一个，过了一会，大家该点菜的点菜，该换地方的换地方，阿李成了看菜单的人里打头的一个，又过了一会儿，后边的人或是不耐了烦，干脆越过阿李看菜单了。阿李倒不是囊中羞涩，阿李家中余财都够他顶富贵地过上半辈子，阿李真的不知到该吃什么，好像所有滋味到了阿李口里都变得平平淡淡的不值当一句赞美。阿李就在菜单前面站了半个小时，还是拿不定主意，这时候听着旁边一个饥饿的声音说，叉烧饭！叉烧饭！就馋这一口好几天了！阿李想想，也叫了个叉烧饭，同那人并排坐着吃。<br />
+                </div>
+                <div class="text">
+                    阿李一边看手机一边用叉子拨弄着那几片叉烧，一抬头才发现旁边的人已经吃完了。阿李觉得自己大概吃了太久，于是倒掉那半碗叉烧饭，走出餐厅。转过街角的时候，阿李看到路边新落的灰积在旧落的灰上，一切没有什么不同；一阵秋风过后，新落的灰和旧落的灰就都没有了，洋洋洒洒飞在天上，刚好阳光足满，落在阿李的前边，后边，左边，右边。<br />
+                </div>
+                <div class="text"><br /><br /><br /><br /><br /><br /></div>
+            </div>
+        </div>
+
+        <div class="section" style="background-image:url(15.jpg);background-size:cover" data-anchor="how-great-is-wang-xiaobo">
+            <div class="article">
+                <div class="title"><br />王小波到底有多伟大<br /></div>
+                <div class="author">冯唐<br /></div>
+                <div class="text">
+                    早读王小波，是七年前的事情了。书名《黄金时代》，华夏出版社出版，恶俗的封面，满纸屎黄。那时候的出版社编辑好象就这点想象力，书名叫《黄金时代》就得满封面鸟屎黄，书名叫《倩女幽魂》就得满封面鸡屎绿。一个叫王小波的汉子印在扉页上，就是那张日后满大街满书店都见得到的照片：太阳当头照，他站在莎士比亚故居门口，皱着眉，咧着嘴，叉着腰，穿着一件屎黄的T恤衫。简介上说这个王小波是个文坛外的文章高手，说还得了一个台湾的什么大奖。一个文学口味不俗的师姐把小说扔给我，说：“值得一看，挺逗，坏起来和你挺象。”这个师姐曾经介绍我认识了库尔特冯尼格和飞利浦罗斯，余华刚出道的时候，就被她认定是个好小伙子。我当时正在上厕所，我大便干燥，我老妈说因为我让她难产所以老天就让我大便干燥。我就在这种不愉快的干燥中一口气读完了《黄金时代》。当时，我有发现的快乐，仿佛阿基米德在澡堂子里发现了浮力定律，我差一点提了裤子狂奔到街上。 <br />
+                </div>
+                <div class="text">
+                    小波的好处显而易见。 <br />
+                </div>
+                <div class="text">
+                    第一，有趣味。这一点非常基本的阅读要求，长久以来对于我们是一种奢侈。好的文字，要挑战我们的大脑，触动我们的情感，颠覆我们的道德观。从我们小时候开始，写小说写散文写诗歌的叔叔大婶们患有永久性欣快症。他们眼里，黑夜不存在，天总是蓝蓝的，太阳公公慈祥地笑着。姑娘总是壮壮的，如果不是国民党特务的直系后代，新婚之夜一定会发现她还是黄花闺女。科普书多走《十万个为什么》、《动脑筋爷爷》一路，只会告诉你圆周率小数点之后两百位是什么，不会告诉你偷看到隔壁女孩洗澡为什么会心跳加快，手心出汗。王小波宣布，月亮也有暗面，破鞋妩媚得要命。读小波的文字，又一次证明了我的论点：女人没有鼻子也不能没有淫荡，男人没有阳具也不能没有脑子。男人的智慧一闪，仿佛钻石着光，春花带露，灿烂无比，蛊惑人心。 <br />
+                </div>
+                <div class="text">
+                    第二，说真话。这一点非常基本的做人作文要求，长久以来对于我们是一种奢侈。明白事理之后，我很快就意识到，如果我们将真实的生活写出来，只能被定性为下流文字，谢天谢地我们还有手抄本、地下刊物和互联网等大众传播形式。如果我们把真实的生活拍成电影，只能让倒霉的制片人将血本赔掉，好在我们还有电影节和世界各地的小众电影市场及艺术院线。中国前辈文章大师为子孙设计职业生涯，无一例外地强调，不要在文字上讨生涯，学些经世济民的理科学问。我言听计从，拼命抵制诱惑，不听从心灵召唤，不吃文字饭。所以才能口无遮拦，编辑要一千五百字，我淋漓而下两千字，写完扔给编辑去删节，自己提笔而立，为之四顾、为之踌躇满志。小波老兄，你为什么不听呢？否则何至于英年早逝，让鼠辈们少了让他们心烦的真话听？ <br />
+                </div>
+                <div class="text">
+                    第三，纯粹个人主义的边缘态度。这一点非常基本的成就文章大师的要求，长久以来已经绝少看到。文章需要寂寞，文章自古憎命达。生活在低处，生活在边缘，才能对现世若即若离，不助不忘，保持神智清醒。当宣传部长，给高力士写传，成不了文学大师。被贬边陲，给街头三陪写传，离文学大师近了一步。塞林格躲进深山，性欲难耐时才重现纽约街头，报摊买本三级杂志，给杂志封面上著名的美人打电话：“我是写《麦田守望者》的塞林格，我想要和你睡觉。”小波也算是海龟派鼻祖，八十年代就回国了，他不搞互联网公司圈钱，不进外企当洋买办，他只在北京街头浑身脏兮兮地晃悠。他写得最好的一篇杂文是《我为什么写作》，在那篇文章里，他从热力学熵定律的角度，阐述了做人的道理：有所不为，有所必为。 <br />
+                </div>
+                <div class="text">
+                    今年4月11日，是王小波逝世五年祭。小波生前寂寞潦倒，死后嘈杂热闹。这些年，这些天，报纸杂志互联网拚命吹捧，小波的照片像影视名人商贾政要似的上了《三联周刊》的封面，一帮人还成立了“王小波门下走狗联盟”。我这个本来喜欢小波的人，开始产生疑问：小波到底有多么伟大？ <br />
+                </div>
+                <div class="text">
+                    小波的不足显而易见。 <br />
+                </div>
+                <div class="text">
+                    第一，文字寒碜。即使被人打闷棍，这一点我必须指明，否则标准混淆了，后代文艺爱好者无所适从。小波的文字，读上去，往好了说，象维多利亚时期的私小说，往老实说，象小学生作文或是手抄本。文字这件事，仿佛京戏或杂技或女性长乳房，需要幼功，少年时缺少熏陶和发展，长大再用功也没多大用。那些狂夸王小波文字好的，不知是无知还是别有用心。小波是个说真话的人，我们应该说真话，比如我们可以夸《北京故事》真情泣鬼神，但是不能夸它文字好。我们伟大的汉语完全可以更质感，更丰腴，更灵动。 <br />
+                </div>
+                <div class="text">
+                    第二，结构臃肿。即使是小波最好的小说《黄金时代》，结构也是异常臃肿。到了后来，无谓的重复已经显现作者精神错乱的先兆。就象小波自己说的，他早早就开始写小说，但是经常是写得断断续续，反反复复。小波式的重复好象街道协管治安的大妈、酷喜议论邻居房事的大嫂，和《诗经》的比兴手法没有任何联系。要不是小波意象奇特有趣，文章又不长，实在无法竟读。几十年后，如果我拿出小波的书给我的后代看，说这是我们时代的伟大杰作，我会感觉惭愧。 <br />
+                </div>
+                <div class="text">
+                    第三，流于趣味。小波成于趣味，也止于趣味。他在《红拂夜奔》的前言里说：“我认为有趣像一个历史阶段，正在被超越。”这是小波的一厢情愿。除了趣味，小波没剩太多。除了《黄金时代》和《绿毛水怪》偶尔真情流露，没有见到大师应有的悲天悯人。至于思想，小波和他崇拜的人物，罗素、福柯、卡尔维诺等等，还有水平上的差距。缺少份量，小波只有三、四本书遗世，而且多为中篇。虽然数量不等于伟大，但是数量反映力量。发现小波之后，我很快就不看了。三万字的中篇，只够搞定一个陈清扬，我还是喜欢看有七个老婆的韦小宝。 <br />
+                </div>
+                <div class="text">
+                    总之，小波的出现是个奇迹，他在文学史上完全可以备一品，但是还谈不上伟大。这一点，不应该因为小波的早逝而改变。我们不能形成一种恶俗的定式，如果想要嘈杂热闹，女作家一定要靠裸露下半身，男作家一定要一死了之。我们已经红了卫慧红了九丹，我们已经死了小波死了海子，这四件事，没一件是好事。 <br />
+                </div>
+                <div class="text">
+                    现代汉语文学才刚刚有了真正意义上的开始，小波就是这个好得不得了的开始。<br />
+                </div>
+                <div class="text"><br /><br /><br /><br /><br /><br /></div>
+            </div>
+        </div>
+    </div> <!--end of fullpage-->
+</body>
