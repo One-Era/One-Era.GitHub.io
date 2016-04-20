@@ -12,8 +12,8 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="msapplication-navbutton-color" content="#ffffff">
     <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.7/jquery.fullPage.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/js/min/perfect-scrollbar.jquery.min.js"></script>
@@ -41,8 +41,8 @@
     .logo {
         width: 100%;
         position: absolute;
-        top: 15vmin;
-        height: 40vmin;
+        top: 10vmin;
+        height: 50vmin;
         display: none;
     }
 
@@ -56,17 +56,19 @@
     .headline {
         width: 100%;
         position: absolute;
-        top: 60vh;
+        top: 63vh;
         display: none;
     }
 
         .headline a {
-            font-size: 5vmin;
+            font-size: 4vmin;
             color: #fff;
             margin: 0;
             padding: 0;
             text-shadow: 0px 0px 20px #000;
             text-decoration: none;
+            line-height: 200%;
+            font-weight: bold;
         }
 
     /*footer section*/
@@ -82,7 +84,7 @@
 
     .footer {
         position: fixed;
-        font-size: 3vmin;
+        font-size: 4vmin;
         bottom: 2vh;
         width: 100%;
         padding: 0;
@@ -97,6 +99,18 @@
             text-decoration: none;
             color: white;
         }
+
+    .aboutusbutton {
+        cursor: pointer;
+    }
+
+    .magazinesbutton {
+        cursor: pointer;
+    }
+
+    .contactusbutton {
+        cursor: pointer;
+    }
 
     /*dialog section*/
     .dialogmask {
@@ -176,6 +190,7 @@
         overflow-y: hidden;
     }
 
+
     .magazinesdialog {
         overflow-x: hidden;
     }
@@ -191,8 +206,16 @@
 
     /*responsive layout*/
     @media only screen and (max-width: 1000px) {
+        .logo {
+            top: 15vh;
+        }
+
+        .headline a {
+            font-size: 5vmin;
+        }
+
         .footer {
-            font-size: 6vmin;
+            font-size: 7vmin;
         }
 
         .dialog {
@@ -228,6 +251,10 @@
         .headline {
             top: 50vh;
         }
+
+            .headline a {
+                font-size: 5vmin;
+            }
     }
 </style>
 <script>
@@ -275,17 +302,16 @@
 <div id="fullpage">
     <!--logo and headline-->
     <div class="logo">
-        <a href="https://one-era.com">
-            <img src="logo.png" unselectable="on" />
-        </a>
+        <img src="logo.png" unselectable="on" />
     </div>
 
     <div class="headline">
-        <h1>
-            <a target="_blank" href="http://t.cn/RqZwjbD">
-                第四届<br />微情书大赛<br />正式开始
-            </a>
-        </h1>
+        <a target="_blank" href="32">
+            第32期《毕业季》已上线<br />
+        </a>
+        <a target="_blank" href="http://t.cn/RqZwjbD">
+            第四届微情书大赛火热进行中<br />
+        </a>
     </div>
     <!--footer-->
     <div class="footermask"></div>
@@ -302,22 +328,17 @@
             <i class="fa fa-facebook fa-fw"></i>
         </a>
         <span>|</span>
-        <a href="#">
-            <span class="aboutusbutton">
-                <i class="fa fa-users fa-fw"></i>
-            </span>
-        </a>
-        <span>|</span><a href="#">
-            <span class="contactusbutton">
-                <i class="fa fa-envelope fa-fw"></i>
-            </span>
-        </a>
+        <span class="aboutusbutton">
+            <i class="fa fa-users fa-fw"></i>
+        </span>
         <span>|</span>
-        <a href="#">
-            <span class="magazinesbutton">
-                <i class="fa fa-book fa-fw"></i>
-            </span>
-        </a>
+        <span class="contactusbutton">
+            <i class="fa fa-envelope fa-fw"></i>
+        </span>
+        <span>|</span>
+        <span class="magazinesbutton">
+            <i class="fa fa-book fa-fw"></i>
+        </span>
     </div>
     <!--dialog-->
     <div class="dialogmask"></div>
@@ -359,6 +380,11 @@
                 </td>
             </tr>
             <tr>
+                <td class="teamname">
+                    <br />
+                </td>
+            </tr>
+            <tr>
                 <td class="teammember">
                     主编：林霏
                     副主编：挡猿钺<br />
@@ -374,6 +400,11 @@
             </tr>
             <tr>
                 <td class="teamname">
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <td class="teamname">
                     第四届制作团体<br />创肆季
                 </td>
                 <td class="teammember">
@@ -384,6 +415,11 @@
                     文编：穗德 尘狭 归墟 阰芷 川岳 Yingace<br />
                     美编：橘桔 卷毛 西瞳 京口人 超新星 6+6<br />
                     技术：morula Eda<br />
+                </td>
+            </tr>
+            <tr>
+                <td class="teamname">
+                    <br />
                 </td>
             </tr>
             <tr>
@@ -402,6 +438,11 @@
             </tr>
             <tr>
                 <td class="teamname">
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <td class="teamname">
                     第二届制作团体<br />二进志
                 </td>
                 <td class="teammember">
@@ -413,6 +454,11 @@
                     文编：Jacinta 魏晋 种子与 攸攸 未名<br />
                     美编：sly Stomacake 费贤 九九 hazard<br />
                     技术：小星星 Blast<br />
+                </td>
+            </tr>
+            <tr>
+                <td class="teamname">
+                    <br />
                 </td>
             </tr>
             <tr>
@@ -439,7 +485,7 @@
         </div>
         <div class="textleft">
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果对我们任何意见建议或查询，或是想加入我们，请发送邮件至<a href="mailto:info@one-era.com">info@one-era.com</a>。<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果对我们任何意见建议或查询，请发送邮件至<a href="mailto:info@one-era.com">info@one-era.com</a>。<br />
             <br />
         </div>
         <div class="introduction">
@@ -447,11 +493,11 @@
         </div>
         <div class="textleft">
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请在投稿的邮件中提供以下信息：姓名、所在省市、就读院校、联系电话、常用邮箱。投稿需要经过编辑人员的筛选才能决定是否录用，我们会以邮件的形式通知被录用稿件的作者。本杂志旨在提供一个畅所欲言，展示创意的空间，所有投稿者不会从中得到任何稿费。你、我、他也许并不相识，但我们一同分享，一同品尝青春年代中的那些或美丽或感动或愤怒的瞬间。君子之交，淡淡如水；金帛珠玉，非吾所求。<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请于投稿邮件中提供这些信息：姓名、笔名、学校、学系、年级、稿件名称、联系电话、常用邮箱、备注。投稿需要经过编辑人员的筛选才能决定是否录用，我们会以邮件的形式通知被录用稿件的作者。本杂志旨在提供一个畅所欲言，展示创意的空间，所有投稿者不会从中得到任何稿费。你、我、他也许并不相识，但我们一同分享，一同品尝青春年代中的那些或美丽或感动或愤怒的瞬间。君子之交，淡淡如水；金帛珠玉，非吾所求。<br />
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文字投稿请发至文字投稿邮箱：<a href="mailto:text@one-era.com">text@one-era.com</a>。稿件开头应注明“时政”或“非时政”字样。艺眼板块字数请不少于300字。其它文章字数则不少于800字。尺牍板块投稿时随稿请详细注明摘稿来源，且我们会优先刊登附有摘者简单感悟文字的优秀作品。<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文字投稿请发至文字投稿邮箱：<a href="mailto:text@one-era.com">text@one-era.com</a>。我们开设的栏目有专题（关于专题你的看法，详情见微信公众号征稿启事）、故事（小说）、行吟（散文、诗歌）、世见（杂文、评论、时政分析）、艺眼（体育、书评、影评、音乐推荐，字数不少于300）、尺牍（文摘，请详细注明摘稿来源，优先刊登附有摘者简单感悟文字的优秀作品）。除注明外，文章字数应不少于800字。投稿时，请在邮件标题中注明稿件类型。<br />
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图片投稿请发至图片投稿邮箱：<a href="mailto:art@one-era.com">art@one-era.com</a>。发送时，请将图像作为附件发送。我们将优先取用符合每期主题的作品，但我们也欢迎与主题无关的其他优秀作品（请附上阐释主题的简单文本）。<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图片投稿请发至图片投稿邮箱：<a href="mailto:art@one-era.com">art@one-era.com</a>。发送时，请将图像作为附件发送。我们将优先取用符合每期主题的作品，但我们也欢迎与主题无关的其他优秀摄影或绘画作品（请附上阐释主题的简单文本）。<br />
             <br />
         </div>
     </div>
@@ -461,6 +507,10 @@
             ————往期杂志————<br />
         </div>
         <table>
+            <tr>
+                <td class="textright">2016.4/32</td>
+                <td class="textleft"><a target="_blank" href="32">毕业季</a></td>
+            </tr>
             <tr>
                 <td class="textright">2016.2/31</td>
                 <td class="textleft"><a href="31.pdf">笔与刀</a></td>
