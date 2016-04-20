@@ -10,55 +10,13 @@ Special thanks to Sodagreen and Bauhinia Lee.
     <meta name="description" content="独立时代" />
     <meta name="author" content="独立时代中文电子杂志社" />
     <meta name="keywords" content="独立时代,中文杂志,电子杂志,中文电子杂志,香港,香港中文大学" />
-    <link href="https://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src="https://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/fullPage.js/2.7.6/jquery.fullPage.js"></script>
+    <link href="http://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/jquery.perfect-scrollbar/0.6.10/css/perfect-scrollbar.min.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/fullPage.js/2.7.7/jquery.fullPage.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery.perfect-scrollbar/0.6.10/js/min/perfect-scrollbar.jquery.min.js"></script>
 
     <style>
-        /*loading animation starts*/
-        #fullpage {
-            opacity: 0;
-            animation: fadein;
-            animation-duration: 1.5s;
-            animation-delay: 0.4s;
-            animation-fill-mode: forwards;
-        }
-
-        .logo {
-            opacity: 0;
-            animation: fadein;
-            animation-duration: 1s;
-            animation-delay: 0.7s;
-            animation-fill-mode: forwards;
-        }
-
-        .headline {
-            opacity: 0;
-            animation: fadein;
-            animation-duration: 1s;
-            animation-delay: 1.0s;
-            animation-fill-mode: forwards;
-        }
-
-        .footer {
-            opacity: 0;
-            animation: fadein;
-            animation-duration: 1s;
-            animation-delay: 1.3s;
-            animation-fill-mode: forwards;
-        }
-
-        @keyframes fadein {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-        /*loading animation ends*/
-
         /*normal css starts*/
         #fullpage {
             text-align: center;
@@ -67,6 +25,8 @@ Special thanks to Sodagreen and Bauhinia Lee.
             -webkit-user-select: none; /* Chrome/Safari */
             -moz-user-select: none; /* Firefox */
             -ms-user-select: none; /* IE10+ */
+            display: none;
+            font-family: "Microsoft YaHei Light","Microsoft YaHei",sans-serif;
         }
 
         .logo {
@@ -74,23 +34,24 @@ Special thanks to Sodagreen and Bauhinia Lee.
             position: absolute;
             top: 15vmin;
             height: 40vmin;
+            display: none;
         }
 
-        .logopng {
-            height: 100%;
-            filter: drop-shadow(0px 0px 10px #000);
-            -webkit-filter: drop-shadow(0px 0px 10px #000000);
-        }
+            .logo img {
+                height: 100%;
+                filter: drop-shadow(0px 0px 10px #000);
+                -webkit-filter: drop-shadow(0px 0px 10px #000000);
+            }
 
         .headline {
             width: 100%;
             position: absolute;
             top: 60vh;
+            display: none;
         }
 
             .headline a {
                 font-size: 5vmin;
-                font-family: "Microsoft YaHei Light","Microsoft YaHei",sans-serif;
                 color: #fff;
                 margin: 0;
                 padding: 0;
@@ -98,23 +59,100 @@ Special thanks to Sodagreen and Bauhinia Lee.
                 text-decoration: none;
             }
 
-        .footer {
-            position: absolute;
-            bottom: 2vh;
-            font-size: 2.5vmin;
-            font-family: "Microsoft YaHei Light","Microsoft YaHei",sans-serif;
-            width: 100%;
-            clear: both;
-            color: #fff;
-            white-space: nowrap;
-            text-shadow: 0px 0px 20px #000;
+        .footermask {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 10vh;
+            background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6));
+            display: none;
         }
+
+            .footermask .footer {
+                position: fixed;
+                font-size: 2.5vmin;
+                bottom: 2vh;
+                width: 100%;
+                padding: 0;
+                margin: auto;
+                color: #fff;
+                white-space: nowrap;
+                text-shadow: 0px 0px 20px #000;
+            }
+
+        .dialogmask {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 100vh;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            overflow: hidden;
+            font-size: 2.5vmin;
+        }
+
+            .dialogmask .aboutusdialog {
+                text-align: left;
+                display: none;
+                position: fixed;
+                margin-left: 20vw;
+                margin-right: 20vw;
+                margin-top: 15vh;
+                max-height: 70vh;
+                display: none;
+                color: #fff;
+                overflow-y: scroll;
+            }
+
+            .dialogmask .socialmediadialog {
+                text-align: left;
+                display: none;
+                position: fixed;
+                margin-left: 20vw;
+                margin-right: 20vw;
+                margin-top: 15vh;
+                max-height: 70vh;
+                display: none;
+                color: #fff;
+                overflow-y: scroll;
+            }
+
+            .dialogmask .magazinesdialog {
+                text-align: left;
+                display: none;
+                position: fixed;
+                margin-left: 20vw;
+                margin-right: 20vw;
+                margin-top: 15vh;
+                max-height: 70vh;
+                display: none;
+                color: #fff;
+                overflow-y: scroll;
+            }
+
+            .dialogmask .contactusdialog {
+                text-align: left;
+                display: none;
+                position: fixed;
+                margin-left: 20vw;
+                margin-right: 20vw;
+                margin-top: 15vh;
+                max-height: 70vh;
+                display: none;
+                color: #fff;
+                overflow-y: scroll;
+            }
         /*normal css ends*/
 
         /*responsive layout for phones*/
         @media only screen and (max-width: 1000px) {
-            .footer {
-                bottom: 2vh;
+            .footermask .footer {
+                font-size: 4vmin;
+            }
+
+            .dialog {
                 font-size: 4vmin;
             }
         }
@@ -122,9 +160,37 @@ Special thanks to Sodagreen and Bauhinia Lee.
     </style>
 
     <script>
-        $(document).ready(function () {
-            $('#fullpage').fullpage({
-                verticalCentered: false
+        $(window).load(function () {
+            $('#fullpage').fullpage();
+            $('#fullpage').fadeIn(800);
+            setTimeout(function () { $('.logo').fadeIn(800); }, 500);
+            setTimeout(function () { $('.headline').fadeIn(800); }, 1000);
+            setTimeout(function () { $('.footermask').fadeIn(800); }, 1500);
+            $('.dialog').perfectScrollbar();
+            $('.aboutusbutton').click(function () {
+                $('.dialogmask').fadeIn(300);
+                $('.aboutusdialog').fadeIn(300);
+                $('.aboutusdialog').addClass('open');
+            });
+            $('.socialmediabutton').click(function () {
+                $('.dialogmask').fadeIn(300);
+                $('.socialmediadialog').fadeIn(300);
+                $('.socialmediadialog').addClass('open');
+            });
+            $('.magazinesbutton').click(function () {
+                $('.dialogmask').fadeIn(300);
+                $('.magazinesdialog').fadeIn(300);
+                $('.magazinesdialog').addClass('open');
+            });
+            $('.contactusbutton').click(function () {
+                $('.dialogmask').fadeIn(300);
+                $('.contactusdialog').fadeIn(300);
+                $('.contactusdialog').addClass('open');
+            });
+            $('.dialogmask').click(function () {
+                $('.dialogmask').fadeOut(300);
+                $('.open').fadeOut(300);
+                $('.open').removeClass('open');
             });
         });
     </script>
@@ -133,21 +199,132 @@ Special thanks to Sodagreen and Bauhinia Lee.
 <body style="margin:0">
     <div id="fullpage">
         <div class="logo">
-            <img class="logopng" src="logo.png" unselectable="on" alt="" />
+            <img src="logo.png" unselectable="on" alt="" />
         </div>
 
         <div class="headline">
             <h1><a href="https://one-era.com/download/v30.pdf">新年刊《食·色》已经上线<br>欢迎下载阅读</a></h1>
         </div>
 
-        <div class="footer">
-            <span><i class="fa fa-users"></i> 关于我们</span>
-            <span> | </span>
-            <span><i class="fa fa-share-alt"></i> 社交媒体</span>
-            <span> | </span>
-            <span><i class="fa fa-book"></i> 往期杂志</span>
-            <span> | </span>
-            <span><i class="fa fa-envelope"></i> 来信来稿</span>
+        <div class="footermask">
+            <div class="footer">
+                <span class="aboutusbutton"><i class="fa fa-users"></i> 关于我们</span>
+                <span> | </span>
+                <span class="socialmediabutton"><i class="fa fa-share-alt"></i> 社交媒体</span>
+                <span> | </span>
+                <span class="magazinesbutton"><i class="fa fa-book"></i> 往期杂志</span>
+                <span> | </span>
+                <span class="contactusbutton"><i class="fa fa-envelope"></i> 来信来稿</span>
+            </div>
+        </div>
+
+        <div class="dialogmask">
+            <div class="aboutusdialog dialog">
+                这是求学于香港的我们所创办的电子杂志——《独立时代》！<br /><br />
+                是我们的呐喊，独立在香港这个视野开阔的自由港口，倚靠着大陆，面迎着季风。是我们的灵魂，漂泊在中文大学这个异乡天地，感受着东西文化碰撞，思想受到撼动。<br /><br />
+                于是我们思考，我们记录。但我们并不侈求匆匆改变所处时代，只是想让时代更多聆听到我们的声音——关注身边社会、描绘大千世界、记录点滴生活、表达见解感动、宣扬独立精神……贪婪的我们办了这个“杂”志。<br /><br />
+                无论是心路散文还是时政评论，这里有着不同的人各自独立的思考与见解，期待与你一起分享这时代年轻人的所见、所思、所闻、所感。我们，也愿意在这个独立的时代，与你同行。<br /><br />
+                让时代，听到你的声音！<br />
+                <br />
+                ===成员介绍===<br />
+                <br />
+                第五届制作团体：五味纸<br />
+                主编：林霏<br />
+                副主编：挡猿钺<br />
+                宣传：泽木<br />
+                文书/财政：凝荷<br />
+                文编：花房八二 简 秦维彧 诶呦喂 景深 子衿<br />
+                美编：晓曦 蘑菇教主 K 梨尘 嘿嘿君 Kelly<br />
+                技术：Kris iWalker<br />
+                <br />
+                第四届制作团体：创肆季<br />
+                主编：辛吉斯<br />
+                副主编：苍耳<br />
+                宣传：没头脑<br />
+                文书/财政：杉木<br />
+                文编：穗德 尘狭 归墟 阰芷 川岳 Yingace<br />
+                美编：橘桔 卷毛 西瞳 京口人 超新星 6+6<br />
+                技术：morula Eda<br />
+                <br />
+                第三届制作团体：三叠纪<br />
+                主编：NA君<br />
+                副主编：微La<br />
+                宣传：Apprentice<br />
+                文书/财政：憓霖<br />
+                文编：道口慕枫 乔白山人 锁骨君 杳伊 墨拦<br />
+                美编：Eda 会飞的猫 来自未来的我 Nobelium Stomacake<br />
+                技术：Aquilaria<br />
+                <br />
+                第二届制作团体：二进志<br />
+                主编：目田君<br />
+                外务副主编：LJC<br />
+                内务副主编：Ursula<br />
+                宣传：落烬枫<br />
+                文书/财政：tsunami<br />
+                文编：Jacinta 魏晋 种子与 攸攸 未名<br />
+                美编：sly Stomacake 费贤 九九 hazard<br />
+                技术：小星星 Blast<br />
+                <br />
+                第一届制作团体：创刊号<br />
+                主编：绿茶<br />
+                外务副主编：跳格子<br />
+                内务副主编：johnlee<br />
+                宣传：栗子<br />
+                文书／财政：Calla<br />
+                文编：SUNNA 目田君 cinsue 三叶 Lorraine Vanya<br />
+                美编：Encore Miu kane Ale Rox<br />
+                技术：snow
+            </div>
+            <div class="socialmediadialog dialog">
+                微信<br /><br />
+                http://weixin.sogou.com/weixin?query=%E7%8B%AC%E7%AB%8B%E6%97%B6%E4%BB%A3%E7%94%B5%E5%AD%90%E6%9D%82%E5%BF%97<br /><br />
+                http://weixin.qq.com/r/WUzIxyHE8h_NhzCknxl9<br /><br />
+                微博<br /><br />
+                http://www.weibo.com/oneera<br /><br />
+                Facebook<br /><br />
+                http://www.facebook.com/164238836966896<br /><br />
+                人人<br /><br />
+                http://www.renren.com/328165481<br /><br />
+            </div>
+            <div class="magazinesdialog dialog">
+                第三十期|201|食·色<br /><br />
+                第二十九期|201|恋爱·观<br /><br />
+                第二十八期|201|海湾下的暗涌<br /><br />
+                第二十七期|201|游<br /><br />
+                第二十六期|201|装<br /><br />
+                第二十五期|201|过期<br /><br />
+                第二十四期|201|暑期特刊<br /><br />
+                第二十三期|201|奇葩<br /><br />
+                特刊|201|十年<br /><br />
+                第二十二期|201|初恋<br /><br />
+                第二十一期|201|归去来兮<br /><br />
+                第二十期|201|江湖<br /><br />
+                第十九期|2013.10|X<br /><br />
+                第十八期<br /><br />
+                第十七期|2013.4|城<br /><br />
+                第十六期|2013.3<br /><br />
+                第十五期|2013.2<br /><br />
+                第十四期|2013.1<br /><br />
+                第十三期？<br /><br />
+                第十二期？<br /><br />
+                第十一期|2012.5<br /><br />
+                第十期|2012.3|怪兽<br /><br />
+                第九期|201？？|漂<br /><br />
+                第八期|2011.10|安全感<br /><br />
+                第七期|2011.8|WEI时代<br /><br />
+                第六期|2011.6|光<br /><br />
+                第五期|2011.4|愚<br /><br />
+                第四期|2011.2|最初<br /><br />
+                第三期|2010.12|荒<br /><br />
+                第二期|2010.10|表情<br /><br />
+                第一期|2010.8|独立时代<br /><br />
+            </div>
+            <div class="contactusdialog dialog">
+                如有对我们任何意见建议或查询，或者是想加入我们，请发送邮件至info@one-era.com。<br /><br />
+                如果是文字投稿，请将稿件发至文字投稿邮箱：text@one-era.com，并注意在稿件开头注明“时政”或“非时政”字样。艺眼板块字数请不少于300字。其它文章字数则不少于800字。尺牍板块投稿时随稿请详细注明摘稿来源，且我们会优先刊登附有摘者简单感悟文字的优秀作品。<br /><br />
+                如果是图片投稿，请将稿件发至图片投稿邮箱：art@one-era.com，并注意发送时，请将图像作为附件发送。我们将优先取用符合每期主题的作品，但我们也欢迎与主题无关的其他优秀作品（请附上阐释主题的简单文本）。<br /><br />
+                请在投稿的邮件中也提供以下信息：姓名，所在省市，就读院校，联系电话，常用邮箱。投稿需要经过编辑人员的筛选才能决定是否录用，我们会以邮件的形式通知被录用稿件的作者。本杂志旨在提供一个畅所欲言，展示创意的空间，所有投稿者不会从中得到任何稿费。你、我、他也许并不相识，但我们一同分享，一同品尝青春年代中的那些或美丽或感动或愤怒的瞬间。君子之交，淡淡如水；金帛珠玉，非吾所求。<br /><br />
+            </div>
         </div>
     </div>
 </body>
