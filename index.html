@@ -1,229 +1,317 @@
-<!DOCTYPE html>
-	<html xmlns="http://www.w3.org/1999/xhtml"><head>
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--© 2016 Crist Xiaotian Ye. Special thanks to Sodagreen and Bauhinia Lee.-->
+<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>独立时代</title>
-	<meta name="description" content="独立时代"/>
-    <meta name="author" content="独立时代中文电子杂志社"/>
-	<meta name="keywords"  content="独立时代,中文杂志,电子杂志,中文电子杂志,香港,香港中文大学" />
-	<!-- 
-	<link rel="stylesheet" href="index/jquery.fullPage.css">
+	<meta name="description" content="独立时代" />
+	<meta name="author" content="独立时代中文电子杂志社" />
+	<meta name="keywords" content="独立时代,中文杂志,电子杂志,中文电子杂志,香港,香港中文大学" />
+
+	<!--<link rel="stylesheet" href="jquery.fullPage.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/jquery.fullpage/2.5.9/jquery.fullPage.min.js"></script>
-	-->    
-    <link href="https://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src="https://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/jqueryui/1.11.4/jquery-ui.min.js"></script>
-    <script src="https://cdn.bootcss.com/fullPage.js/2.7.6/jquery.fullPage.js"></script>
-    
+	<script src="https://cdn.jsdelivr.net/jquery.fullpage/2.5.9/jquery.fullPage.min.js"></script>-->
+
+	<link href="https://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="https://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script src="https://cdn.bootcss.com/fullPage.js/2.7.6/jquery.fullPage.js"></script>
+
 	<link rel="stylesheet" href="index/normalize.css" />
 	<link rel="stylesheet" href="index/demo.css" />
 	<link rel="stylesheet" href="index/dialog.css" />
 	<link rel="stylesheet" href="index/dialog-annie.css" />
 	<script src="index/modernizr.custom.js"></script>
-    <script src="index/classie.js"></script>
+	<script src="index/classie.js"></script>
 	<script src="index/dialogFx.js"></script>
 
 	<script>
-		$(document).ready(function() {
+		$(document).ready(function () {
 			$('#fullpage').fullpage({
 				verticalCentered: false
 			});
 		});
 	</script>
-    
-    <script>
-		$(document).ready(function() {
-			var dlgtrigger = document.querySelector( '[data-dialog1]' ),
-			somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog1' ) ),
-			dlg = new DialogFx( somedialog );
-			dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
-		});
-	</script>
-    
-    <script>
-		$(document).ready(function() {
-			var dlgtrigger = document.querySelector( '[data-dialog2]' ),
-			somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog2' ) ),
-			dlg = new DialogFx( somedialog );
-			dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
-		});
-	</script>
-    
-    <script>
-		$(document).ready(function() {
-			var dlgtrigger = document.querySelector( '[data-dialog3]' ),
-			somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog3' ) ),
-			dlg = new DialogFx( somedialog );
-			dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
-		});
-	</script>
-    
-    <script>
-		$(document).ready(function() {
-			var dlgtrigger = document.querySelector( '[data-dialog4]' ),
-			somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog4' ) ),
-			dlg = new DialogFx( somedialog );
-			dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
+
+	<script>
+		$(document).ready(function () {
+			var dlgtrigger = document.querySelector('[data-dialog1]'),
+			somedialog = document.getElementById(dlgtrigger.getAttribute('data-dialog1')),
+			dlg = new DialogFx(somedialog);
+			dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
 		});
 	</script>
 
-    <script>
-		$(document).ready(function() {
-			var dlgtrigger = document.querySelector( '[data-dialog5]' ),
-			somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog5' ) ),
-			dlg = new DialogFx( somedialog );
-			dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
+	<script>
+		$(document).ready(function () {
+			var dlgtrigger = document.querySelector('[data-dialog2]'),
+			somedialog = document.getElementById(dlgtrigger.getAttribute('data-dialog2')),
+			dlg = new DialogFx(somedialog);
+			dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
 		});
 	</script>
-    
-    <script>
-		$(document).ready(function() {
-			var dlgtrigger = document.querySelector( '[data-dialog6]' ),
-			somedialog = document.getElementById( dlgtrigger.getAttribute( 'data-dialog6' ) ),
-			dlg = new DialogFx( somedialog );
-			dlgtrigger.addEventListener( 'click', dlg.toggle.bind(dlg) );
+
+	<script>
+		$(document).ready(function () {
+			var dlgtrigger = document.querySelector('[data-dialog3]'),
+			somedialog = document.getElementById(dlgtrigger.getAttribute('data-dialog3')),
+			dlg = new DialogFx(somedialog);
+			dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
 		});
 	</script>
-	
+
+	<script>
+		$(document).ready(function () {
+			var dlgtrigger = document.querySelector('[data-dialog4]'),
+			somedialog = document.getElementById(dlgtrigger.getAttribute('data-dialog4')),
+			dlg = new DialogFx(somedialog);
+			dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
+		});
+	</script>
+
+	<script>
+		$(document).ready(function () {
+			var dlgtrigger = document.querySelector('[data-dialog5]'),
+			somedialog = document.getElementById(dlgtrigger.getAttribute('data-dialog5')),
+			dlg = new DialogFx(somedialog);
+			dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
+		});
+	</script>
+
+	<script>
+		$(document).ready(function () {
+			var dlgtrigger = document.querySelector('[data-dialog6]'),
+			somedialog = document.getElementById(dlgtrigger.getAttribute('data-dialog6')),
+			dlg = new DialogFx(somedialog);
+			dlgtrigger.addEventListener('click', dlg.toggle.bind(dlg));
+		});
+	</script>
+
+
+
 	<style>
-	h1{
-		font-size: 5vmin;
-		font-family: "Microsoft YaHei Light","Microsoft YaHei",sans-serif;
-		color: #fff;
-		margin:0;
-		padding:0;
-		text-shadow:0px 0px 10px #000;
-	}
-	
-	h1 a{
-		font-size: 5vmin;
-		font-family: "Microsoft YaHei Light","Microsoft YaHei",sans-serif;
-		color: #fff;
-		margin:0;
-		padding:0;
-		text-shadow:0px 0px 10px #000;
-	}
+		#fullpage {
+			opacity: 0;
+			animation: fadein;
+			animation-duration: 1.5s;
+			animation-delay: 0s;
+			animation-fill-mode: forwards;
+		}
 
-	.section{
-		text-align:center;
-		background-size: cover;
-	}
+		.logo {
+			opacity: 0;
+			animation: fadein;
+			animation-duration: 1s;
+			animation-delay: 0.6s;
+			animation-fill-mode: forwards;
+		}
 
-	#section0{
-		background-image: url(index/bg.jpg);
-		padding: 8% 0 0 0;
-	}
-	
-	.dilan{
-		position:absolute;
-		bottom:5vmin;
-		font-family: "Microsoft YaHei Light","微软雅黑Light",sans-serif;
-		width: 100%;
-		clear:both;
-		color: #fff;
-		font-size:1.85vmax;
-	}
-	
-	.main{
-		top:15vmin;
-		width:100%;
-		height:40vmin;
-	}
-	
-	.logo{
-		pointer-events: none;
-		-webkit-filter:drop-shadow(0px 0px 10px #000);
-		filter:drop-shadow(0px 0px 10px #000);
-		height:100%;
-	}
-	
-	.dialog__content{
-		color:#000;
-	}
-	
-	.dilannowrap{
-		white-space:nowrap;
-		text-shadow:1px 1px 1px #000;
-	}
-	
+		.headline {
+			opacity: 0;
+			animation: fadein;
+			animation-duration: 1s;
+			animation-delay: 1s;
+			animation-fill-mode: forwards;
+		}
+
+		.dilan {
+			opacity: 0;
+			animation: fadein;
+			animation-duration: 1s;
+			animation-delay: 1.4s;
+			animation-fill-mode: forwards;
+		}
+
+		@keyframes fadein {
+			from {
+				opacity: 0;
+			}
+
+			to {
+				opacity: 1;
+			}
+		}
+
+
+		.section {
+			text-align: center;
+			background-size: cover;
+		}
+
+		#section0 {
+			background-image: url(index/bg.jpg);
+			padding: 8% 0 0 0;
+		}
+
+		.dialog__content {
+			color: #000;
+		}
+
+		.logo {
+			width: 100%;
+			position: absolute;
+			pointer-events: none;
+			top: 15vmin;
+			height: 40vmin;
+		}
+
+		.logopng {
+			height: 100%;
+			-webkit-filter: drop-shadow(0px 0px 10px #000);
+			filter: drop-shadow(0px 0px 10px #000);
+		}
+
+		.headline {
+			width: 100%;
+			position: absolute;
+		}
+
+			.headline a {
+				font-size: 5vmin;
+				font-family: "Microsoft YaHei Light","Microsoft YaHei",sans-serif;
+				color: #fff;
+				margin: 0;
+				padding: 0;
+				text-shadow: 0px 0px 20px #000;
+				-webkit-user-select: none; /* Chrome/Safari */
+				-moz-user-select: none; /* Firefox */
+				-ms-user-select: none; /* IE10+ */
+			}
+
+
+
+		.dilan {
+			position: absolute;
+			font-family: "Microsoft YaHei Light","Microsoft YaHei",sans-serif;
+			width: 100%;
+			clear: both;
+			color: #fff;
+			-webkit-user-select: none; /* Chrome/Safari */
+			-moz-user-select: none; /* Firefox */
+			-ms-user-select: none; /* IE10+ */
+		}
+
+
+		.dilannowrap {
+			white-space: nowrap;
+			text-shadow: 0px 0px 15px #000;
+		}
+
+		/*responsive layout*/
+
+		/*for phones*/
+		@media only screen and (max-device-width: 736px) {
+
+			.headline {
+				top: 100vmin;
+			}
+
+			.dilan {
+				bottom: 2vmin;
+				font-size: 4vmin;
+			}
+
+			.phonehidden {
+				opacity: 0;
+			}
+		}
+
+		/*for small windows on tablets and computers*/
+		@media only screen and (min-device-width: 737px) and (max-width:699px) {
+
+			.headline {
+				top: 60vmin;
+			}
+
+			.dilan {
+				bottom: 2vmin;
+				font-size: 4vmin;
+			}
+
+			.phonehidden {
+				opacity: 0;
+			}
+		}
+
+		/*for large windows on htablets and computers*/
+		@media only screen and (min-device-width: 737px) and (min-width:700px) {
+
+			.headline {
+				top: 60vmin;
+			}
+
+			.dilan {
+				bottom: 5vmin;
+				font-size: 2vmin;
+			}
+		}
 	</style>
 
 </head>
-
 <body>
-<div id="fullpage">
-	<div class="section" id="section0">
-    	
-        <div class="main">
-       	<img class="logo" src="index/logo.png" unselectable="on" alt=""/>
-        <br><br><h1>新年刊《食·色》已经上线<br>欢迎<a href="https://one-era.com">下载阅读</a></h1>
-        
+	<div id="fullpage">
+		<div class="section" id="section0">
 
-        </div>
-        
-		<div class="dilan">
-        
-        <span class="dilannowrap">
-    	<span class="button-wrap,trigger" data-dialog1="somedialog1">| <i class="fa fa-weixin"></i> 微信 </span>
-			<span id="somedialog1" class="dialog">
-				<span class="dialog__overlay"></span>
-				<span class="dialog__content"><p>?????。</p>
-       		 	<div><button class="action" data-dialog-close>关闭</button></div>
-			</span>
-		</span>
-                
-  		<span class="button-wrap,trigger" data-dialog2="somedialog2">| <i class="fa fa-weibo"></i> 微博 </span>
-			<span id="somedialog2" class="dialog">
-				<span class="dialog__overlay"></span>
-				<span class="dialog__content"><p>???。</p>
-       		 	<div><button class="action" data-dialog-close>关闭</button></div>
-			</span>
-		</span>
-        
-   		<span class="button-wrap,trigger" data-dialog3="somedialog3">| <i class="fa fa-facebook-official"></i> Facebook </span>
-			<span id="somedialog3" class="dialog">
-				<span class="dialog__overlay"></span>
-				<span class="dialog__content"><p>???。</p>
-       		 	<div><button class="action" data-dialog-close>关闭</button></div>
-			</span>
-		</span>
-        </span>
-        
-        <span class="dilannowrap">
-   		<span class="button-wrap,trigger" data-dialog4="somedialog4">| <i class="fa fa-book"></i> 往期杂志 </span>
-			<span id="somedialog4" class="dialog">
-				<span class="dialog__overlay"></span>
-				<span class="dialog__content"><p>???同行。</p>
-       		 	<div><button class="action" data-dialog-close>关闭</button></div>
-			</span>
-		</span>
+			<div class="logo">
+				<img class="logopng" src="index/logo.png" unselectable="on" alt="" />
+			</div>
 
-		<span class="button-wrap,trigger" data-dialog5="somedialog5">| <i class="fa fa-envelope"></i> 来信来稿 </span>
-			<span id="somedialog5" class="dialog">
-				<span class="dialog__overlay"></span>
-				<span class="dialog__content"><p>这是求学于香港的我们所创办的电子杂志——《独立时代》！<br>是我们的呐喊，独立在香港这个视野开阔的自由港口，倚靠着大陆，面迎着季风。<br>是我们的灵魂，漂泊在中文大学这个异乡天地，感受着东西文化碰撞，思想受到撼动。<br>于是我们思考，我们记录。但我们并不侈求匆匆改变所处时代，只是想让时代更多聆听到我们的声音——关注身边社会、描绘大千世界、<br>记录点滴生活、表达见解感动、宣扬独立精神……贪婪的我们办了这个“杂”志。<br>无论是心路散文还是时政评论，这里有着不同的人各自独立的思考与见解，期待与你一起分享这时代年轻人的所见、所思、所闻、所感。<br>我们，也愿意在这个独立的时代，与你同行。</p>
-       		 	<div><button class="action" data-dialog-close>关闭</button></div>
-			</span>
-		</span>
-	
-  	  <span class="button-wrap,trigger" data-dialog6="somedialog6">| <i class="fa fa-users"></i> 关于我们 </span>
-			<span id="somedialog6" class="dialog">
-				<span class="dialog__overlay"></span>
-				<span class="dialog__content"><p>文字投稿1.请在稿件开头注明“时政”或“非时政”字样。2.艺眼板块字数不少于300字；文章字数不少于800字。3.支持多种文体；欢迎配图来稿。4.尺牍板块投稿时随稿请详细注明摘稿来源，且我们会优先刊登附有摘者简单感悟文字的优秀作品。</p>
-      		  	<span><button class="action" data-dialog-close>关闭</button></span>
-			</span>
-		</span>
-        </span>
-        
-        
-       <span class="dilannowrap">| &#169; 2016《独立时代》中文电子杂志社</span>
-       
-       
-       </div>
-	</div>      
-</div>
+
+			<div class="headline">
+				<h1><a class="headlineword" href="https://one-era.com/download/v30.pdf">新年刊《食·色》已经上线<br>欢迎下载阅读</a></h1>
+			</div>
+
+			<div class="dilan">
+
+				<span class="dilannowrap"><span class="phonehidden">| </span>© 2016《独立时代》中文电子杂志社</span>
+
+				<span class="dilannowrap">
+					<span class="button-wrap,trigger" data-dialog1="somedialog1"><span class="phonehidden">| </span><i class="fa fa-users"></i> 关于我们 </span>
+					<span id="somedialog1" class="dialog">
+						<span class="dialog__overlay"></span>
+						<span class="dialog__content">
+							<p>?????。</p>
+							<div><button class="action" data-dialog-close>关闭</button></div>
+						</span>
+					</span>
+
+					<span class="button-wrap,trigger" data-dialog2="somedialog2">| <i class="fa fa-share-alt"></i> 社交媒体 </span>
+					<span id="somedialog2" class="dialog">
+						<span class="dialog__overlay"></span>
+						<span class="dialog__content">
+							<p>???。</p>
+							<div><button class="action" data-dialog-close>关闭</button></div>
+						</span>
+					</span>
+
+					<span class="button-wrap,trigger" data-dialog4="somedialog4">| <i class="fa fa-book"></i> 往期杂志 </span>
+					<span id="somedialog4" class="dialog">
+						<span class="dialog__overlay"></span>
+						<span class="dialog__content">
+							<p>???同行。</p>
+							<div><button class="action" data-dialog-close>关闭</button></div>
+						</span>
+					</span>
+
+					<span class="button-wrap,trigger" data-dialog5="somedialog5">| <i class="fa fa-envelope"></i> 来信来稿 <span class="phonehidden">| </span></span>
+					<span id="somedialog5" class="dialog">
+						<span class="dialog__overlay"></span>
+						<span class="dialog__content">
+							<div><button class="action" data-dialog-close>关闭</button></div>
+						</span>
+					</span>
+				</span>
+
+
+
+
+
+			</div>
+		</div>
+	</div>
+
+
 </body>
 </html>
-<!--Copyright 2016 被抛弃的老鱼 Special thanks to Sodagreen and Bauhinia Lee-->
