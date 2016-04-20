@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <!--
-Written by Crist Xiaotian Ye.
+Written by Crist Xiaotian Ye in January 2016.
 Special thanks to Sodagreen and Bauhinia Lee.
 -->
 <head>
@@ -12,7 +12,6 @@ Special thanks to Sodagreen and Bauhinia Lee.
     <meta name="keywords" content="独立时代,中文杂志,电子杂志,中文电子杂志,香港,香港中文大学" />
     <link href="https://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script src="https://cdn.bootcss.com/fullPage.js/2.7.6/jquery.fullPage.js"></script>
 
     <style>
@@ -21,21 +20,15 @@ Special thanks to Sodagreen and Bauhinia Lee.
             opacity: 0;
             animation: fadein;
             animation-duration: 1.5s;
-            animation-delay: 0s;
+            animation-delay: 0.4s;
             animation-fill-mode: forwards;
-            text-align: center;
-            background-size: cover;
-            background-image: url(bg.jpg);
-            -webkit-user-select: none; /* Chrome/Safari */
-            -moz-user-select: none; /* Firefox */
-            -ms-user-select: none; /* IE10+ */
         }
 
         .logo {
             opacity: 0;
             animation: fadein;
             animation-duration: 1s;
-            animation-delay: 0.6s;
+            animation-delay: 0.7s;
             animation-fill-mode: forwards;
         }
 
@@ -43,15 +36,15 @@ Special thanks to Sodagreen and Bauhinia Lee.
             opacity: 0;
             animation: fadein;
             animation-duration: 1s;
-            animation-delay: 1s;
+            animation-delay: 1.0s;
             animation-fill-mode: forwards;
         }
 
-        .dilan {
+        .footer {
             opacity: 0;
             animation: fadein;
             animation-duration: 1s;
-            animation-delay: 1.4s;
+            animation-delay: 1.3s;
             animation-fill-mode: forwards;
         }
 
@@ -67,6 +60,15 @@ Special thanks to Sodagreen and Bauhinia Lee.
         /*loading animation ends*/
 
         /*normal css starts*/
+        #fullpage {
+            text-align: center;
+            background-size: cover;
+            background-image: url(bg.jpg);
+            -webkit-user-select: none; /* Chrome/Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+ */
+        }
+
         .logo {
             width: 100%;
             position: absolute;
@@ -83,6 +85,7 @@ Special thanks to Sodagreen and Bauhinia Lee.
         .headline {
             width: 100%;
             position: absolute;
+            top: 60vh;
         }
 
             .headline a {
@@ -95,79 +98,24 @@ Special thanks to Sodagreen and Bauhinia Lee.
                 text-decoration: none;
             }
 
-        .dilan {
+        .footer {
             position: absolute;
+            bottom: 2vh;
+            font-size: 2.5vmin;
             font-family: "Microsoft YaHei Light","Microsoft YaHei",sans-serif;
             width: 100%;
             clear: both;
             color: #fff;
-        }
-
-        .dilannowrap {
             white-space: nowrap;
             text-shadow: 0px 0px 20px #000;
         }
         /*normal css ends*/
 
-        /*responsive layout*/
-        /*for potrtait phones*/
-        @media only screen and (max-device-width: 736px) and (orientation : portrait) {
-            .headline {
-                top: 100vmin;
-            }
-
-            .dilan {
-                bottom: 2vmin;
+        /*responsive layout for phones*/
+        @media only screen and (max-width: 1000px) {
+            .footer {
+                bottom: 2vh;
                 font-size: 4vmin;
-            }
-
-            .phonehidden {
-                opacity: 0;
-            }
-        }
-        /*for landscape phones*/
-        @media only screen and (max-device-width: 736px) and (orientation : landscape) {
-            .headline {
-                top: 60vmin;
-            }
-
-            .dilan {
-                bottom: 2vmin;
-                font-size: 3.5vmin;
-            }
-
-            .phonehidden {
-                opacity: 1;
-            }
-        }
-        /*for small windows on tablets and computers*/
-        @media only screen and (min-device-width: 737px) and (max-width:699px) {
-            .headline {
-                top: 60vmin;
-            }
-
-            .dilan {
-                bottom: 2vmin;
-                font-size: 4vmin;
-            }
-
-            .phonehidden {
-                opacity: 0;
-            }
-        }
-        /*for large windows on htablets and computers*/
-        @media only screen and (min-device-width: 737px) and (min-width:700px) {
-            .headline {
-                top: 60vmin;
-            }
-
-            .dilan {
-                bottom: 3vmin;
-                font-size: 2.5vmin;
-            }
-
-            .phonehidden {
-                opacity: 1;
             }
         }
         /*responsive layout ends*/
@@ -189,18 +137,17 @@ Special thanks to Sodagreen and Bauhinia Lee.
         </div>
 
         <div class="headline">
-            <h1><a class="headlineword" href="https://one-era.com/download/v30.pdf">新年刊《食·色》已经上线<br>欢迎下载阅读</a></h1>
+            <h1><a href="https://one-era.com/download/v30.pdf">新年刊《食·色》已经上线<br>欢迎下载阅读</a></h1>
         </div>
 
-        <div class="dilan">
-            <span class="dilannowrap"><span class="phonehidden">| </span>© 2016《独立时代》中文电子杂志社</span>
-
-            <span class="dilannowrap">
-                <span class="button-wrap,trigger" data-dialog1="somedialog1"><span class="phonehidden">| </span><i class="fa fa-users"></i> 关于我们 </span>
-                <span class="button-wrap,trigger" data-dialog2="somedialog2">| <i class="fa fa-share-alt"></i> 社交媒体 </span>
-                <span class="button-wrap,trigger" data-dialog4="somedialog4">| <i class="fa fa-book"></i> 往期杂志 </span>
-                <span class="button-wrap,trigger" data-dialog5="somedialog5">| <i class="fa fa-envelope"></i> 来信来稿 <span class="phonehidden">| </span></span>
-            </span>
+        <div class="footer">
+            <span><i class="fa fa-users"></i> 关于我们</span>
+            <span> | </span>
+            <span><i class="fa fa-share-alt"></i> 社交媒体</span>
+            <span> | </span>
+            <span><i class="fa fa-book"></i> 往期杂志</span>
+            <span> | </span>
+            <span><i class="fa fa-envelope"></i> 来信来稿</span>
         </div>
     </div>
 </body>
