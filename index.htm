@@ -12,7 +12,7 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="msapplication-navbutton-color" content="#ffffff">
     <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff">
-    <link rel="prerender" href="https://one-era.com/32">
+    <link rel="prefetch" href="https://one-era.com/32">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/css/perfect-scrollbar.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
@@ -230,6 +230,10 @@
                     font-size: 3.5vmin;
                     line-height: 200%;
                 }
+
+            .magazinesdialog .textleft {
+                text-indent: 0;
+            }
         }
 
         @media only screen and (max-width: 1000px) and (orientation: landscape) {
@@ -297,11 +301,11 @@
             <img src="logo.png" unselectable="on" />
         </div>
         <!--headline-->
-        <div class="headline clickable">
-            <div onclick='window.location="https://one-era.com/32"'>
+        <div class="headline">
+            <div onclick='window.location="https://one-era.com/32"' class="clickable">
                 第32期《毕业季》已上线<br />
             </div>
-            <div onclick='window.open("http://mp.weixin.qq.com/s?__biz=MzA4MDIyMzkyOQ==&mid=402331671&idx=1&sn=e73c4ab16ec1606e6b21e57ab1781efb")'>
+            <div onclick='window.open("http://mp.weixin.qq.com/s?__biz=MzA4MDIyMzkyOQ==&mid=402331671&idx=1&sn=e73c4ab16ec1606e6b21e57ab1781efb")' class="clickable">
                 第四届微情书大赛火热进行中<br />
             </div>
         </div>
