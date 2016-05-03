@@ -396,14 +396,10 @@
         });
 
         //分享
-        var currenturl;
-
         $(".share-icon").click(function () {
             $(".share-menu").slideDown(300);
             menu_opened = true;
-            currenturl = window.location.href;
-            currenturl = currenturl.replace("#", "%23");
-            $(".share-menu img").attr("src", "https://api.qrserver.com/v1/create-qr-code/?&size=1000x1000&margin=50&data=" + currenturl);
+            $(".share-menu img").attr("src", "https://api.qrserver.com/v1/create-qr-code/?&size=1000x1000&margin=50&data=" + encodeURIComponent(window.location.href));
         });
 
         $(".share-menu .close-icon").click(function () {
@@ -413,11 +409,11 @@
         });
 
         $(".share-menu .weibo-share-icon").click(function () {
-            window.open("http://v.t.sina.com.cn/share/share.php?title=我刚在独立时代第三十二期《毕业季》里发现一篇不错的文章，一起看看吧~%20@独立时代电子杂志社&url=" + currenturl);
+            window.open("http://v.t.sina.com.cn/share/share.php?title=我刚在独立时代第三十二期《毕业季》里发现一篇不错的文章，一起看看吧~%20@独立时代电子杂志社&url=" + encodeURIComponent(window.location.href));
         });
 
         $(".share-menu .facebook-share-icon").click(function () {
-            window.open("https://www.facebook.com/sharer/sharer.php?picture=one-era.com/favicon.ico&description=我剛在獨立時代第三十二期《畢業季》裡發現到一篇不錯的文章，一起看看吧~&u=" + currenturl);
+            window.open("https://www.facebook.com/sharer/sharer.php?picture=one-era.com/favicon.ico&description=我剛在獨立時代第三十二期《畢業季》裡發現到一篇不錯的文章，一起看看吧~&u=" + encodeURIComponent(window.location.href));
         });
     });
 </script>
