@@ -15,10 +15,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/css/perfect-scrollbar.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.7/jquery.fullPage.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/js/min/perfect-scrollbar.jquery.min.js"></script>
     <style>
-        /*fullpage.js*/
+        /*overall style*/
         body {
             margin: 0;
             -webkit-touch-callout: none;
@@ -26,18 +25,22 @@
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
-        }
-
-        #fullpage {
-            text-align: center;
-            background-size: cover;
-            background-image: url(picture.jpg);
-            display: none;
             font-family: "Microsoft YaHei Light","Microsoft YaHei",sans-serif;
+            text-align: center;
         }
 
         .clickable {
             cursor: pointer;
+        }
+
+        /*background section*/
+        .background {
+            background-size: cover;
+            background-image: url(picture.jpg);
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+            display: none;
         }
 
         /*logo section*/
@@ -120,11 +123,6 @@
             max-height: 70vh;
         }
 
-            .dialog a {
-                color: #fff;
-                text-decoration: none;
-            }
-
             .dialog .introduction {
                 font-size: 4vmin;
             }
@@ -168,24 +166,6 @@
             .aboutusdialog .teammember {
                 font-size: 1.8vmin;
                 line-height: 200%;
-            }
-
-        .contactusdialog {
-            overflow-y: hidden;
-        }
-
-
-        .magazinesdialog {
-            overflow-x: hidden;
-        }
-
-            .magazinesdialog table {
-                margin: auto;
-            }
-
-            .magazinesdialog td {
-                width: 50%;
-                padding: 0.5vw;
             }
 
         /*responsive layout*/
@@ -241,15 +221,12 @@
     </style>
     <script>
         $(document).ready(function () {
-            //load fullpage and scrollbar js
-            $('#fullpage').fullpage();
-            $('.aboutusdialog').perfectScrollbar({ suppressScrollX: true });
-            $('.contactusdialog').perfectScrollbar({ suppressScrollX: true });
-            $('.magazinesdialog').perfectScrollbar({ suppressScrollX: true });
+            //load scrollbar js
+            $('.dialog').perfectScrollbar({ suppressScrollX: true });
 
             //normal loading animation
             $(window).load(function () {
-                setTimeout(function () { $('#fullpage').fadeIn(800); }, 0);
+                setTimeout(function () { $('.background').fadeIn(800); }, 0);
                 setTimeout(function () { $('.footermask').fadeIn(800); }, 0);
                 setTimeout(function () { $('.logo').fadeIn(800); }, 500);
                 setTimeout(function () { $('.headline').fadeIn(800); }, 500);
@@ -283,391 +260,392 @@
     </script>
 </head>
 <body>
-    <div id="fullpage">
-        <!--logo-->
-        <div class="logo">
-            <img src="logo.png" unselectable="on" />
+    <!--background-->
+    <div class="background">
+    </div>
+    <!--logo-->
+    <div class="logo">
+        <img src="logo.png" unselectable="on" />
+    </div>
+    <!--headline-->
+    <div class="headline">
+        <div onclick='window.location="32"' class="clickable">
+            第32期《毕业季》已上线<br />
         </div>
-        <!--headline-->
-        <div class="headline">
-            <div onclick='window.location="32"' class="clickable">
-                第32期《毕业季》已上线<br />
-            </div>
-            <div onclick='window.open("http://mp.weixin.qq.com/s?__biz=MzA4MDIyMzkyOQ==&mid=402331671&idx=1&sn=e73c4ab16ec1606e6b21e57ab1781efb")' class="clickable">
-                第四届微情书大赛火热进行中<br />
-            </div>
+        <div onclick='window.open("http://mp.weixin.qq.com/s?__biz=MzA4MDIyMzkyOQ==&mid=402331671&idx=1&sn=e73c4ab16ec1606e6b21e57ab1781efb")' class="clickable">
+            第四届微情书大赛火热进行中<br />
         </div>
-        <!--footer-->
-        <div class="footermask"></div>
-        <div class="footer">
-            <span class="wechatbutton clickable" onclick='window.open("http://mp.weixin.qq.com/s?__biz=MzA4MDIyMzkyOQ==&mid=402390501&idx=1&sn=ab9d8eefd368ed623f4dc3f70b921ff6")'>
-                <i class="fa fa-weixin fa-fw"></i>
-            </span>
-            <span>|</span>
-            <span class="weibobutton clickable" onclick='window.open("http://www.weibo.com/oneera")'>
-                <i class="fa fa-weibo fa-fw"></i>
-            </span>
-            <span>|</span>
-            <span class="facebookbutton clickable" onclick='window.open("http://www.facebook.com/164238836966896")'>
-                <i class="fa fa-facebook fa-fw"></i>
-            </span>
-            <span>|</span>
-            <span class="aboutusbutton clickable">
-                <i class="fa fa-users fa-fw"></i>
-            </span>
-            <span>|</span>
-            <span class="contactusbutton clickable">
-                <i class="fa fa-envelope fa-fw"></i>
-            </span>
-            <span>|</span>
-            <span class="magazinesbutton clickable">
-                <i class="fa fa-book fa-fw"></i>
-            </span>
+    </div>
+    <!--footer-->
+    <div class="footermask"></div>
+    <div class="footer">
+        <span class="wechatbutton clickable" onclick='window.open("http://mp.weixin.qq.com/s?__biz=MzA4MDIyMzkyOQ==&mid=402390501&idx=1&sn=ab9d8eefd368ed623f4dc3f70b921ff6")'>
+            <i class="fa fa-weixin fa-fw"></i>
+        </span>
+        <span>|</span>
+        <span class="weibobutton clickable" onclick='window.open("http://www.weibo.com/oneera")'>
+            <i class="fa fa-weibo fa-fw"></i>
+        </span>
+        <span>|</span>
+        <span class="facebookbutton clickable" onclick='window.open("http://www.facebook.com/164238836966896")'>
+            <i class="fa fa-facebook fa-fw"></i>
+        </span>
+        <span>|</span>
+        <span class="aboutusbutton clickable">
+            <i class="fa fa-users fa-fw"></i>
+        </span>
+        <span>|</span>
+        <span class="contactusbutton clickable">
+            <i class="fa fa-envelope fa-fw"></i>
+        </span>
+        <span>|</span>
+        <span class="magazinesbutton clickable">
+            <i class="fa fa-book fa-fw"></i>
+        </span>
+    </div>
+    <!--dialog-->
+    <div class="dialogmask"></div>
+    <!--about us dialog-->
+    <div class="aboutusdialog dialog">
+        <div class="introduction">
+            ————杂志介绍————<br />
         </div>
-        <!--dialog-->
-        <div class="dialogmask"></div>
-        <!--about us dialog-->
-        <div class="aboutusdialog dialog">
-            <div class="introduction">
-                ————杂志介绍————<br />
-            </div>
-            <div class="textleft">
-                <br />
-            </div>
-            <div class="textleft">
-                这是求学于香港的我们所创办的电子杂志——《独立时代》！<br /><br />
-            </div>
-            <div class="textleft">
-                是我们的呐喊，独立在香港这个视野开阔的自由港口，倚靠着大陆，面迎着季风。是我们的灵魂，漂泊在中文大学这个异乡天地，感受着东西文化碰撞，思想受到撼动。<br /><br />
-            </div>
-            <div class="textleft">
-                于是我们思考，我们记录。但我们并不侈求匆匆改变所处时代，只是想让时代更多聆听到我们的声音——关注身边社会、描绘大千世界、记录点滴生活、表达见解感动、宣扬独立精神……贪婪的我们办了这个“杂”志。<br /><br />
-            </div>
-            <div class="textleft">
-                无论是心路散文还是时政评论，这里有着不同的人各自独立的思考与见解，期待与你一起分享这时代年轻人的所见、所思、所闻、所感。我们，也愿意在这个独立的时代，与你同行。<br /><br />
-            </div>
-            <div class="textleft">
-                让时代，听到你的声音！<br />
-                <br />
-            </div>
-            <div class="introduction">
-                ————成员介绍————<br />
-            </div>
-            <table>
-                <tr>
-                    <td class="teamname">
-                        第六届制作团体<br />六羡歌
-                    </td>
-                    <td class="teammember">
-                        主编：怀海<br />
-                        外务副主编：沈念卿
-                        内务副主编：子艨<br />
-                        宣传：墨瞳
-                        文书/财政：Wendy<br />
-                        文编：叶空 墨拦 四饼 寒宇 伟哥 中文系<br />
-                        美编：HXI  月月鸟 君槐 贝贝 镜楼 安德烈<br />
-                        技术：凉君 老鱼<br />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="teamname">
-                        <br />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="teammember">
-                        主编：林霏
-                        副主编：挡猿钺<br />
-                        宣传：泽木
-                        文书/财政：凝荷<br />
-                        文编：花房八二 简 秦维彧 诶呦喂 景深 子衿<br />
-                        美编：晓曦 蘑菇教主 K 梨尘 嘿嘿君 Kelly<br />
-                        技术：Kris iWalker
-                    </td>
-                    <td class="teamname">
-                        第五届制作团体<br />五味纸
-                    </td>
-                </tr>
-                <tr>
-                    <td class="teamname">
-                        <br />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="teamname">
-                        第四届制作团体<br />创肆季
-                    </td>
-                    <td class="teammember">
-                        主编：辛吉斯
-                        副主编：苍耳<br />
-                        宣传：没头脑
-                        文书/财政：杉木<br />
-                        文编：穗德 尘狭 归墟 阰芷 川岳 Yingace<br />
-                        美编：橘桔 卷毛 西瞳 京口人 超新星 6+6<br />
-                        技术：morula Eda<br />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="teamname">
-                        <br />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="teammember">
-                        主编：NA君
-                        副主编：微La<br />
-                        宣传：Apprentice
-                        文书/财政：憓霖<br />
-                        文编：道口慕枫 乔白山人 锁骨君 杳伊 墨拦<br />
-                        美编：Eda 会飞的猫 来自未来的我<br />Nobelium Stomacake<br />
-                        技术：Aquilaria<br />
-                    </td>
-                    <td class="teamname">
-                        第三届制作团体<br />三叠纪
-                    </td>
-                </tr>
-                <tr>
-                    <td class="teamname">
-                        <br />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="teamname">
-                        第二届制作团体<br />二进志
-                    </td>
-                    <td class="teammember">
-                        主编：目田君<br />
-                        外务副主编：LJC
-                        内务副主编：Ursula<br />
-                        宣传：落烬枫
-                        文书/财政：tsunami<br />
-                        文编：Jacinta 魏晋 种子与 攸攸 未名<br />
-                        美编：sly Stomacake 费贤 九九 hazard<br />
-                        技术：小星星 Blast<br />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="teamname">
-                        <br />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="teammember">
-                        主编：绿茶<br />
-                        外务副主编：跳格子
-                        内务副主编：johnle<br />
-                        宣传：栗子
-                        文书／财政：Calla<br />
-                        文编：SUNNA 目田君 cinsue 三叶 Lorraine Vanya<br />
-                        美编：Encore Miu kane Ale Rox<br />
-                        技术：snow
-                    </td>
-                    <td class="teamname">
-                        第一届制作团体<br />创刊号
-                    </td>
-                </tr>
-            </table>
+        <div class="textleft">
+            <br />
         </div>
-        <!--contact us dialog-->
-        <div class="contactusdialog dialog">
-            <div class="introduction">
-                ————联系我们————<br />
-            </div>
-            <div class="textleft">
-                <br />
-            </div>
-            <div class="textleft">
-                如果对我们任何意见建议或查询，请发送邮件至<span onclick='window.location="mailto:info@one-era.com"' class="clickable">info@one-era.com</span>。<br /><br />
-            </div>
-            <div class="introduction">
-                ————投稿须知————<br />
-            </div>
-            <div class="textleft">
-                <br />
-            </div>
-            <div class="textleft">
-                请于投稿邮件中提供这些信息：姓名、笔名、学校、学系、年级、稿件名称、联系电话、常用邮箱、备注。投稿需要经过编辑人员的筛选才能决定是否录用，我们会以邮件的形式通知被录用稿件的作者。本杂志旨在提供一个畅所欲言，展示创意的空间，所有投稿者不会从中得到任何稿费。你、我、他也许并不相识，但我们一同分享，一同品尝青春年代中的那些或美丽或感动或愤怒的瞬间。君子之交，淡淡如水；金帛珠玉，非吾所求。<br /><br />
-            </div>
-            <div class="textleft">
-                文字投稿请发至文字投稿邮箱：<span onclick='window.location = "mailto:text@one-era.com"' class="clickable">text@one-era.com</span>。我们开设的栏目有专题（关于专题你的看法，详情见微信公众号征稿启事）、故事（小说）、行吟（散文、诗歌）、世见（杂文、评论、时政分析）、艺眼（体育、书评、影评、音乐推荐，字数不少于300）、尺牍（文摘，请详细注明摘稿来源，优先刊登附有摘者简单感悟文字的优秀作品）。除注明外，文章字数应不少于800字。投稿时，请在邮件标题中注明稿件类型。<br /><br />
-            </div>
-            <div class="textleft">
-                图片投稿请发至图片投稿邮箱：<span onclick='window.location="mailto:art@one-era.com"' class="clickable">art@one-era.com</span>。发送时，请将图像作为附件发送。我们将优先取用符合每期主题的作品，但我们也欢迎与主题无关的其他优秀摄影或绘画作品（请附上阐释主题的简单文本）。<br /><br />
-            </div>
+        <div class="textleft">
+            这是求学于香港的我们所创办的电子杂志——《独立时代》！<br /><br />
         </div>
-        <!--magazines dialog-->
-        <div class="magazinesdialog dialog">
-            <div class="introduction">
-                ————往期杂志————<br />
-            </div>
+        <div class="textleft">
+            是我们的呐喊，独立在香港这个视野开阔的自由港口，倚靠着大陆，面迎着季风。是我们的灵魂，漂泊在中文大学这个异乡天地，感受着东西文化碰撞，思想受到撼动。<br /><br />
+        </div>
+        <div class="textleft">
+            于是我们思考，我们记录。但我们并不侈求匆匆改变所处时代，只是想让时代更多聆听到我们的声音——关注身边社会、描绘大千世界、记录点滴生活、表达见解感动、宣扬独立精神……贪婪的我们办了这个“杂”志。<br /><br />
+        </div>
+        <div class="textleft">
+            无论是心路散文还是时政评论，这里有着不同的人各自独立的思考与见解，期待与你一起分享这时代年轻人的所见、所思、所闻、所感。我们，也愿意在这个独立的时代，与你同行。<br /><br />
+        </div>
+        <div class="textleft">
+            让时代，听到你的声音！<br />
             <br />
-            <div class="textcenter clickable" onclick='window.open("32")'>
-                2016.4/32<br />
-                毕业季<br />
-            </div>
+        </div>
+        <div class="introduction">
+            ————成员介绍————<br />
+        </div>
+        <table>
+            <tr>
+                <td class="teamname">
+                    第六届制作团体<br />六羡歌
+                </td>
+                <td class="teammember">
+                    主编：怀海<br />
+                    外务副主编：沈念卿
+                    内务副主编：子艨<br />
+                    宣传：墨瞳
+                    文书/财政：Wendy<br />
+                    文编：叶空 墨拦 四饼 寒宇 伟哥 中文系<br />
+                    美编：HXI  月月鸟 君槐 贝贝 镜楼 安德烈<br />
+                    技术：凉君 老鱼<br />
+                </td>
+            </tr>
+            <tr>
+                <td class="teamname">
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <td class="teammember">
+                    主编：林霏
+                    副主编：挡猿钺<br />
+                    宣传：泽木
+                    文书/财政：凝荷<br />
+                    文编：花房八二 简 秦维彧 诶呦喂 景深 子衿<br />
+                    美编：晓曦 蘑菇教主 K 梨尘 嘿嘿君 Kelly<br />
+                    技术：Kris iWalker
+                </td>
+                <td class="teamname">
+                    第五届制作团体<br />五味纸
+                </td>
+            </tr>
+            <tr>
+                <td class="teamname">
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <td class="teamname">
+                    第四届制作团体<br />创肆季
+                </td>
+                <td class="teammember">
+                    主编：辛吉斯
+                    副主编：苍耳<br />
+                    宣传：没头脑
+                    文书/财政：杉木<br />
+                    文编：穗德 尘狭 归墟 阰芷 川岳 Yingace<br />
+                    美编：橘桔 卷毛 西瞳 京口人 超新星 6+6<br />
+                    技术：morula Eda<br />
+                </td>
+            </tr>
+            <tr>
+                <td class="teamname">
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <td class="teammember">
+                    主编：NA君
+                    副主编：微La<br />
+                    宣传：Apprentice
+                    文书/财政：憓霖<br />
+                    文编：道口慕枫 乔白山人 锁骨君 杳伊 墨拦<br />
+                    美编：Eda 会飞的猫 来自未来的我<br />Nobelium Stomacake<br />
+                    技术：Aquilaria<br />
+                </td>
+                <td class="teamname">
+                    第三届制作团体<br />三叠纪
+                </td>
+            </tr>
+            <tr>
+                <td class="teamname">
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <td class="teamname">
+                    第二届制作团体<br />二进志
+                </td>
+                <td class="teammember">
+                    主编：目田君<br />
+                    外务副主编：LJC
+                    内务副主编：Ursula<br />
+                    宣传：落烬枫
+                    文书/财政：tsunami<br />
+                    文编：Jacinta 魏晋 种子与 攸攸 未名<br />
+                    美编：sly Stomacake 费贤 九九 hazard<br />
+                    技术：小星星 Blast<br />
+                </td>
+            </tr>
+            <tr>
+                <td class="teamname">
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <td class="teammember">
+                    主编：绿茶<br />
+                    外务副主编：跳格子
+                    内务副主编：johnle<br />
+                    宣传：栗子
+                    文书／财政：Calla<br />
+                    文编：SUNNA 目田君 cinsue 三叶 Lorraine Vanya<br />
+                    美编：Encore Miu kane Ale Rox<br />
+                    技术：snow
+                </td>
+                <td class="teamname">
+                    第一届制作团体<br />创刊号
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!--contact us dialog-->
+    <div class="contactusdialog dialog">
+        <div class="introduction">
+            ————联系我们————<br />
+        </div>
+        <div class="textleft">
             <br />
-            <div class="textcenter clickable" onclick='window.open("31.pdf")'>
-                2016.2/31<br />
-                笔与刀<br />
-            </div>
+        </div>
+        <div class="textleft">
+            如果对我们任何意见建议或查询，请发送邮件至<span onclick='window.location="mailto:info@one-era.com"' class="clickable">info@one-era.com</span>。<br /><br />
+        </div>
+        <div class="introduction">
+            ————投稿须知————<br />
+        </div>
+        <div class="textleft">
             <br />
-            <div class="textcenter clickable" onclick='window.open("30.pdf")'>
-                2016.1/30<br />
-                食·色<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("29.pdf")'>
-                2015.10/29<br />
-                恋爱·观<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("28.pdf")'>
-                2015.3/28<br />
-                海湾下的暗涌<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("27.pdf")'>
-                2015.2/27<br />
-                游<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("26.pdf")'>
-                2015.1/26<br />
-                装<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("25.pdf")'>
-                2014.11/25<br />
-                过期<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("24.pdf")'>
-                2014.9/24<br />
-                暑期特刊<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("23.pdf")'>
-                2014.5/23<br />
-                奇葩<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("22-sp-23.pdf")'>
-                2014.3/特刊<br />
-                十年<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("22.pdf")'>
-                2014.3/22<br />
-                初恋<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("21.pdf")'>
-                2014.2/21<br />
-                归去来兮<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("20.pdf")'>
-                2013.11/20<br />
-                江湖<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("19.pdf")'>
-                2013.10/19<br />
-                X<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("18.pdf")'>
-                2013.8/18<br />
-                暑期合刊<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("17.pdf")'>
-                2013.4/17<br />
-                城<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("16.pdf")'>
-                2013.3/16<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("15.pdf")'>
-                2013.2/15<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("14.pdf")'>
-                2013.1/14<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("13.pdf")'>
-                2012.11/13<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("12.pdf")'>
-                2012.9/12<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("11.pdf")'>
-                2012.5/11<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("10.pdf")'>
-                2012.3/10<br />
-                怪兽<br />
-                pdf<br />
-            </div>
-            <div class="textcenter clickable" onclick='window.open("10.exe")'>
-                exe<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("9.exe")'>
-                2011.12/9<br />
-                漂<br />
-                exe<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("8.exe")'>
-                2011.10/8<br />
-                安全感<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("7.pdf")'>
-                2011.8/7<br />
-                WEI时代<br />
-                pdf<br />
-            </div>
-            <div class="textcenter clickable" onclick='window.open("7.exe")'>
-                exe<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("6.exe")'>
-                2011.6/6<br />
-                光<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("5.exe")'>
-                2011.4/5<br />
-                愚<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("4.exe")'>
-                2011.2/4<br />
-                最初<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("3.exe")'>
-                2010.12/3<br />
-                荒<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("2.exe")'>
-                2010.10/2<br />
-                表情<br />
-            </div>
-            <br />
-            <div class="textcenter clickable" onclick='window.open("1.exe")'>
-                2010.8/1<br />
-                独立时代<br />
-            </div>
+        </div>
+        <div class="textleft">
+            请于投稿邮件中提供这些信息：姓名、笔名、学校、学系、年级、稿件名称、联系电话、常用邮箱、备注。投稿需要经过编辑人员的筛选才能决定是否录用，我们会以邮件的形式通知被录用稿件的作者。本杂志旨在提供一个畅所欲言，展示创意的空间，所有投稿者不会从中得到任何稿费。你、我、他也许并不相识，但我们一同分享，一同品尝青春年代中的那些或美丽或感动或愤怒的瞬间。君子之交，淡淡如水；金帛珠玉，非吾所求。<br /><br />
+        </div>
+        <div class="textleft">
+            文字投稿请发至文字投稿邮箱：<span onclick='window.location = "mailto:text@one-era.com"' class="clickable">text@one-era.com</span>。我们开设的栏目有专题（关于专题你的看法，详情见微信公众号征稿启事）、故事（小说）、行吟（散文、诗歌）、世见（杂文、评论、时政分析）、艺眼（体育、书评、影评、音乐推荐，字数不少于300）、尺牍（文摘，请详细注明摘稿来源，优先刊登附有摘者简单感悟文字的优秀作品）。除注明外，文章字数应不少于800字。投稿时，请在邮件标题中注明稿件类型。<br /><br />
+        </div>
+        <div class="textleft">
+            图片投稿请发至图片投稿邮箱：<span onclick='window.location="mailto:art@one-era.com"' class="clickable">art@one-era.com</span>。发送时，请将图像作为附件发送。我们将优先取用符合每期主题的作品，但我们也欢迎与主题无关的其他优秀摄影或绘画作品（请附上阐释主题的简单文本）。<br /><br />
+        </div>
+    </div>
+    <!--magazines dialog-->
+    <div class="magazinesdialog dialog">
+        <div class="introduction">
+            ————往期杂志————<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("32")'>
+            2016.4/32<br />
+            毕业季<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("31.pdf")'>
+            2016.2/31<br />
+            笔与刀<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("30.pdf")'>
+            2016.1/30<br />
+            食·色<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("29.pdf")'>
+            2015.10/29<br />
+            恋爱·观<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("28.pdf")'>
+            2015.3/28<br />
+            海湾下的暗涌<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("27.pdf")'>
+            2015.2/27<br />
+            游<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("26.pdf")'>
+            2015.1/26<br />
+            装<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("25.pdf")'>
+            2014.11/25<br />
+            过期<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("24.pdf")'>
+            2014.9/24<br />
+            暑期特刊<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("23.pdf")'>
+            2014.5/23<br />
+            奇葩<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("22-sp-23.pdf")'>
+            2014.3/特刊<br />
+            十年<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("22.pdf")'>
+            2014.3/22<br />
+            初恋<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("21.pdf")'>
+            2014.2/21<br />
+            归去来兮<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("20.pdf")'>
+            2013.11/20<br />
+            江湖<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("19.pdf")'>
+            2013.10/19<br />
+            X<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("18.pdf")'>
+            2013.8/18<br />
+            暑期合刊<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("17.pdf")'>
+            2013.4/17<br />
+            城<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("16.pdf")'>
+            2013.3/16<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("15.pdf")'>
+            2013.2/15<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("14.pdf")'>
+            2013.1/14<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("13.pdf")'>
+            2012.11/13<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("12.pdf")'>
+            2012.9/12<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("11.pdf")'>
+            2012.5/11<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("10.pdf")'>
+            2012.3/10<br />
+            怪兽<br />
+            pdf<br />
+        </div>
+        <div class="textcenter clickable" onclick='window.open("10.exe")'>
+            exe<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("9.exe")'>
+            2011.12/9<br />
+            漂<br />
+            exe<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("8.exe")'>
+            2011.10/8<br />
+            安全感<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("7.pdf")'>
+            2011.8/7<br />
+            WEI时代<br />
+            pdf<br />
+        </div>
+        <div class="textcenter clickable" onclick='window.open("7.exe")'>
+            exe<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("6.exe")'>
+            2011.6/6<br />
+            光<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("5.exe")'>
+            2011.4/5<br />
+            愚<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("4.exe")'>
+            2011.2/4<br />
+            最初<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("3.exe")'>
+            2010.12/3<br />
+            荒<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("2.exe")'>
+            2010.10/2<br />
+            表情<br />
+        </div>
+        <br />
+        <div class="textcenter clickable" onclick='window.open("1.exe")'>
+            2010.8/1<br />
+            独立时代<br />
         </div>
     </div>
 </body>
