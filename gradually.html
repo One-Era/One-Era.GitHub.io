@@ -51,7 +51,7 @@
             position: absolute;
             top: 10vmin;
             height: 50vmin;
-            display: none;
+            opacity: 0;
         }
 
             .logo img {
@@ -65,7 +65,7 @@
             width: 100%;
             position: absolute;
             top: 63vh;
-            display: none;
+            opacity: 0;
             font-size: 4vmin;
             color: #fff;
             margin: 0;
@@ -97,7 +97,7 @@
             color: #fff;
             white-space: nowrap;
             text-shadow: 0px 0px 20px #000;
-            display: none;
+            opacity: 0;
         }
 
         /*dialog section*/
@@ -230,9 +230,9 @@
             $(window).load(function () {
                 setTimeout(function () { $('.background').fadeIn(800); }, 0);
                 setTimeout(function () { $('.footermask').fadeIn(800); }, 0);
-                setTimeout(function () { $('.logo').show(); $('.logo').addClass('animated fadeInUp'); }, 500);
-                setTimeout(function () { $('.headline').show(); $('.headline').addClass('animated fadeInUp'); }, 750);
-                setTimeout(function () { $('.footer').show(); $('.footer').addClass('animated fadeInUp'); }, 1000);
+                setTimeout(function () { $('.logo').addClass('animated fadeInUp'); }, 500);
+                setTimeout(function () { $('.headline').addClass('animated fadeInUp'); }, 750);
+                setTimeout(function () { $('.footer').addClass('animated fadeInUp'); }, 1000);
             });
 
             //open dialog
