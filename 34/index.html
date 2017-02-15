@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>衣冠</title>
+    <title>少年游</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
     <link rel="stylesheet" href="../dist/css/swiper.min.css">
@@ -141,11 +141,11 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img src="images/p1.png"></div>
                         <div class="swiper-slide" style="background-image:url(images/1-1.png);background-size:cover" data-anchor="intro">
-                                <div class="antitext">
+                                <div class="myref" style="padding-top: 40%">
                                     小孩子对转学生总有种虚假的关心，他们围在我身边，叽叽喳喳，殷殷切切。我甚至都不需要抬头，就可以感受到他们的提防、戒备和不屑。<br>
                                     渐渐的，他们不来了。于是我坐在教室里一个什么特殊故事都不会发生的普通座位，借着周围黑压压的人头保护自己。
                                     <br>
-                                    <a href="1-1.html" target="_blank" class="antitext">阅读全文</a>
+                                    <a href="1-1.html" target="_blank" class="myref">阅读全文</a>
                                 </div>
                         </div>
                         <div class="swiper-slide" style="background-image:url(images/1-2.png);background-size:cover" data-anchor="intro">
@@ -195,7 +195,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img src="images/p3.png"></div>
                         <div class="swiper-slide" style="background-image:url(images/3-1.png);background-size:cover" data-anchor="intro">
-                            <div class="mytext" align="left"><br>
+                            <div class="mytext" style="padding-top: 80%" align="left"><br>
                                 不该踏入静谧的夜<br>
                                 否则我可以信任我的眼睛一辈子<br>
                                 难得晴天<br>
@@ -281,7 +281,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img src="images/p5.png"></div>
                         <div class="swiper-slide" style="background-image:url(images/5-1.png);background-size:cover" data-anchor="intro">
-                            <div class="a5text">
+                            <div class="antitext">
                                 <br>当代社会，游戏作为日常娱乐的一个相当重要的组成部分为男女老少所共同喜爱。即使是那些最不接触游戏的人，大概也能说出像英雄联盟、阴阳师这样如今炙手可热的游戏名称来。
                                 <br>
                                 这些名字的背后往往站着一个庞大的团队，美工、程序、后期运营、市场等等方面都有专人负责。这样的游戏不在我们今天讨论的范围之内，我们今天想和大家聊聊的是游戏中的小众存在——独立游戏。
@@ -317,7 +317,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img src="images/p6.png"></div>
                         <div class="swiper-slide" style="background-image:url(images/6-1.png);background-size:cover" data-anchor="intro">
-                            <div class="a6text">
+                            <div class="antitext">
                                 <br>“很久之前，玛嘉烈为大卫煮了一碗酸辣汤，大卫问她，酸辣汤难煮吗？ 于是玛嘉烈就解释了一次酸辣汤的做法。
                                 <br>今天，大卫想再问一次，他希望可以回到以前，然后将酸辣汤的做法永远放在心里。 ”
                                 <br>
@@ -335,11 +335,11 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img src="images/p7.png"></div>
                         <div class="swiper-slide" style="background-image:url(images/7-1.png);background-size:cover" data-anchor="intro">
-                            <div class="antitext"><br>
+                            <div class="mytext"><br>
                                 新的一年到了。在这个浮躁的时代里，我们更应回望。<br>
                                 回望热忱的青年，回望真诚的追求，回望明明暗暗无从捕捉的诗意，回望一代大师里尔克，对于文学与人生、爱与寂寞、追求与矛盾的阐述、解读和寄托。<br>
                                 通过回望，或许能帮助我们或完成，或开启，一场对内与对外的生命求索。<br>
-                                <a href="7.html" target="_blank" class="antitext">阅读全文</a>
+                                <a href="7.html" target="_blank" class="myref">阅读全文</a>
                             </div>
                         </div>
                     </div>
@@ -367,6 +367,27 @@
         direction: 'vertical',
         spaceBetween: 50
     });
+    </script>
+    <script type="text/javascript">
+        <!--
+        //平台、设备和操作系统
+        var system ={
+            win : false,
+            mac : false,
+            xll : false
+        };
+        //检测平台
+        var p = navigator.platform;
+        system.win = p.indexOf("Win") == 0;
+        system.mac = p.indexOf("Mac") == 0;
+        system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+        //跳转语句，如果是手机访问就自动跳转到wap.baidu.com页面
+        if(system.win||system.mac||system.xll){
+            window.location.href="PCindex.html"
+        }else{
+            //window.location.href="index.html";
+        }
+        -->
     </script>
 </body>
 </html>
