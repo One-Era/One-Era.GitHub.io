@@ -119,7 +119,7 @@
         }
             /*真正的目录中*/
             .contents-menu .contents-links td {
-                padding: 0 0 0 0;
+                /*padding: 0 0 0 0;*/
                 vertical-align: top;
             }
             /*栏目名*/
@@ -302,53 +302,53 @@
             afterLoad: function (anchorLink, index) {
                 $(".share-menu img").attr("src", "");
                 $(".share-menu img").attr("src", "https://api.qrserver.com/v1/create-qr-code/?&size=1000x1000&margin=50&data=" + encodeURIComponent(window.location.href));
-                switch (index) {
-                    case 1:
-                        document.title = "独立时代·35·微情书";
-                        break;
-                    case 2:
-                        document.title = "自我感动的大学生活";
-                        break;
-                    case 3:
-                        document.title = "你都如何回忆八百米";
-                        break;
-                    case 4:
-                        document.title = "两个夏天";
-                        break;
-                    case 5:
-                        document.title = "春秋大梦";
-                        break;
-                    case 6:
-                        document.title = "说";
-                        break;
-                    case 7:
-                        document.title = "人虫";
-                        break;
-                    case 8:
-                        document.title = "人之困境";
-                        break;
-                    case 9:
-                        document.title = "怀旧·理性·未来";
-                        break;
-                    case 10:
-                        document.title = "《奥义书》中梵我观与道家哲学相似之初探";
-                        break;
-                    case 11:
-                        document.title = "《年月日》中的 “神” 与 “实”";
-                        break;
-                    case 12:
-                        document.title = "说棋";
-                        break;
-                    case 13:
-                        document.title = "牛肉饼";
-                        break;
-                    case 14:
-                        document.title = "富贵闲人";
-                        break;
-                    case 15:
-                        document.title = "王小波到底有多伟大";
-                        break;
-                }
+                // switch (index) {
+                //     case 1:
+                //         document.title = "独立时代·35·微情书";
+                //         break;
+                //     case 2:
+                //         document.title = "自我感动的大学生活";
+                //         break;
+                //     case 3:
+                //         document.title = "你都如何回忆八百米";
+                //         break;
+                //     case 4:
+                //         document.title = "两个夏天";
+                //         break;
+                //     case 5:
+                //         document.title = "春秋大梦";
+                //         break;
+                //     case 6:
+                //         document.title = "说";
+                //         break;
+                //     case 7:
+                //         document.title = "人虫";
+                //         break;
+                //     case 8:
+                //         document.title = "人之困境";
+                //         break;
+                //     case 9:
+                //         document.title = "怀旧·理性·未来";
+                //         break;
+                //     case 10:
+                //         document.title = "《奥义书》中梵我观与道家哲学相似之初探";
+                //         break;
+                //     case 11:
+                //         document.title = "《年月日》中的 “神” 与 “实”";
+                //         break;
+                //     case 12:
+                //         document.title = "说棋";
+                //         break;
+                //     case 13:
+                //         document.title = "牛肉饼";
+                //         break;
+                //     case 14:
+                //         document.title = "富贵闲人";
+                //         break;
+                //     case 15:
+                //         document.title = "王小波到底有多伟大";
+                //         break;
+                // }
             }
         });
         $.fn.fullpage.setAllowScrolling(false, 'down, up');
@@ -424,7 +424,7 @@
         </div>
     </div>
 
-    <div class="contents-menu">
+    <div class="contents-menu" style="overflow:scroll">
         <div class="contents-header">
         </div>
         <div class="close-icon">
@@ -433,60 +433,138 @@
         <div class="contents-header-text">
             目录
         </div>
-        <div class="contents-links">
+        <div class="contents-links" style="margin-left: 10%; overflow: scroll">
             <table>
                 <tr>
-                    <td style="width:20vw;"></td>
-                    <td><a href="#intro">本期介绍</a></td>
+                    <td><a href="#q1">耘春</a></td>
                 </tr>
                 <tr>
-                    <td class="column" rowspan="3">专题</td>
-                    <td><a href="#self-moving-u-life">自我感动的大学生活/吴岱晖</a></td>
+                    <td><a href="#q2">无题</a></td>
                 </tr>
                 <tr>
-                    <td><a href="#how-do-you-recall-800-meters">你都如何回忆八百米/马料水小野猪</a></td>
+                    <td><a href="#q3">挖土豆的人</a></td>
                 </tr>
                 <tr>
-                    <td><a href="#two-summers">两个夏天/西班牙小苍蝇</a></td>
+                    <td><a href="#q4">半个生命</a></td>
                 </tr>
                 <tr>
-                    <td class="column" rowspan="3">行吟</td>
-                    <td><a href="#big-dream">春秋大梦/西班牙小苍蝇</a></td>
+                    <td><a href="#q5">持镜人</a></td>
                 </tr>
                 <tr>
-                    <td><a href="#talking">说/西班牙小苍蝇</a></td>
+                    <td><a href="#q6">勇气</a></td>
                 </tr>
                 <tr>
-                    <td><a href="#human-worm">人虫/朱恋淮</a></td>
+                    <td><a href="#q7">烟</a></td>
                 </tr>
                 <tr>
-                    <td class="column" rowspan="2">世见</td>
-                    <td><a href="#people-in-dilemma">人之困境/詹哥哥</a></td>
+                    <td><a href="#q8">你是我右手指尖的一个疣 </a></td>
                 </tr>
                 <tr>
-                    <td><a href="#reminiscence-reason-future">怀旧·理性·未来/马鞍山小麋鹿</a></td>
+                    <td><a href="#q9">静静</a></td>
                 </tr>
                 <tr>
-                    <td class="column" rowspan="2">艺眼</td>
-                    <td><a href="#about-upanishad">《奥义书》中梵我观与道家哲学相似之初探/西班牙小苍蝇</a></td>
+                    <td><a href="#q10">无题</a></td>
                 </tr>
                 <tr>
-                    <td><a href="#about-year-month-day">《年月日》中的 “神” 与 “实”/张韵秋</a></td>
+                    <td><a href="#q11">月寄</a></td>
                 </tr>
                 <tr>
-                    <td class="column" rowspan="3">故事</td>
-                    <td><a href="#chess">说棋/醒月楼主人</a></td>
+                    <td><a href="#q12">我想住进你的眼</a></td>
                 </tr>
                 <tr>
-                    <td><a href="#burgers">牛肉饼/佚名</a></td>
+                    <td><a href="#q13">生于母，归于母</a></td>
                 </tr>
                 <tr>
-                    <td><a href="#wealthy-idler">富贵闲人/西班牙小苍蝇</a></td>
+                    <td><a href="#q14">你的味道</a></td>
                 </tr>
                 <tr>
-                    <td class="column" rowspan="1">尺牍</td>
-                    <td><a href="#how-great-is-wang-xiaobo">王小波到底有多伟大/冯唐</a></td>
+                    <td><a href="#q15">孤独启蒙</a></td>
                 </tr>
+                <tr>
+                    <td><a href="#q16">春天很好</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#q17">桥</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#q18">烂漫</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#q19">想念与你有关</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#q20">距离</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#q21">假如</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#q22">列宁之死</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#q23">一赠一答</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#q24">相思树</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#q25">遣怀</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#q26">还有</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#q27">风水</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#q28">请不要爱我胜过爱你自己</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#q29">烟火</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#q30">无题</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#q31">送你的独白</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#q32">⽩⾊衬衫</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#q33">无题</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#q34">无题</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#q35">等</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#q36">月光</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#q37">门外第二十七个行人</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#q38">年轮</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#q39">木柵又雨</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#q40">我瓦刀</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#q41">致乌尔里卡</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#q41">何满子</a></td>
+                </tr>
+
+
+
+      
             </table>
             <br /><br /><br /><br />
         </div>
@@ -513,13 +591,13 @@
     </div>
 
     <div id="fullpage">
-        <div class="section" style="background-image:url(封面.jpg);background-size:cover" data-anchor="self-moving-u-life">
+        <div class="section" style="background-image:url(封面.jpg);background-size:cover" data-anchor="">
             <div class="article">
                 <div class="text"></div>
             </div>
         </div>
 
-        <div class="section" style="background-image:url(2.jpg);background-size:cover" data-anchor="self-moving-u-life">
+        <div class="section" style="background-image:url(2.jpg);background-size:cover" data-anchor="q1">
             <div class="article">
                 <div class="text">
                 春草青青 春虫喑喑<br />
@@ -543,7 +621,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(3.jpg);background-size:cover" data-anchor="how-do-you-recall-800-meters">
+        <div class="section" style="background-image:url(3.jpg);background-size:cover" data-anchor="q2">
             <div class="article" style="text-shadow :0px 0px 20px #000000; color :white;">
                 <div class="title"><br />无题<br /></div>
                 
@@ -554,7 +632,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(4.jpg);background-size:cover" data-anchor="two-summers">
+        <div class="section" style="background-image:url(4.jpg);background-size:cover" data-anchor="q3">
             <div class="article" style="text-shadow :0px 0px 20px black; color :white;">
                 <div class="title"><br />挖土豆的人 <br /></div>
                 
@@ -577,7 +655,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(5.jpg);background-size:cover" data-anchor="big-dream">
+        <div class="section" style="background-image:url(5.jpg);background-size:cover" data-anchor="q4">
             <div class="article" style="text-shadow :0px 0px 20px white; color:black;">
                 <div class="title"><br />半个生命 <br /></div>
                 <div class="poem">
@@ -607,7 +685,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(6.jpg);background-size:cover" data-anchor="talking">
+        <div class="section" style="background-image:url(6.jpg);background-size:cover" data-anchor="q5">
             <div class="article" style="text-shadow :0px 0px 20px white; color:black;">
                 <div class="title"><br />说<br /></div>
                 <div class="poem">
@@ -635,7 +713,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(7.jpg);background-size:cover" data-anchor="human-worm">
+        <div class="section" style="background-image:url(7.jpg);background-size:cover" data-anchor="q6">
             <div class="article" style="text-shadow :0px 0px 20px white; color:black;">
                 <div class="title"><br />勇气<br /></div>
                 <div class="author">朱恋淮<br /></div>
@@ -658,7 +736,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(8.jpg);background-size:cover" data-anchor="people-in-dilemma">
+        <div class="section" style="background-image:url(8.jpg);background-size:cover" data-anchor="q7">
             <div class="article">
                 <div class="title"><br />烟<br /></div>
                 <div class="text">从前我藏起你所有的火机 堵着门不许任何人给你买烟<br />
@@ -683,7 +761,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(11.jpg);background-size:cover" data-anchor="reminiscence-reason-future">
+        <div class="section" style="background-image:url(11.jpg);background-size:cover" data-anchor="q8">
             <div class="article" style="text-shadow :0px 0px 20px #000000; color :white;">
                 <div class="title"><br />你是我右手指尖的一个疣 <br /></div>
                 <div class="text">
@@ -707,7 +785,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(12.jpg);background-size:cover" data-anchor="about-upanishad">
+        <div class="section" style="background-image:url(12.jpg);background-size:cover" data-anchor="q9">
             <div class="article">
                 <div class="title"><br />静静<br /></div>
                 <div class="text">
@@ -732,7 +810,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(14.jpg);background-size:cover" data-anchor="about-year-month-day">
+        <div class="section" style="background-image:url(14.jpg);background-size:cover" data-anchor="q10">
             <div class="article">
                 <div class="title"><br />无题<br /></div>
                 <div class="text">
@@ -759,7 +837,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(15.jpg);background-size:cover" data-anchor="chess">
+        <div class="section" style="background-image:url(15.jpg);background-size:cover" data-anchor="q11">
             <div class="article">
                 <div class="title"><br />月寄<br /></div>
                 <div class="text">
@@ -775,7 +853,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(16.jpg);background-size:cover" data-anchor="burgers">
+        <div class="section" style="background-image:url(16.jpg);background-size:cover" data-anchor="q12">
             <div class="article">
                 <div class="title"><br />我想住进你的眼<br /></div>
                 <div class="text">
@@ -801,7 +879,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(17.jpg);background-size:cover" data-anchor="wealthy-idler">
+        <div class="section" style="background-image:url(17.jpg);background-size:cover" data-anchor="q13">
             <div class="article" style="text-shadow :0px 0px 20px #000000; color :white;">
                 <div class="title"><br />生于母，归于母<br /></div>
                 <div class="text">
@@ -850,7 +928,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(18.jpg);background-size:cover" data-anchor="how-great-is-wang-xiaobo">
+        <div class="section" style="background-image:url(18.jpg);background-size:cover" data-anchor="q14">
             <div class="article">
                 <div class="title"><br />你的味道 <br /></div>
                 <div class="text">
@@ -877,7 +955,7 @@
             </div>
 
 
-        <div class="section" style="background-image:url(19.jpg);background-size:cover" data-anchor="self-moving-u-life1">
+        <div class="section" style="background-image:url(19.jpg);background-size:cover" data-anchor="q15">
             <div class="article">
                 <div class="title"><br />孤独启蒙<br /></div>
                 <div class="text">
@@ -897,7 +975,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(20.jpg);background-size:cover" data-anchor="how-do-you-recall-800-meters1">
+        <div class="section" style="background-image:url(20.jpg);background-size:cover" data-anchor="q16">
             <div class="article" style="text-shadow :0px 0px 20px #000000; color :white;">
                 <div class="title"><br />春天很好<br /></div>
                 
@@ -910,7 +988,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(21.jpg);background-size:cover" data-anchor="two-summers">
+        <div class="section" style="background-image:url(21.jpg);background-size:cover" data-anchor="q17">
             <div class="article" style="text-shadow :0px 0px 20px black; color :white;">
                 <div class="title"><br />桥 <br /></div>
                 
@@ -927,7 +1005,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(22.jpg);background-size:cover" data-anchor="big-dream">
+        <div class="section" style="background-image:url(22.jpg);background-size:cover" data-anchor="q18">
             <div class="article" style="text-shadow :0px 0px 20px white; color:black;">
                 <div class="title"><br />烂漫 <br /></div>
                 <div class="poem">
@@ -946,7 +1024,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(23.jpg);background-size:cover" data-anchor="talking">
+        <div class="section" style="background-image:url(23.jpg);background-size:cover" data-anchor="q19">
             <div class="article" style="text-shadow :0px 0px 20px white; color:black;">
                 <div class="title"><br />想念与你有关<br /></div>
                 <div class="poem">
@@ -985,7 +1063,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(24.jpg);background-size:cover" data-anchor="human-worm">
+        <div class="section" style="background-image:url(24.jpg);background-size:cover" data-anchor="q20">
             <div class="article" style="text-shadow :0px 0px 20px white; color:black;">
                 <div class="title"><br />距离<br /></div>
                 <div class="poem">
@@ -999,7 +1077,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(25.jpg);background-size:cover" data-anchor="people-in-dilemma">
+        <div class="section" style="background-image:url(25.jpg);background-size:cover" data-anchor="q21">
             <div class="article">
                 <div class="title"><br />假如<br /></div>
                 <div class="text">假如风吹遍田野<br />
@@ -1018,7 +1096,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(26.jpg);background-size:cover" data-anchor="reminiscence-reason-future">
+        <div class="section" style="background-image:url(26.jpg);background-size:cover" data-anchor="q22">
             <div class="article" style="text-shadow :0px 0px 20px #000000; color :white;">
                 <div class="title"><br />列宁之死<br /></div>
                 <div class="text">莫斯科的严冬未能留住伟人的生命，<br />
@@ -1037,7 +1115,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(27.jpg);background-size:cover" data-anchor="about-upanishad">
+        <div class="section" style="background-image:url(27.jpg);background-size:cover" data-anchor="q23">
             <div class="article">
                 <div class="title"><br />一赠一答 <br /></div>
                 <div class="text">鹧鸪天    夜赠梦尘<br />
@@ -1052,7 +1130,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(28.jpg);background-size:cover" data-anchor="about-year-month-day">
+        <div class="section" style="background-image:url(28.jpg);background-size:cover" data-anchor="q24">
             <div class="article">
                 <div class="title"><br />相思树<br /></div>
                 <div class="text">
@@ -1074,7 +1152,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(29.jpg);background-size:cover" data-anchor="chess">
+        <div class="section" style="background-image:url(29.jpg);background-size:cover" data-anchor="q25">
             <div class="article">
                 <div class="title"><br />遣怀<br /></div>
                 <div class="text">瑶琴鼓破宝钗分，纵解丹青懒写真。<br />
@@ -1086,7 +1164,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(30.jpg);background-size:cover" data-anchor="burgers">
+        <div class="section" style="background-image:url(30.jpg);background-size:cover" data-anchor="q26">
             <div class="article">
                 <div class="title"><br />还有<br /></div>
                 <div class="text">
@@ -1121,7 +1199,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(31.jpg);background-size:cover" data-anchor="wealthy-idler">
+        <div class="section" style="background-image:url(31.jpg);background-size:cover" data-anchor="q27">
             <div class="article" style="text-shadow :0px 0px 20px #000000; color :white;">
                 <div class="title"><br />风水<br /></div>
                 <div class="text">
@@ -1138,7 +1216,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(32.jpg);background-size:cover" data-anchor="how-great-is-wang-xiaobo">
+        <div class="section" style="background-image:url(32.jpg);background-size:cover" data-anchor="q28">
             <div class="article">
                 <div class="title"><br />请不要爱我胜过爱你自己 <br /></div>
                 <div class="text">
@@ -1179,7 +1257,7 @@
 <br /><br /><br /><br /><br /><br /></div>
             </div>
         </div>
-        <div class="section" style="background-image:url(33.jpg);background-size:cover" data-anchor="self-moving-u-life">
+        <div class="section" style="background-image:url(33.jpg);background-size:cover" data-anchor="q29">
             <div class="article">
                 <div class="title"><br />烟火<br /></div>
                 <div class="text">
@@ -1190,7 +1268,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(34.jpg);background-size:cover" data-anchor="how-do-you-recall-800-meters">
+        <div class="section" style="background-image:url(34.jpg);background-size:cover" data-anchor="q30">
             <div class="article" style="text-shadow :0px 0px 20px #000000; color :white;">
                 <div class="title"><br />无题<br /></div>
                 
@@ -1203,7 +1281,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(35.jpg);background-size:cover" data-anchor="two-summers">
+        <div class="section" style="background-image:url(35.jpg);background-size:cover" data-anchor="q31">
             <div class="article" style="text-shadow :0px 0px 20px black; color :white;">
                 <div class="title"><br />送你的独白<br /></div>
                 
@@ -1234,7 +1312,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(36.jpg);background-size:cover" data-anchor="big-dream">
+        <div class="section" style="background-image:url(36.jpg);background-size:cover" data-anchor="q32">
             <div class="article" style="text-shadow :0px 0px 20px white; color:black;">
                 <div class="title"><br />⽩⾊衬衫 <br /></div>
                 <div class="poem">棉花 <br />
@@ -1267,7 +1345,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(37.jpg);background-size:cover" data-anchor="talking">
+        <div class="section" style="background-image:url(37.jpg);background-size:cover" data-anchor="q33">
             <div class="article" style="text-shadow :0px 0px 20px white; color:black;">
                 <div class="title"><br />无题<br /></div>
                 <div class="poem">面向花园的北窗一<br />
@@ -1309,7 +1387,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(38.jpg);background-size:cover" data-anchor="human-worm">
+        <div class="section" style="background-image:url(38.jpg);background-size:cover" data-anchor="q34">
             <div class="article" style="text-shadow :0px 0px 20px white; color:black;">
                 <div class="title"><br />无题<br /></div>
                 <div class="poem">北方的风难得柔和，<br />
@@ -1337,7 +1415,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(39.jpg);background-size:cover" data-anchor="people-in-dilemma">
+        <div class="section" style="background-image:url(39.jpg);background-size:cover" data-anchor="q35">
             <div class="article">
                 <div class="title"><br />等<br /></div>
                 <div class="text">我端一杯水坐在门槛上 <br />
@@ -1354,7 +1432,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(40.jpg);background-size:cover" data-anchor="reminiscence-reason-future">
+        <div class="section" style="background-image:url(40.jpg);background-size:cover" data-anchor="q36">
             <div class="article" style="text-shadow :0px 0px 20px #000000; color :white;">
                 <div class="title"><br />月光<br /></div>
                 <div class="text">如水的月光照在前方的小路上<br />
@@ -1381,7 +1459,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(41.jpg);background-size:cover" data-anchor="about-upanishad">
+        <div class="section" style="background-image:url(41.jpg);background-size:cover" data-anchor="q37">
             <div class="article">
                 <div class="title"><br />门外第二十七个行人<br /></div>
                 <div class="text">
@@ -1410,7 +1488,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(42.jpg);background-size:cover" data-anchor="about-year-month-day">
+        <div class="section" style="background-image:url(42.jpg);background-size:cover" data-anchor="q38">
             <div class="article">
                 <div class="title"><br />年轮<br /></div>
                 <div class="text">
@@ -1425,7 +1503,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(43.jpg);background-size:cover" data-anchor="chess">
+        <div class="section" style="background-image:url(43.jpg);background-size:cover" data-anchor="q39">
             <div class="article">
                 <div class="title"><br />木柵又雨 <br /></div>
                 <div class="text">
@@ -1450,7 +1528,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(44.jpg);background-size:cover" data-anchor="burgers">
+        <div class="section" style="background-image:url(44.jpg);background-size:cover" data-anchor="q40">
             <div class="article">
                 <div class="title"><br />我瓦刀<br /></div>
                 <div class="text">
@@ -1481,7 +1559,7 @@
             </div>
         </div>
 
-        <div class="section" style="background-image:url(45.jpg);background-size:cover" data-anchor="wealthy-idler">
+        <div class="section" style="background-image:url(45.jpg);background-size:cover" data-anchor="q41">
             <div class="article" style="text-shadow :0px 0px 20px #000000; color :white;">
                 <div class="title"><br />致乌尔里卡<br /></div>
                 <div class="text">
@@ -1534,7 +1612,7 @@
 <br /><br /><br /><br /><br /><br /></div>
             </div>
         </div>
-                <div class="section" style="background-image:url(46.jpg);background-size:cover" data-anchor="wealthy-idler">
+                <div class="section" style="background-image:url(46.jpg);background-size:cover" data-anchor="q42">
             <div class="article" style="text-shadow :0px 0px 20px #000000; color :white;">
                 <div class="title"><br />何满子<br /></div>
                 <div class="text">
